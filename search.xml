@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2013年7月flash游戏推荐</title>
-    <url>/post/aecb2428.html</url>
-    <content><![CDATA[<p><img src="/../images/2013%E5%B9%B47%E6%9C%88flash%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90/clip_image001.jpg" alt="http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201307/301624317w88.jpg"></p>
-<p><strong>[**</strong>相关游戏请点击右上角传送门按钮]**</p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>-游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EFI系统分区设定盘符 取消盘符</title>
-    <url>/post/7f94f96a.html</url>
-    <content><![CDATA[<p>给EFI系统分区设定盘符Win7 64bit安装后的出现EFI分区，在磁盘管理中右键点击无法指定盘符，可以进行下面的操作。</p>
-<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><ul>
-<li>efi分区格式硬盘</li>
-<li>64位系统</li>
-</ul>
-<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
-<li>—-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7 assign letter=y (y为分配的盘符，任意)</li>
-<li>返回EFI系统分区隐藏 —-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=c12a7328-f81f-11d2-ba4b-00a0c93ec93b （EFI系统分区ID）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A Song of Ice and Fire冰与火之歌Game of Thrones权力的游戏</title>
     <url>/post/bec41196.html</url>
     <content><![CDATA[<p><img src="/../images/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F/ac6eddc451da81cb97a797275866d01608243192.jpg" alt="img"> </p>
@@ -51,6 +18,19 @@
       </categories>
       <tags>
         <tag>-电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2013年7月flash游戏推荐</title>
+    <url>/post/aecb2428.html</url>
+    <content><![CDATA[<p><img src="/../images/2013%E5%B9%B47%E6%9C%88flash%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90/clip_image001.jpg" alt="http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201307/301624317w88.jpg"></p>
+<p><strong>[**</strong>相关游戏请点击右上角传送门按钮]**</p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>-游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -142,6 +122,26 @@
       </categories>
       <tags>
         <tag>-linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EFI系统分区设定盘符 取消盘符</title>
+    <url>/post/7f94f96a.html</url>
+    <content><![CDATA[<p>给EFI系统分区设定盘符Win7 64bit安装后的出现EFI分区，在磁盘管理中右键点击无法指定盘符，可以进行下面的操作。</p>
+<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><ul>
+<li>efi分区格式硬盘</li>
+<li>64位系统</li>
+</ul>
+<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
+<li>—-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7 assign letter=y (y为分配的盘符，任意)</li>
+<li>返回EFI系统分区隐藏 —-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=c12a7328-f81f-11d2-ba4b-00a0c93ec93b （EFI系统分区ID）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
       </tags>
   </entry>
   <entry>
@@ -366,6 +366,66 @@
       </tags>
   </entry>
   <entry>
+    <title>【教程固件】 酷比魔方Talk5H刷机指南,解救小白</title>
+    <url>/post/11f986cf.html</url>
+    <content><![CDATA[<p>安卓机最大的乐趣就是刷机了，鉴于很多5H的机油还不会刷机，只有写个教程出手一助了。提醒一句，刷机有风险，变砖的话LZ可不承担责任。</p>
+<p>不过根据LZ多年的刷机经验。要想把手机刷成砖，也是需要一定技术的，大胆的尝试吧。</p>
+<p>Talk5H刷机需要的几个工具下载</p>
+<p><strong>1）一键ROOT工具</strong></p>
+<p><a href="http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357</a></p>
+<p>2）叔叔工具箱**<br><a href="http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357</a></p>
+<p><strong>3）Recovery</strong></p>
+<p>Talk5H第三方Recovery （用于刷<strong>Talk5H第三方ROM</strong>，如MIUI，原生精简版，MUSE UI等等）<br><a href="http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357</a></p>
+<p>Talk5H官方Recovery （用于刷<strong>Talk5H官方ROM</strong>）<br><a href="http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357</a></p>
+<p><strong>4）rom文件</strong></p>
+<p>目前Talk5H的<strong>第三方rom</strong>有</p>
+<p>作者 <strong>ccfly_89</strong> ；</p>
+<p>完美、稳定、流畅ROM来了，移植Muse UI</p>
+<p><a href="http://bbs.51cube.com/thread-77996-1-1.html">http://bbs.51cube.com/thread-77996-1-1.html</a></p>
+<p>应该是最流畅最省电的ROM：原汁原味原生体验，Talk5H原生版ROM发布</p>
+<p><a href="http://bbs.51cube.com/thread-78401-1-1.html">http://bbs.51cube.com/thread-78401-1-1.html</a></p>
+<p>作者 <strong>米柚真威武</strong> ；</p>
+<p>[MIUI-V5-ROM] <a href="http://bbs.ereadcn.com/forum-21-1.html">酷比魔方</a>Talk 5H【开发版第一期-13.8.16】</p>
+<p><a href="http://bbs.51cube.com/thread-77722-1-1.html">http://bbs.51cube.com/thread-77722-1-1.html</a></p>
+<p>[MIUI-V5-ROM] 酷比魔方Talk 5H【开发版第2期-13.8.23】</p>
+<p><a href="http://bbs.51cube.com/thread-78356-1-1.html">http://bbs.51cube.com/thread-78356-1-1.html</a></p>
+<p>移植红米真正完美MIUI V5稳定版【第一期】，再送近500个漂亮的MIUI收费主题爽到爆</p>
+<p><a href="http://bbs.51cube.com/thread-78477-1-1.html">http://bbs.51cube.com/thread-78477-1-1.html</a></p>
+<p>作者<strong>吉他</strong> ；</p>
+<p>基于官方V1.01版，吉他发布TALK 5H【A5300】精简优化固件</p>
+<p><a href="http://bbs.ereadcn.com/forum.php?mod=viewthread&amp;tid=99166&amp;fromuid=14">http://bbs.ereadcn.com/forum.php?mod=viewthread&amp;tid=99166&amp;fromuid=14</a></p>
+<p>作者 <strong>wuxianlin</strong> ；</p>
+<p>CUBE Talk 5H完美移植红米HBJ2.0 MIUI V5</p>
+<p><a href="http://bbs.51cube.com/thread-78280-1-1.html">http://bbs.51cube.com/thread-78280-1-1.html</a></p>
+<p>官方rom**有 </p>
+<p>比魔方Talk 5H V1.01（出厂固件）发布，反馈BUG请跟帖</p>
+<p><a href="http://bbs.51cube.com/thread-77711-1-1.html">http://bbs.51cube.com/thread-77711-1-1.html</a></p>
+<p>5）如果觉得麻烦还可以下载 Talk 5H刷机工具箱 by wuxianlin V1.1<a href="http://bbs.51cube.com/thread-78236-1-1.html">http://bbs.51cube.com/thread-78236-1-1.html</a></p>
+<p>这只工具箱集合了一键root，一键刷入recovery，一键安装谷歌服务套件等功能，非常强大，适合没有刷机经验的使用，配合PC鼠标点击操作，非常方便。</p>
+<p>下面教程需要下载工具</p>
+<p><strong>1）一键ROOT工具</strong></p>
+<p><a href="http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357</a></p>
+<p>2）叔叔工具箱**<br><a href="http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357</a></p>
+<p>3）Recovery**</p>
+<p>Talk5H第三方Recovery （用于刷<strong>Talk5H第三方ROM</strong>，如MIUI，原生精简版，MUSE UI等等）<br><a href="http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357</a></p>
+<p><strong>4）rom文件</strong><br>第三方ROM任选</p>
+<p><strong>一键ROOT工具在PC解压使用</strong></p>
+<p>叔叔工具箱安装到5H中使用**</p>
+<p>第三方Recovery放到手机根目录**</p>
+<p>rom文件,放到手机或者卡中**</p>
+<p>刷机教程；<br>1）root<br>2）安装 recovery</p>
+<p>3）刷机<img src="http://www.ereadcn.com/data/attachment/forum/201308/31/0050009a1t1nzzn6aqw2a2.jpg" alt="img"><br><img src="http://www.ereadcn.com/data/attachment/forum/201308/31/005003ev5qe5pw3vvle0ua.jpg" alt="img"><br><img src="http://www.ereadcn.com/data/attachment/forum/201308/31/0050060jzjtt7bqscuf0mm.jpg" alt="img"> </p>
+<p>要刷回官方ROM<br>需要安装官方recovery进行上述的操作</p>
+<p><strong>3）Recovery</strong><br>Talk5H官方Recovery （用于刷<strong>Talk5H官方ROM</strong>）<br><a href="http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357</a></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VirtualminWebmin安装与使用强大的VPS服务器和虚拟主机管理系统</title>
     <url>/post/8ff6ed20.html</url>
     <content><![CDATA[<p>Webmin是一个开源免费并且功能非常强大的基于Web的Unix系统管理工具，支持绝大多数的Unix系统，另外还包括：AIX、HPUX、Solaris、Unixware、Irix和FreeBSD等，Webmin可以对服务器、磁盘、网络、硬件等进行全方位的管理，功能媲美地WHM。</p>
@@ -478,6 +538,36 @@
       </tags>
   </entry>
   <entry>
+    <title>f-gan生成对抗神经网络进阶第一级</title>
+    <url>/post/49c94cd0.html</url>
+    <content><![CDATA[<p>在之前我们做始祖Gan的数学推导的时候，其实留下了一堆坑（不知道你注意到了没有哈哈）。当然，牛逼的人就是这样的，指明了一条光明大道，让人知道从哪里走，然后剩下的一些坑坑洼洼刚刚好就能帮助一些博士、硕士毕业或者一些人评副教授、教授啥的。</p>
+<p>这篇文章介绍的f-gan就是填的其中一个坑，那就是给V(G,D)这个函数一个更加通用的描述。在始祖文章里面，这个函数是直接写出来的，虽然知道它巧妙得令人窒息，而且也确实是在算拟合网络和实际数据之间的数据分布距离（JS），但具体为什么能那么列式，那么列式之后为什么就刚刚好算的是分布间的某种距离其实我们是不大知道的，这导致的结果就是我们只能用它的，不能改进。而f-gan要解决的就是这个问题，它将告诉我们一道通用公式。在这道公式的约束下，你爱咋整咋整。</p>
+<p>首先我们看怎么一般化的表述两个分布之间的距离，f-gan告诉我们是这样的：<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) f \left( \frac { p ( x ) } { q ( x ) } \right) d x<br>$$<br>这里有两个约束，第一：f是凸函数；第二：f(1)=0</p>
+<p>由始祖文章的数学推导我们知道，对于神经网络而言，我们去衡量两个分布之间的差距其实不需要那么准，只要当他们有差距的时候，损失函数输出一个正值，而没差距的时候输出一个0就OK。那么f(1)=0就很好理解，当两个分布相同，只要满足这一约束就能使得最后的<br>$$<br>D _ { f } ( P | Q )<br>$$<br>也等于0。剩下我们就只需要证明在两个分布不完全相等的情况下，<br>$$<br>D _ { f } ( P | Q )<br>$$<br>大于0，就可以认为这道式子在表达两个分布之间的某种距离。</p>
+<p>证明的过程我们会用到<a href="https://aichn.cn/post/96895f36.html">琴生不等式</a>（要求f是凸函数也跟用到它有关，证明请移步链接所指文章），该不等式告诉我们：<br>$$<br>E ( f ( x ) ) \geq f ( E ( x ) )<br>$$<br>我们可以把<br>$$<br>f \left( \frac { p ( x ) } { q ( x ) } \right)看成f(x)，q(x)看成x的分布，那么D _ { f } ( P | Q )直接就变成E ( f ( x ) )E(f(x))<br>$$<br>，故：<br>$$<br>D _ { f } ( P | Q ) \geq f(\int _ { x } q ( x )  \left( \frac { p ( x ) } { q ( x ) } \right) d x)=f(1)=0<br>$$<br>注意，由于琴生不等式等于号只有在x分布完全均匀的时候取得（在这个应用中几乎不可能发生），因此基本可以判定除非<br>$$<br>D _ { f } ( P | Q )<br>$$<br>中的两个分布完全相等，不然不会取得等于号，这是极好的！避免了我们训练突然因为loss等于0而没反应的情况。</p>
+<p>完成了上面的推理，我们得到了两个分布的某种距离的一般表达式。但它还不是V(G,D)，原因是这里面既没有G也没有D（其实有D就好了,G在D里面），也就是说这是道看起来很美但对于Gan完全没用的式子。</p>
+<p>那怎么让这道式子跟D网络有关呢？我们可以想D是一个评价数据是不是真实分布的东西，当我们在训练D的时候，我们希望整个距离表达式最大。那么，能不能找到一个式子，当D使得距离表达式取最大值的时候，式子刚刚好就等于上面的<br>$$<br>D _ { f } ( P | Q )= \int _ { x } q ( x ) f \left( \frac { p ( x ) } { q ( x ) } \right) d x<br>$$<br>呢？</p>
+<p>要求有点多，但还真有办法实现！</p>
+<p>那就是利用<a href="https://aichn.cn/post/e66f8853.html">共轭函数</a>（具体见链接所指博客或自行google），它的定义如下：<br>$$<br>f ^ { * } ( t ) = \max _ { x \in \operatorname { dom } ( f ) } { x t - f ( x ) }<br>$$<br>它告诉我们，假设f(x)是一个凸函数，那么它存在一个共轭函数长上面描述的那样，写作<br>$$<br>f ^ { * } ( t )。<br>$$</p>
+<p>$$<br>f ^ { * } ( t )<br>$$</p>
+<p>本身也是凸函数，且它的共轭函数是f(x)。也就有：<br>$$<br>f( x ) = \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { x t - f  ^ { * } ( t ) }<br>$$<br>假设这个时候我们把<br>$$<br>f \left( \frac { p ( x ) } { q ( x ) } \right)<br>$$<br>看成是f(x)（前提是，<br>$$<br>f( 1 ) = \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { t - f  ^ { * } ( t ) }=0<br>$$<br>，这样f(x)就完全符合<br>$$<br>$D _ { f } ( P | Q ) $<br>$$<br>的要求），可得到：<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { \frac { p ( x ) } { q ( x ) } t - f  ^ { * } ( t ) } d x<br>$$<br>这个时候的公式其实还是跟D和G网络没什么关系，接着的这一步闪瞎眼，因为它做出了一个神之假设，假设有个神经网络D，输入是x，然后输出是t，这样上面的式子直接就变成<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) \max _ { D(x) \in \operatorname { dom } ( f  ^ { * } ) } { \frac { p ( x ) } { q ( x ) } D(x) - f  ^ { * } ( D(x) ) } d x<br>$$</p>
+<p>$$<br>\geq\int _ { x } q ( x ) { \frac { p ( x ) } { q ( x ) } D(x) - f  ^ { * } ( D(x) ) } d x<br>$$</p>
+<p>等于号在D(x)刚刚好等于使得积分中的全部式子最大的t的集合时取得。将式子进一步化简得到<br>$$<br>=\int _ { x } p ( x )D(x) - q ( x )f  ^ { * } ( D(x) )  d x<br>$$<br>这道式子牛逼的地方不知道你看出来了没有，它就在于这个≥号，回忆一下始祖gan，D网络的目标是最大化距离式子。而上面这道式子，我们恰恰好就能训练D网络来使得式子取得最大值。这个时候，式子可以写成下面的形式：</p>
+<p><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/HxmWegThKvG1sNjwAnfobKQJWGk8c_rBCTiWt8DHgfY.original.fullsize.png" alt="img"></p>
+<p>对于G网络而言，我们目的是最小化距离式子，则写成如下形式：</p>
+<p><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/image-20210102233819152.png" alt="image-20210102233819152"></p>
+<p>不知各位看出来没有，它就是通用版本的gan距离计算公式。真的对弄出这个东西的数学家跪服，太牛逼了！</p>
+<p>有了这个公式，我们只要找出一个凸函数（这里文章是这么写的，但其实非凸函数的共轭函数也是凸函数，因此不太清楚为什么要有这一条件，先存疑吧，有老哥知道麻烦留意告诉我）符合正实数域上有取值且是连续的，满足t−f(1)=0就可以作为<br>$$<br>f^*。<br>$$<br>文章中也列举了个可选的函数：<br><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/20190204011004991.png" alt="在这里插入图片描述"><br>经过该篇文章，我们解放了距离函数的限制，让它可以带着镣铐跳舞了，而不是一动不动的木乃伊。</p>
+<p>但其实它证明了一个让人哭笑不得的结论，始祖gan之所以效果不太好，跟我们选用的距离函数没有太大关系。也就是说，它的贡献主要在于帮助我们排除了一个错误答案。。。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WNMPA一键环境 1.0.0.0 正式版发布</title>
     <url>/post/b5e8cb00.html</url>
     <content><![CDATA[<p><img src="/../images/WNMPA%E4%B8%80%E9%94%AE%E7%8E%AF%E5%A2%831000%E6%AD%A3%E5%BC%8F%E7%89%88%E5%8F%91%E5%B8%83/wnmpa.png" alt="wnmpa"></p>
@@ -545,96 +635,6 @@
       </categories>
       <tags>
         <tag>-WNMPA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【教程固件】 酷比魔方Talk5H刷机指南,解救小白</title>
-    <url>/post/11f986cf.html</url>
-    <content><![CDATA[<p>安卓机最大的乐趣就是刷机了，鉴于很多5H的机油还不会刷机，只有写个教程出手一助了。提醒一句，刷机有风险，变砖的话LZ可不承担责任。</p>
-<p>不过根据LZ多年的刷机经验。要想把手机刷成砖，也是需要一定技术的，大胆的尝试吧。</p>
-<p>Talk5H刷机需要的几个工具下载</p>
-<p><strong>1）一键ROOT工具</strong></p>
-<p><a href="http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357</a></p>
-<p>2）叔叔工具箱**<br><a href="http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357</a></p>
-<p><strong>3）Recovery</strong></p>
-<p>Talk5H第三方Recovery （用于刷<strong>Talk5H第三方ROM</strong>，如MIUI，原生精简版，MUSE UI等等）<br><a href="http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357</a></p>
-<p>Talk5H官方Recovery （用于刷<strong>Talk5H官方ROM</strong>）<br><a href="http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357</a></p>
-<p><strong>4）rom文件</strong></p>
-<p>目前Talk5H的<strong>第三方rom</strong>有</p>
-<p>作者 <strong>ccfly_89</strong> ；</p>
-<p>完美、稳定、流畅ROM来了，移植Muse UI</p>
-<p><a href="http://bbs.51cube.com/thread-77996-1-1.html">http://bbs.51cube.com/thread-77996-1-1.html</a></p>
-<p>应该是最流畅最省电的ROM：原汁原味原生体验，Talk5H原生版ROM发布</p>
-<p><a href="http://bbs.51cube.com/thread-78401-1-1.html">http://bbs.51cube.com/thread-78401-1-1.html</a></p>
-<p>作者 <strong>米柚真威武</strong> ；</p>
-<p>[MIUI-V5-ROM] <a href="http://bbs.ereadcn.com/forum-21-1.html">酷比魔方</a>Talk 5H【开发版第一期-13.8.16】</p>
-<p><a href="http://bbs.51cube.com/thread-77722-1-1.html">http://bbs.51cube.com/thread-77722-1-1.html</a></p>
-<p>[MIUI-V5-ROM] 酷比魔方Talk 5H【开发版第2期-13.8.23】</p>
-<p><a href="http://bbs.51cube.com/thread-78356-1-1.html">http://bbs.51cube.com/thread-78356-1-1.html</a></p>
-<p>移植红米真正完美MIUI V5稳定版【第一期】，再送近500个漂亮的MIUI收费主题爽到爆</p>
-<p><a href="http://bbs.51cube.com/thread-78477-1-1.html">http://bbs.51cube.com/thread-78477-1-1.html</a></p>
-<p>作者<strong>吉他</strong> ；</p>
-<p>基于官方V1.01版，吉他发布TALK 5H【A5300】精简优化固件</p>
-<p><a href="http://bbs.ereadcn.com/forum.php?mod=viewthread&amp;tid=99166&amp;fromuid=14">http://bbs.ereadcn.com/forum.php?mod=viewthread&amp;tid=99166&amp;fromuid=14</a></p>
-<p>作者 <strong>wuxianlin</strong> ；</p>
-<p>CUBE Talk 5H完美移植红米HBJ2.0 MIUI V5</p>
-<p><a href="http://bbs.51cube.com/thread-78280-1-1.html">http://bbs.51cube.com/thread-78280-1-1.html</a></p>
-<p>官方rom**有 </p>
-<p>比魔方Talk 5H V1.01（出厂固件）发布，反馈BUG请跟帖</p>
-<p><a href="http://bbs.51cube.com/thread-77711-1-1.html">http://bbs.51cube.com/thread-77711-1-1.html</a></p>
-<p>5）如果觉得麻烦还可以下载 Talk 5H刷机工具箱 by wuxianlin V1.1<a href="http://bbs.51cube.com/thread-78236-1-1.html">http://bbs.51cube.com/thread-78236-1-1.html</a></p>
-<p>这只工具箱集合了一键root，一键刷入recovery，一键安装谷歌服务套件等功能，非常强大，适合没有刷机经验的使用，配合PC鼠标点击操作，非常方便。</p>
-<p>下面教程需要下载工具</p>
-<p><strong>1）一键ROOT工具</strong></p>
-<p><a href="http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2646370454&amp;uk=288410357</a></p>
-<p>2）叔叔工具箱**<br><a href="http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2650065834&amp;uk=288410357</a></p>
-<p>3）Recovery**</p>
-<p>Talk5H第三方Recovery （用于刷<strong>Talk5H第三方ROM</strong>，如MIUI，原生精简版，MUSE UI等等）<br><a href="http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=2656531356&amp;uk=288410357</a></p>
-<p><strong>4）rom文件</strong><br>第三方ROM任选</p>
-<p><strong>一键ROOT工具在PC解压使用</strong></p>
-<p>叔叔工具箱安装到5H中使用**</p>
-<p>第三方Recovery放到手机根目录**</p>
-<p>rom文件,放到手机或者卡中**</p>
-<p>刷机教程；<br>1）root<br>2）安装 recovery</p>
-<p>3）刷机<img src="http://www.ereadcn.com/data/attachment/forum/201308/31/0050009a1t1nzzn6aqw2a2.jpg" alt="img"><br><img src="http://www.ereadcn.com/data/attachment/forum/201308/31/005003ev5qe5pw3vvle0ua.jpg" alt="img"><br><img src="http://www.ereadcn.com/data/attachment/forum/201308/31/0050060jzjtt7bqscuf0mm.jpg" alt="img"> </p>
-<p>要刷回官方ROM<br>需要安装官方recovery进行上述的操作</p>
-<p><strong>3）Recovery</strong><br>Talk5H官方Recovery （用于刷<strong>Talk5H官方ROM</strong>）<br><a href="http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357">http://pan.baidu.com/share/link?shareid=4107364334&amp;uk=288410357</a></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>f-gan生成对抗神经网络进阶第一级</title>
-    <url>/post/49c94cd0.html</url>
-    <content><![CDATA[<p>在之前我们做始祖Gan的数学推导的时候，其实留下了一堆坑（不知道你注意到了没有哈哈）。当然，牛逼的人就是这样的，指明了一条光明大道，让人知道从哪里走，然后剩下的一些坑坑洼洼刚刚好就能帮助一些博士、硕士毕业或者一些人评副教授、教授啥的。</p>
-<p>这篇文章介绍的f-gan就是填的其中一个坑，那就是给V(G,D)这个函数一个更加通用的描述。在始祖文章里面，这个函数是直接写出来的，虽然知道它巧妙得令人窒息，而且也确实是在算拟合网络和实际数据之间的数据分布距离（JS），但具体为什么能那么列式，那么列式之后为什么就刚刚好算的是分布间的某种距离其实我们是不大知道的，这导致的结果就是我们只能用它的，不能改进。而f-gan要解决的就是这个问题，它将告诉我们一道通用公式。在这道公式的约束下，你爱咋整咋整。</p>
-<p>首先我们看怎么一般化的表述两个分布之间的距离，f-gan告诉我们是这样的：<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) f \left( \frac { p ( x ) } { q ( x ) } \right) d x<br>$$<br>这里有两个约束，第一：f是凸函数；第二：f(1)=0</p>
-<p>由始祖文章的数学推导我们知道，对于神经网络而言，我们去衡量两个分布之间的差距其实不需要那么准，只要当他们有差距的时候，损失函数输出一个正值，而没差距的时候输出一个0就OK。那么f(1)=0就很好理解，当两个分布相同，只要满足这一约束就能使得最后的<br>$$<br>D _ { f } ( P | Q )<br>$$<br>也等于0。剩下我们就只需要证明在两个分布不完全相等的情况下，<br>$$<br>D _ { f } ( P | Q )<br>$$<br>大于0，就可以认为这道式子在表达两个分布之间的某种距离。</p>
-<p>证明的过程我们会用到<a href="https://aichn.cn/post/96895f36.html">琴生不等式</a>（要求f是凸函数也跟用到它有关，证明请移步链接所指文章），该不等式告诉我们：<br>$$<br>E ( f ( x ) ) \geq f ( E ( x ) )<br>$$<br>我们可以把<br>$$<br>f \left( \frac { p ( x ) } { q ( x ) } \right)看成f(x)，q(x)看成x的分布，那么D _ { f } ( P | Q )直接就变成E ( f ( x ) )E(f(x))<br>$$<br>，故：<br>$$<br>D _ { f } ( P | Q ) \geq f(\int _ { x } q ( x )  \left( \frac { p ( x ) } { q ( x ) } \right) d x)=f(1)=0<br>$$<br>注意，由于琴生不等式等于号只有在x分布完全均匀的时候取得（在这个应用中几乎不可能发生），因此基本可以判定除非<br>$$<br>D _ { f } ( P | Q )<br>$$<br>中的两个分布完全相等，不然不会取得等于号，这是极好的！避免了我们训练突然因为loss等于0而没反应的情况。</p>
-<p>完成了上面的推理，我们得到了两个分布的某种距离的一般表达式。但它还不是V(G,D)，原因是这里面既没有G也没有D（其实有D就好了,G在D里面），也就是说这是道看起来很美但对于Gan完全没用的式子。</p>
-<p>那怎么让这道式子跟D网络有关呢？我们可以想D是一个评价数据是不是真实分布的东西，当我们在训练D的时候，我们希望整个距离表达式最大。那么，能不能找到一个式子，当D使得距离表达式取最大值的时候，式子刚刚好就等于上面的<br>$$<br>D _ { f } ( P | Q )= \int _ { x } q ( x ) f \left( \frac { p ( x ) } { q ( x ) } \right) d x<br>$$<br>呢？</p>
-<p>要求有点多，但还真有办法实现！</p>
-<p>那就是利用<a href="https://aichn.cn/post/e66f8853.html">共轭函数</a>（具体见链接所指博客或自行google），它的定义如下：<br>$$<br>f ^ { * } ( t ) = \max _ { x \in \operatorname { dom } ( f ) } { x t - f ( x ) }<br>$$<br>它告诉我们，假设f(x)是一个凸函数，那么它存在一个共轭函数长上面描述的那样，写作<br>$$<br>f ^ { * } ( t )。<br>$$</p>
-<p>$$<br>f ^ { * } ( t )<br>$$</p>
-<p>本身也是凸函数，且它的共轭函数是f(x)。也就有：<br>$$<br>f( x ) = \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { x t - f  ^ { * } ( t ) }<br>$$<br>假设这个时候我们把<br>$$<br>f \left( \frac { p ( x ) } { q ( x ) } \right)<br>$$<br>看成是f(x)（前提是，<br>$$<br>f( 1 ) = \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { t - f  ^ { * } ( t ) }=0<br>$$<br>，这样f(x)就完全符合<br>$$<br>$D _ { f } ( P | Q ) $<br>$$<br>的要求），可得到：<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) \max _ { t \in \operatorname { dom } ( f  ^ { * } ) } { \frac { p ( x ) } { q ( x ) } t - f  ^ { * } ( t ) } d x<br>$$<br>这个时候的公式其实还是跟D和G网络没什么关系，接着的这一步闪瞎眼，因为它做出了一个神之假设，假设有个神经网络D，输入是x，然后输出是t，这样上面的式子直接就变成<br>$$<br>D _ { f } ( P | Q ) = \int _ { x } q ( x ) \max _ { D(x) \in \operatorname { dom } ( f  ^ { * } ) } { \frac { p ( x ) } { q ( x ) } D(x) - f  ^ { * } ( D(x) ) } d x<br>$$</p>
-<p>$$<br>\geq\int _ { x } q ( x ) { \frac { p ( x ) } { q ( x ) } D(x) - f  ^ { * } ( D(x) ) } d x<br>$$</p>
-<p>等于号在D(x)刚刚好等于使得积分中的全部式子最大的t的集合时取得。将式子进一步化简得到<br>$$<br>=\int _ { x } p ( x )D(x) - q ( x )f  ^ { * } ( D(x) )  d x<br>$$<br>这道式子牛逼的地方不知道你看出来了没有，它就在于这个≥号，回忆一下始祖gan，D网络的目标是最大化距离式子。而上面这道式子，我们恰恰好就能训练D网络来使得式子取得最大值。这个时候，式子可以写成下面的形式：</p>
-<p><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/HxmWegThKvG1sNjwAnfobKQJWGk8c_rBCTiWt8DHgfY.original.fullsize.png" alt="img"></p>
-<p>对于G网络而言，我们目的是最小化距离式子，则写成如下形式：</p>
-<p><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/image-20210102233819152.png" alt="image-20210102233819152"></p>
-<p>不知各位看出来没有，它就是通用版本的gan距离计算公式。真的对弄出这个东西的数学家跪服，太牛逼了！</p>
-<p>有了这个公式，我们只要找出一个凸函数（这里文章是这么写的，但其实非凸函数的共轭函数也是凸函数，因此不太清楚为什么要有这一条件，先存疑吧，有老哥知道麻烦留意告诉我）符合正实数域上有取值且是连续的，满足t−f(1)=0就可以作为<br>$$<br>f^*。<br>$$<br>文章中也列举了个可选的函数：<br><img src="/../images/f-gan%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%9B%E9%98%B6%E7%AC%AC%E4%B8%80%E7%BA%A7/20190204011004991.png" alt="在这里插入图片描述"><br>经过该篇文章，我们解放了距离函数的限制，让它可以带着镣铐跳舞了，而不是一动不动的木乃伊。</p>
-<p>但其实它证明了一个让人哭笑不得的结论，始祖gan之所以效果不太好，跟我们选用的距离函数没有太大关系。也就是说，它的贡献主要在于帮助我们排除了一个错误答案。。。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -802,6 +802,21 @@
       </tags>
   </entry>
   <entry>
+    <title>win10 网络连接0x80070035</title>
+    <url>/post/afa9daf5.html</url>
+    <content><![CDATA[<p>按window+R键输入gpedit.msc 来启动本地组策略编辑器。</p>
+<p>依次找到“计算机配置-管理模板-网络-Lanman工作站”这个节点，在右侧内容区可以看到“启用不安全的来宾登录”这一条策略设置。状态是“未配置”。</p>
+<p>双击“启用不安全的来宾登录”这一条策略设置，将其状态修改为“已启用”并单击确定按钮。</p>
+<p>设置完成再次尝试访问发现可以正常访问了。</p>
+]]></content>
+      <categories>
+        <category>win10</category>
+      </categories>
+      <tags>
+        <tag>-win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python三步实现人脸识别</title>
     <url>/post/e86121cf.html</url>
     <content><![CDATA[<p>Face Recognition软件包</p>
@@ -888,21 +903,6 @@
       </categories>
       <tags>
         <tag>-Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10 网络连接0x80070035</title>
-    <url>/post/afa9daf5.html</url>
-    <content><![CDATA[<p>按window+R键输入gpedit.msc 来启动本地组策略编辑器。</p>
-<p>依次找到“计算机配置-管理模板-网络-Lanman工作站”这个节点，在右侧内容区可以看到“启用不安全的来宾登录”这一条策略设置。状态是“未配置”。</p>
-<p>双击“启用不安全的来宾登录”这一条策略设置，将其状态修改为“已启用”并单击确定按钮。</p>
-<p>设置完成再次尝试访问发现可以正常访问了。</p>
-]]></content>
-      <categories>
-        <category>win10</category>
-      </categories>
-      <tags>
-        <tag>-win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1027,19 +1027,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【吉他伴奏版】See You Again【Igor Presnyakov】</title>
-    <url>/post/22e374f1.html</url>
-    <content><![CDATA[<p>【吉他伴奏版】See You Again【Igor Presnyakov】</p>
-<p><a href="http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1">http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1</a></p>
-]]></content>
-      <categories>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>-音乐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【君子兰】如何强制刷新MSI的VBIOS让Clevo蓝天的5870M支持Powerplay自动降频,Overdrive超频教程</title>
     <url>/post/945e81c2.html</url>
     <content><![CDATA[<p>对于买到了Clevo蓝天的5870M这张卡准备给自己的M15X或者M17X的兄弟们应该非常郁闷吧<br>这张Clevo蓝天的卡真是巨雷无比,不支持overdrive超频,更可怕的是不能支持powerplay自动降频降压…<br>GPU全天候的工作在700 1000 1.15V的电压下<br>电池撑不了多久,温度也非常的高</p>
@@ -1067,6 +1054,19 @@
       </categories>
       <tags>
         <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【吉他伴奏版】See You Again【Igor Presnyakov】</title>
+    <url>/post/22e374f1.html</url>
+    <content><![CDATA[<p>【吉他伴奏版】See You Again【Igor Presnyakov】</p>
+<p><a href="http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1">http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1</a></p>
+]]></content>
+      <categories>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>-音乐</tag>
       </tags>
   </entry>
   <entry>
@@ -1098,6 +1098,33 @@
 ]]></content>
       <categories>
         <category>其他</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解决方案】WordPress无法建立到WordPress。org的安全连接</title>
+    <url>/post/17062.html</url>
+    <content><![CDATA[<p>服务器一直使用03系统，为了更好的满足需求决定升级系统，然而升级的路程的坎坷的，各种问题不曾间断，经过一夜努力终于在第二天的天明前完成了系统的各项配置。</p>
+<p>自以为风雨过后能见彩虹了，没想到这才是开始…</p>
+<p>安装好wordpress后发现许多需要跟wordpress.org进行连接的页面都无法打开了。</p>
+<p>期初以为是因为程序卡导致链接超时无法打开，于是就想到WordPress 的主题还有它的后台都会用到 Google 字体，在国内访问 Google 会遇到问题，这就是打开 WordPress 网站慢的主要原因。</p>
+<p>解决的办法是去安装一个叫 useso-take-over-google 的插件，它会用国内的 useso 替换 google，但是安装好后之前的问题仍然存在。</p>
+<p>于是又想到 WordPress 默认为用户使用的是 Gravatar 头像，我们访问这个网站也会遇到问题，虽然已经有现成的解决方案但仍然不太理想。</p>
+<p>解决办法：我们可以先禁用掉用户的头像功能，打开 <em>设置 – 讨论 – 头像显示</em>，去掉勾选显示头像，保存更改。</p>
+<p>OK 现在应该不会卡慢了，但是问题依旧，没办法自己的能力有限只能搜搜往上看有没有人遇到同样的问题。</p>
+<p>结果搜到了很多同样的问题，但是都没有得到解决，只有个别说到是因为空间商屏蔽了wordpress服务器IP，还有个别说要修改DNS为谷歌的DNS。</p>
+<p>但在尝试过后发现都不可用，于是我的脑细胞又开始了疯狂的自杀…</p>
+<p>想到曾经谷歌翻译不能用的时候会在host文件里添加记录就可以使用谷歌翻译了，于是开始尝试向host文件添加记录，首先ping一下api.wordpress.org的服务器IP得到66.155.40.249 打开host文件添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">66.155.40.249 api.wordpress.org</span><br></pre></td></tr></table></figure>
+<p>保存，刷新后台，完美！！</p>
+<p>win系统下host文件路径：c:\windows\system32\drivers\etc</p>
+<p>linux系统的host文件路径？</p>
+<p>施主请百度去吧，贫僧没搞过啊！！！</p>
+]]></content>
+      <categories>
+        <category>建站</category>
       </categories>
       <tags>
         <tag>-技术</tag>
@@ -1275,33 +1302,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【解决方案】WordPress无法建立到WordPress。org的安全连接</title>
-    <url>/post/17062.html</url>
-    <content><![CDATA[<p>服务器一直使用03系统，为了更好的满足需求决定升级系统，然而升级的路程的坎坷的，各种问题不曾间断，经过一夜努力终于在第二天的天明前完成了系统的各项配置。</p>
-<p>自以为风雨过后能见彩虹了，没想到这才是开始…</p>
-<p>安装好wordpress后发现许多需要跟wordpress.org进行连接的页面都无法打开了。</p>
-<p>期初以为是因为程序卡导致链接超时无法打开，于是就想到WordPress 的主题还有它的后台都会用到 Google 字体，在国内访问 Google 会遇到问题，这就是打开 WordPress 网站慢的主要原因。</p>
-<p>解决的办法是去安装一个叫 useso-take-over-google 的插件，它会用国内的 useso 替换 google，但是安装好后之前的问题仍然存在。</p>
-<p>于是又想到 WordPress 默认为用户使用的是 Gravatar 头像，我们访问这个网站也会遇到问题，虽然已经有现成的解决方案但仍然不太理想。</p>
-<p>解决办法：我们可以先禁用掉用户的头像功能，打开 <em>设置 – 讨论 – 头像显示</em>，去掉勾选显示头像，保存更改。</p>
-<p>OK 现在应该不会卡慢了，但是问题依旧，没办法自己的能力有限只能搜搜往上看有没有人遇到同样的问题。</p>
-<p>结果搜到了很多同样的问题，但是都没有得到解决，只有个别说到是因为空间商屏蔽了wordpress服务器IP，还有个别说要修改DNS为谷歌的DNS。</p>
-<p>但在尝试过后发现都不可用，于是我的脑细胞又开始了疯狂的自杀…</p>
-<p>想到曾经谷歌翻译不能用的时候会在host文件里添加记录就可以使用谷歌翻译了，于是开始尝试向host文件添加记录，首先ping一下api.wordpress.org的服务器IP得到66.155.40.249 打开host文件添加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">66.155.40.249 api.wordpress.org</span><br></pre></td></tr></table></figure>
-<p>保存，刷新后台，完美！！</p>
-<p>win系统下host文件路径：c:\windows\system32\drivers\etc</p>
-<p>linux系统的host文件路径？</p>
-<p>施主请百度去吧，贫僧没搞过啊！！！</p>
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一条短信直接崩溃iPhone，几乎所有iOS设备躺枪</title>
     <url>/post/3420606c.html</url>
     <content><![CDATA[<p>iPhone 又出 Bug 了！国外有网友发现，只要给用 iPhone 的好友发送一段含有特殊字符的短信或者是 iMessage 消息，就会让对方的 iPhone 崩溃重启，这条信息最先出现在 Reddit 网站。这段字符信息包含了英文、阿拉伯文、中文和特殊符号：</p>
@@ -1320,53 +1320,6 @@
       </categories>
       <tags>
         <tag>-其他</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人工智能神经网络四种算法</title>
-    <url>/post/cbd530a7.html</url>
-    <content><![CDATA[<p>人工神经网络的许多算法已在智能信息处理系统中获得广泛采用，尤为突出是是以下4种算法：ART网络、LVQ网络、Kohonen网络Hopfield网络，下面就具体介绍一下这这四种算法：</p>
-<p><strong>1．自适应谐振理论（ART）网络</strong></p>
-<p>自适应谐振理论（ART）网络具有不同的方案。一个ART-1网络含有两层一个输入层和一个输出层。这两层完全互连，该连接沿着正向（自底向上）和反馈（自顶向下）两个方向进行。</p>
-<p>当ART-1网络在工作时，其训练是连续进行的，且包括下列算法步骤：</p>
-<p>（1）对于所有输出神经元，如果一个输出神经元的全部警戒权值均置为1，则称为独立神经元，因为它不被指定表示任何模式类型。</p>
-<p>（2）给出一个新的输入模式x。</p>
-<p>（3）使所有的输出神经元能够参加激发竞争。</p>
-<p>（4）从竞争神经元中找到获胜的输出神经元，即这个神经元的x·W值为最大；在开始训练时或不存在更好的输出神经元时，优胜神经元可能是个独立神经元。</p>
-<p>（5）检查该输入模式x是否与获胜神经元的警戒矢量V足够相似。</p>
-<p>（6）如果r≥p，即存在谐振，则转向步骤（7）；否则，使获胜神经元暂时无力进一步竞争，并转向步骤（4），重复这一过程直至不存在更多的有能力的神经元为止。</p>
-<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=1076120041,773083672&fm=173&app=49&f=JPEG" alt="img">ART网络</p>
-<p><strong>2．学习矢量量化（LVQ）网络</strong></p>
-<p>学习矢量量化（LVQ）网络，它由三层神经元组成，即输入转换层、隐含层和输出层。该网络在输入层与隐含层之间为完全连接，而在隐含层与输出层之间为部分连接，每个输出神经元与隐含神经元的不同组相连接。</p>
-<p>最简单的LVQ训练步骤如下：</p>
-<p>（1）预置参考矢量初始权值。</p>
-<p>（2）供给网络一个训练输入模式。</p>
-<p>（3）计算输人模式与每个参考矢量间的Euclidean距离。</p>
-<p>（4）更新最接近输入模式的参考矢量（即获胜隐含神经元的参考矢量）的权值。如果获胜隐含神经元以输入模式一样的类属于连接至输出神经元的缓冲器，那么参考矢量应更接近输入模式。否则，参考矢量就离开输人模式。</p>
-<p>（5）转至步骤（2），以某个新的训练输入模式重复本过程，直至全部训练模式被正确地分类或者满足某个终止准则为止。</p>
-<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=81949266,355555348&fm=173&app=49&f=JPEG" alt="img">LVQ网络</p>
-<p><strong>3．Kohonen网络</strong></p>
-<p>Kohonen网络或自组织特征映射网络含有两层，一个输入缓冲层用于接收输入模式，另一个为输出层，输出层的神经元一般按正则二维阵列排列，每个输出神经元连接至所有输入神经元。连接权值形成与已知输出神经元相连的参考矢量的分量。</p>
-<p>训练一个Kohonen网络包含下列步骤：</p>
-<p>（1）对所有输出神经元的参考矢量预置小的随机初值。</p>
-<p>（2）供给网络一个训练输入模式。</p>
-<p>（3）确定获胜的输出神经元，即参考矢量最接近输入模式的神经元。参考矢量与输入矢量间的Euclidean距离通常被用作距离测量。</p>
-<p>（4）更新获胜神经元的参考矢量及其近邻参考矢量。这些参考矢量（被引至）更接近输入矢量。对于获胜参考矢量，其调整是最大的，而对于离得更远的神经元，减少调整个神经元邻域的大小随着训练的进行而相对减小，到训练结束，只有获胜神经元的参考矢量被调整。</p>
-<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=3981122705,166961606&fm=173&app=49&f=JPEG" alt="img">Kohonen网络</p>
-<p><strong>4．Hopfield网络</strong></p>
-<p>Hopfield网络是一种典型的递归网络，这种网络通常只接受二进制输入（0或1）以及双极输入（+1或-1）。它含有一个单层神经元，每个神经元与所有其他神经元连接，形成递归结构。</p>
-<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/20180112110954464" alt="img"></p>
-<p>上图为Hopfield神经网络结构图。</p>
-<p>   首先，网络结构上，Hopfield神经网络是一种单层互相全连接的反馈型神经网络。每个神经元既是输入也是输出，网络中的每一个神经元都将自己的输出通过连接权传送给所有其它神经元，同时又都接收所有其它神经元传递过来的信息。即：网络中的神经元在t时刻的输出状态实际上间接地与自己t-1时刻的输出状态有关。神经元之间互连接，所以得到的权重矩阵将是对称矩阵。</p>
-<p>​    同时，Hopfield神经网络成功引入能量函数的概念，使网络运行地稳定性判断有了可靠依据。基本的Hopfield神经网络是一个由非线性元件构成的全连接型单层递归系统。其状态变化可以用差分方程来表示。递归型网络的一个重要特点就是它具有稳定状态‘当网络达到稳定状态的时候，也就是它的能量函数达到最小的时候。这里的能量函数不是物理意义上的能量函数，而是在表达形式上与物理意义上的能量概念一致，即它表征网络状态的变化趋势，并可以依据Hopfield网络模型的工作运行规则不断地进行状态变化，最终能够到达具有某个极小值的目标函数。网络收敛就是指能量函数达到极小值。</p>
-<p>​    如果把一个最优化在着递归信号，网络的状态是随时间的变化而变化的，其运动轨迹必然存在着稳定性的问题。这就是递归网络与前向网络在网络性能分析上最大的区别之一在使用递归网络时，必须对其稳定性进行专门的分析与讨论，合理选择网络的参数变化范围，才能确保递归网络的正常工作。</p>
-<p>​    Hopfield神经网络模型有离散型和连续性两种，离散型适用于联想记忆，连续性适合处理优化问题。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能 -神经网络 -算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1433,15 +1386,106 @@
       </tags>
   </entry>
   <entry>
-    <title>似然函数</title>
-    <url>/post/fbf175a6.html</url>
-    <content><![CDATA[<p>似然（likelihood）这个词其实和概率（probability）是差不多的意思，但是在统计里面，似然函数和概率函数却是两个不同的概念。</p>
-<p>对于函数：P(x∣θ)，输入有两个：x表示某一个具体的数据；θ表示模型的参数。</p>
-<p>如果θ是确定的，x是变量，这个函数叫做概率函数(probability function)，它描述对于不同的样本点x，其出现概率是多少。</p>
-<p>比如我们已经知道了一个箱子里有19个黑球和一个白球，现在问你从箱子里抽出两个球，是两个黑球的概率是多少，这个时候我们的模型参数是完全知道了，就是19个黑球和一个白球，不知道的是抽出的具体的球是什么。这个时候，P(x∣θ)就是概率函数。</p>
-<p>如果x是已知确定的，θ是变量，这个函数叫做似然函数(likelihood function)，它描述对于不同的模型参数，出现x这个样本点的概率是多少。</p>
-<p>比如我们有一箱子球，已经从里面抽出了1个黑球8个白球，问你箱子里面黑球和白球的分布模型参数是什么。这个时候我们是不知道箱子里面的具体情况的，但我们知道抽出球的样本分布，那么我们要用样本的分布来评估箱子里的球的模型分布，这个时候P(x∣θ)就是似然函数。</p>
-<p>参考文章：<a href="https://blog.csdn.net/u011508640/article/details/72815981">https://blog.csdn.net/u011508640/article/details/72815981</a></p>
+    <title>为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷</title>
+    <url>/post/7c5ef9ec.html</url>
+    <content><![CDATA[<p>在很多二分类问题中，特别是正负样本不均衡的分类问题中，常使用交叉熵作为loss对模型的参数求梯度进行更新，那为何交叉熵能作为损失函数呢，我也是带着这个问题去找解析的。</p>
+<p>以下仅为个人理解，如有不当地方，请读到的看客能指出。</p>
+<p>我们都知道，各种机器学习模型都是模拟输入的分布，使得模型输出的分布尽量与训练数据一致，最直观的就是MSE（均方误差，Mean squared deviation), 直接就是输出与输入的差值平方，尽量保证输入与输出相同。这种loss我们都能理解。</p>
+<p>以下按照（1）熵的定义（2）交叉熵的定义 (3) 交叉熵的由来 （4）交叉熵作为loss的优势 作为主线来一步步理清思路。</p>
+<p>（1）熵的定义 各种熵的名称均来自信息论领域，这方面的背景就不介绍了，随便就能找到很多。</p>
+<p>根据维基的定义，熵的定义如下：熵是接收的每条消息中包含的信息的平均量，又被称为信息熵、信源熵、平均自信息量。直白地解释就是信息中含的信息量的大小，其定义如下：</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827110906555" alt="img"></p>
+<p>其曲线如下所示：</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827111213829" alt="img"></p>
+<p>可以看出，一个事件的发生的概率离0.5越近，其熵就越大，概率为0或1就是确定性事件，不能为我们带信息量。也可以看作是一件事我们越难猜测是否会发生，它的信息熵就越大</p>
+<p>（2）交叉熵的定义 交叉熵的公式定义如下：</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827112109611" alt="img"></p>
+<p>其中p(x)在机器学习中为样本label，q(x)为模型的预估，分别代表训练样本和模型的分布，如果只是根据这个公式，是看不出来什么的，暂且放下，继续往下看</p>
+<p>（3）交叉熵的由来 将上面的交叉熵的公式减去一个固定的值（H(p), 训练样本的熵，训练样本定，该值即为固定值），即训练样本分布p(x)的熵，可得如下：</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827181853299" alt="img"></p>
+<p>最后得到的为相对熵或KL散度(Kullback-Leibler divergence), 亦可称为KL距离，是用于评判两个分布的差异程序，看到这里，应该明白为何交叉熵为何能作为loss了。即可以使得模型输出的分布尽量与训练样本的分布一致</p>
+<p>（4）交叉熵作为loss的优势 模型训练的loss有很多，交叉熵作为loss有很多应用场景，其最大的好处我认为是可以避免梯度消散，因为一般我们使用平方差作为损失函数，（<img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/gif.latex" alt="\hat{y}">-y）^2作为损失函数，这种损失函数在进行梯度下降计算的时候会出现梯度弥散，导致学习速率下降，使用交叉熵作为损失函数可以很好的解决这个问题。</p>
+<p>那我们再讨论一下，平方差为什么会梯度弥散，而交叉熵不会：</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20180924084311715" alt="img"></p>
+<p>因为y求导为y(y-1)所以趋近于0或1时上述倒数趋近于零，梯度弥散。</p>
+<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20180924084812961" alt="img"></p>
+<p>与sigmoid导数无关，从而避免了梯度弥散。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>交叉熵</title>
+    <url>/post/ea101373.html</url>
+    <content><![CDATA[<p>我们简单介绍了相对熵的概念，知道了相对熵可以用来表达真实事件和理论拟合出来的事件之间的差异。</p>
+<p>相对熵的公式如下：<br>$$<br>D _ { K L } ( p | q ) = \sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log p \left( x _ { i } \right)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>可以看到前面一项是真实事件的信息熵取反，我们可以直接写成<br>$$<br>D _ { K L } ( p | q ) = -H(p)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>在神经网络训练中，我们要训练的是<br>$$<br>q ( x _ { i })<br>$$<br>使得其与真实事件的分布越接近越好，也就是说在神经网络的训练中，相对熵会变的部分只有后面的部分，我们希望它越小越好，而前面的那部分是不变的。因此我们可以把后面的部分单独取出来，那部分就是交叉熵，写作：<br>$$<br>H(p，q) = -\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>这就是我们经常在神经网络训练中看到的交叉熵损失函数。如果要了解它的内涵，要回头去看相对熵。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人工智能神经网络四种算法</title>
+    <url>/post/cbd530a7.html</url>
+    <content><![CDATA[<p>人工神经网络的许多算法已在智能信息处理系统中获得广泛采用，尤为突出是是以下4种算法：ART网络、LVQ网络、Kohonen网络Hopfield网络，下面就具体介绍一下这这四种算法：</p>
+<p><strong>1．自适应谐振理论（ART）网络</strong></p>
+<p>自适应谐振理论（ART）网络具有不同的方案。一个ART-1网络含有两层一个输入层和一个输出层。这两层完全互连，该连接沿着正向（自底向上）和反馈（自顶向下）两个方向进行。</p>
+<p>当ART-1网络在工作时，其训练是连续进行的，且包括下列算法步骤：</p>
+<p>（1）对于所有输出神经元，如果一个输出神经元的全部警戒权值均置为1，则称为独立神经元，因为它不被指定表示任何模式类型。</p>
+<p>（2）给出一个新的输入模式x。</p>
+<p>（3）使所有的输出神经元能够参加激发竞争。</p>
+<p>（4）从竞争神经元中找到获胜的输出神经元，即这个神经元的x·W值为最大；在开始训练时或不存在更好的输出神经元时，优胜神经元可能是个独立神经元。</p>
+<p>（5）检查该输入模式x是否与获胜神经元的警戒矢量V足够相似。</p>
+<p>（6）如果r≥p，即存在谐振，则转向步骤（7）；否则，使获胜神经元暂时无力进一步竞争，并转向步骤（4），重复这一过程直至不存在更多的有能力的神经元为止。</p>
+<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=1076120041,773083672&fm=173&app=49&f=JPEG" alt="img">ART网络</p>
+<p><strong>2．学习矢量量化（LVQ）网络</strong></p>
+<p>学习矢量量化（LVQ）网络，它由三层神经元组成，即输入转换层、隐含层和输出层。该网络在输入层与隐含层之间为完全连接，而在隐含层与输出层之间为部分连接，每个输出神经元与隐含神经元的不同组相连接。</p>
+<p>最简单的LVQ训练步骤如下：</p>
+<p>（1）预置参考矢量初始权值。</p>
+<p>（2）供给网络一个训练输入模式。</p>
+<p>（3）计算输人模式与每个参考矢量间的Euclidean距离。</p>
+<p>（4）更新最接近输入模式的参考矢量（即获胜隐含神经元的参考矢量）的权值。如果获胜隐含神经元以输入模式一样的类属于连接至输出神经元的缓冲器，那么参考矢量应更接近输入模式。否则，参考矢量就离开输人模式。</p>
+<p>（5）转至步骤（2），以某个新的训练输入模式重复本过程，直至全部训练模式被正确地分类或者满足某个终止准则为止。</p>
+<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=81949266,355555348&fm=173&app=49&f=JPEG" alt="img">LVQ网络</p>
+<p><strong>3．Kohonen网络</strong></p>
+<p>Kohonen网络或自组织特征映射网络含有两层，一个输入缓冲层用于接收输入模式，另一个为输出层，输出层的神经元一般按正则二维阵列排列，每个输出神经元连接至所有输入神经元。连接权值形成与已知输出神经元相连的参考矢量的分量。</p>
+<p>训练一个Kohonen网络包含下列步骤：</p>
+<p>（1）对所有输出神经元的参考矢量预置小的随机初值。</p>
+<p>（2）供给网络一个训练输入模式。</p>
+<p>（3）确定获胜的输出神经元，即参考矢量最接近输入模式的神经元。参考矢量与输入矢量间的Euclidean距离通常被用作距离测量。</p>
+<p>（4）更新获胜神经元的参考矢量及其近邻参考矢量。这些参考矢量（被引至）更接近输入矢量。对于获胜参考矢量，其调整是最大的，而对于离得更远的神经元，减少调整个神经元邻域的大小随着训练的进行而相对减小，到训练结束，只有获胜神经元的参考矢量被调整。</p>
+<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/u=3981122705,166961606&fm=173&app=49&f=JPEG" alt="img">Kohonen网络</p>
+<p><strong>4．Hopfield网络</strong></p>
+<p>Hopfield网络是一种典型的递归网络，这种网络通常只接受二进制输入（0或1）以及双极输入（+1或-1）。它含有一个单层神经元，每个神经元与所有其他神经元连接，形成递归结构。</p>
+<p><img src="/../images/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9B%9B%E7%A7%8D%E7%AE%97%E6%B3%95/20180112110954464" alt="img"></p>
+<p>上图为Hopfield神经网络结构图。</p>
+<p>   首先，网络结构上，Hopfield神经网络是一种单层互相全连接的反馈型神经网络。每个神经元既是输入也是输出，网络中的每一个神经元都将自己的输出通过连接权传送给所有其它神经元，同时又都接收所有其它神经元传递过来的信息。即：网络中的神经元在t时刻的输出状态实际上间接地与自己t-1时刻的输出状态有关。神经元之间互连接，所以得到的权重矩阵将是对称矩阵。</p>
+<p>​    同时，Hopfield神经网络成功引入能量函数的概念，使网络运行地稳定性判断有了可靠依据。基本的Hopfield神经网络是一个由非线性元件构成的全连接型单层递归系统。其状态变化可以用差分方程来表示。递归型网络的一个重要特点就是它具有稳定状态‘当网络达到稳定状态的时候，也就是它的能量函数达到最小的时候。这里的能量函数不是物理意义上的能量函数，而是在表达形式上与物理意义上的能量概念一致，即它表征网络状态的变化趋势，并可以依据Hopfield网络模型的工作运行规则不断地进行状态变化，最终能够到达具有某个极小值的目标函数。网络收敛就是指能量函数达到极小值。</p>
+<p>​    如果把一个最优化在着递归信号，网络的状态是随时间的变化而变化的，其运动轨迹必然存在着稳定性的问题。这就是递归网络与前向网络在网络性能分析上最大的区别之一在使用递归网络时，必须对其稳定性进行专门的分析与讨论，合理选择网络的参数变化范围，才能确保递归网络的正常工作。</p>
+<p>​    Hopfield神经网络模型有离散型和连续性两种，离散型适用于联想记忆，连续性适合处理优化问题。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能 -神经网络 -算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息熵</title>
+    <url>/post/4c350e9d.html</url>
+    <content><![CDATA[<p>我们简单介绍了<a href="https://aichn.cn/post/6375c8f0.html">香农信息量</a>的概念，由香农信息量我们可以知道对于一个已知概率的事件，我们需要多少的数据量能完整地把它表达清楚，不与外界产生歧义。但对于整个系统而言，其实我们更加关心的是表达系统整体所需要的信息量。比如我们上面举例的aaBaaaVaaaaa这段字母，虽然B和V的香农信息量比较大，但他们出现的次数明显要比a少很多，因此我们需要有一个方法来评估整体系统的信息量。</p>
+<p>相信你可以很容易想到利用期望这个东西，因此评估的方法可以是：“事件香农信息量×事件概率”的累加。这也正是信息熵的概念。</p>
+<p>如aaBaaaVaaaaa这段字母，信息熵为：<br>$$<br>-\frac{5}{6}log_2\frac{5}{6}-2×\frac{1}{12}log_2\frac{1}{12}=0.817<br>$$<br>abBcdeVfhgim这段字母，信息熵为：<br>$$<br>-12×\frac{1}{12}log_2\frac{1}{12}=3.585<br>$$<br>从数值上可以很直观地看出，第二段字母信息量大，和观察相一致。</p>
+<p>对于连续型随机变量，信息熵公式变为积分的形式，如下：</p>
+<p>$$<br>H ( p ) = H ( X ) = \mathrm { E } _ { x \sim p ( x ) } [ - \log p ( x ) ] = - \int p ( x ) \log p ( x ) d x<br>$$</p>
 ]]></content>
       <categories>
         <category>人工智能</category>
@@ -1498,46 +1542,15 @@
       </tags>
   </entry>
   <entry>
-    <title>信息熵</title>
-    <url>/post/4c350e9d.html</url>
-    <content><![CDATA[<p>我们简单介绍了<a href="https://aichn.cn/post/6375c8f0.html">香农信息量</a>的概念，由香农信息量我们可以知道对于一个已知概率的事件，我们需要多少的数据量能完整地把它表达清楚，不与外界产生歧义。但对于整个系统而言，其实我们更加关心的是表达系统整体所需要的信息量。比如我们上面举例的aaBaaaVaaaaa这段字母，虽然B和V的香农信息量比较大，但他们出现的次数明显要比a少很多，因此我们需要有一个方法来评估整体系统的信息量。</p>
-<p>相信你可以很容易想到利用期望这个东西，因此评估的方法可以是：“事件香农信息量×事件概率”的累加。这也正是信息熵的概念。</p>
-<p>如aaBaaaVaaaaa这段字母，信息熵为：<br>$$<br>-\frac{5}{6}log_2\frac{5}{6}-2×\frac{1}{12}log_2\frac{1}{12}=0.817<br>$$<br>abBcdeVfhgim这段字母，信息熵为：<br>$$<br>-12×\frac{1}{12}log_2\frac{1}{12}=3.585<br>$$<br>从数值上可以很直观地看出，第二段字母信息量大，和观察相一致。</p>
-<p>对于连续型随机变量，信息熵公式变为积分的形式，如下：</p>
-<p>$$<br>H ( p ) = H ( X ) = \mathrm { E } _ { x \sim p ( x ) } [ - \log p ( x ) ] = - \int p ( x ) \log p ( x ) d x<br>$$</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷</title>
-    <url>/post/7c5ef9ec.html</url>
-    <content><![CDATA[<p>在很多二分类问题中，特别是正负样本不均衡的分类问题中，常使用交叉熵作为loss对模型的参数求梯度进行更新，那为何交叉熵能作为损失函数呢，我也是带着这个问题去找解析的。</p>
-<p>以下仅为个人理解，如有不当地方，请读到的看客能指出。</p>
-<p>我们都知道，各种机器学习模型都是模拟输入的分布，使得模型输出的分布尽量与训练数据一致，最直观的就是MSE（均方误差，Mean squared deviation), 直接就是输出与输入的差值平方，尽量保证输入与输出相同。这种loss我们都能理解。</p>
-<p>以下按照（1）熵的定义（2）交叉熵的定义 (3) 交叉熵的由来 （4）交叉熵作为loss的优势 作为主线来一步步理清思路。</p>
-<p>（1）熵的定义 各种熵的名称均来自信息论领域，这方面的背景就不介绍了，随便就能找到很多。</p>
-<p>根据维基的定义，熵的定义如下：熵是接收的每条消息中包含的信息的平均量，又被称为信息熵、信源熵、平均自信息量。直白地解释就是信息中含的信息量的大小，其定义如下：</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827110906555" alt="img"></p>
-<p>其曲线如下所示：</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827111213829" alt="img"></p>
-<p>可以看出，一个事件的发生的概率离0.5越近，其熵就越大，概率为0或1就是确定性事件，不能为我们带信息量。也可以看作是一件事我们越难猜测是否会发生，它的信息熵就越大</p>
-<p>（2）交叉熵的定义 交叉熵的公式定义如下：</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827112109611" alt="img"></p>
-<p>其中p(x)在机器学习中为样本label，q(x)为模型的预估，分别代表训练样本和模型的分布，如果只是根据这个公式，是看不出来什么的，暂且放下，继续往下看</p>
-<p>（3）交叉熵的由来 将上面的交叉熵的公式减去一个固定的值（H(p), 训练样本的熵，训练样本定，该值即为固定值），即训练样本分布p(x)的熵，可得如下：</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827181853299" alt="img"></p>
-<p>最后得到的为相对熵或KL散度(Kullback-Leibler divergence), 亦可称为KL距离，是用于评判两个分布的差异程序，看到这里，应该明白为何交叉熵为何能作为loss了。即可以使得模型输出的分布尽量与训练样本的分布一致</p>
-<p>（4）交叉熵作为loss的优势 模型训练的loss有很多，交叉熵作为loss有很多应用场景，其最大的好处我认为是可以避免梯度消散，因为一般我们使用平方差作为损失函数，（<img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/gif.latex" alt="\hat{y}">-y）^2作为损失函数，这种损失函数在进行梯度下降计算的时候会出现梯度弥散，导致学习速率下降，使用交叉熵作为损失函数可以很好的解决这个问题。</p>
-<p>那我们再讨论一下，平方差为什么会梯度弥散，而交叉熵不会：</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20180924084311715" alt="img"></p>
-<p>因为y求导为y(y-1)所以趋近于0或1时上述倒数趋近于零，梯度弥散。</p>
-<p><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20180924084812961" alt="img"></p>
-<p>与sigmoid导数无关，从而避免了梯度弥散。</p>
+    <title>似然函数</title>
+    <url>/post/fbf175a6.html</url>
+    <content><![CDATA[<p>似然（likelihood）这个词其实和概率（probability）是差不多的意思，但是在统计里面，似然函数和概率函数却是两个不同的概念。</p>
+<p>对于函数：P(x∣θ)，输入有两个：x表示某一个具体的数据；θ表示模型的参数。</p>
+<p>如果θ是确定的，x是变量，这个函数叫做概率函数(probability function)，它描述对于不同的样本点x，其出现概率是多少。</p>
+<p>比如我们已经知道了一个箱子里有19个黑球和一个白球，现在问你从箱子里抽出两个球，是两个黑球的概率是多少，这个时候我们的模型参数是完全知道了，就是19个黑球和一个白球，不知道的是抽出的具体的球是什么。这个时候，P(x∣θ)就是概率函数。</p>
+<p>如果x是已知确定的，θ是变量，这个函数叫做似然函数(likelihood function)，它描述对于不同的模型参数，出现x这个样本点的概率是多少。</p>
+<p>比如我们有一箱子球，已经从里面抽出了1个黑球8个白球，问你箱子里面黑球和白球的分布模型参数是什么。这个时候我们是不知道箱子里面的具体情况的，但我们知道抽出球的样本分布，那么我们要用样本的分布来评估箱子里的球的模型分布，这个时候P(x∣θ)就是似然函数。</p>
+<p>参考文章：<a href="https://blog.csdn.net/u011508640/article/details/72815981">https://blog.csdn.net/u011508640/article/details/72815981</a></p>
 ]]></content>
       <categories>
         <category>人工智能</category>
@@ -1574,33 +1587,6 @@
       </tags>
   </entry>
   <entry>
-    <title>决策树中结点的特征选择方法</title>
-    <url>/post/e5078155.html</url>
-    <content><![CDATA[<h3 id="一、信息增益"><a href="#一、信息增益" class="headerlink" title="一、信息增益"></a>一、信息增益</h3><p> 信息增益用在ID3决策树中，信息增益是依据熵的变化值来决定的值。</p>
-<p> 熵：随机变量不确定性大小的度量。熵越大，变量的不确定性就越大。</p>
-<p> 熵的公式表示：</p>
-<p>​     X的概率分布为P(x=xi) = pi, i=1,2,3…(x可能的取值)，随机变量X熵为<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">，并且0log0=1。</p>
-<p>​    条件熵：H(Y|X)表示在随机变量X的条件下随机变量Y的不确定性。<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img"></p>
-<p>​    在决策树中，Y即是数据集，X即是某个特征，即条件熵就是数据集在特征A划分条件下的熵。</p>
-<p>​    信息增益：数据集D的熵H(D)与特征A给定条件下D的条件熵H(D|A)之差。g(D|A)=H(D)-H(D|A)</p>
-<p>​    因此根据信息增益决策划分节点时特征选择方法是：对训练数据集D，计算其每隔特征的信息增益，并比较它们的大小，选择信息增益最大的特征。</p>
-<h3 id="二、信息增益比"><a href="#二、信息增益比" class="headerlink" title="二、信息增益比"></a>二、信息增益比</h3><p>​    以信息增益作为划分数据集的特征，存在偏向于选择去取值较多的特征的问题，这时候可以使用信息增益比对这一问题进行修正。C4.5决策树正是基于信息增益比进行特征的选择进行结点的分割。</p>
-<p>​    信息增益比定义：特征A对于训练集D的信息增益比定义为信息增益g(D|A)与数据集D关于特征A的值得熵之比。</p>
-<p>​    公式定义：<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">,其中<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">。</p>
-<p>​    关于为什么信息增益比可以修正信息增益存在偏向去选择取值较多的特征的问题，可以认为当一个特征取值特别多时，会分出很多个子结点，当数据集不是很大时，每个子结点只能有很少的数据，大数定律满足条件性更差，不能体现整体数据集的分布，从而使得不确定性减小，比如这个特征有N个取值，且数据集恰好有N个例子，从而每个结点只有一个数据，从而每点的熵均为0，从而加起来也为0，从而信息增益最大。然而，当数据集十分大足够大时，就不会存在这种问题了。</p>
-<h3 id="三、基尼指数-Gini"><a href="#三、基尼指数-Gini" class="headerlink" title="三、基尼指数(Gini)"></a>三、基尼指数(Gini)</h3><p>​    CART树分为回归树和分类树，CART分类树结点选择特征进行分裂时选择特征的方法就是基尼指数。</p>
-<p>​    分类问题中，假设有K个类，样本点属于第k类的概率为<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">,则概率分布的基尼指数定义为：</p>
-<p>​    <img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">.</p>
-<p>​    基尼指数Gini(D)表示集合D的不确定性，基尼指数Gini(D，A)表示经A=a分割后集合D的不确定性，基尼指数越大，样本集合的不确定性也就越大，与熵类似。</p>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>-大数据</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>卷积与转置卷积</title>
     <url>/post/525002ea.html</url>
     <content><![CDATA[<p>卷积与转置卷积</p>
@@ -1634,19 +1620,6 @@
       </categories>
       <tags>
         <tag>-人工智能 -神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>交叉熵</title>
-    <url>/post/ea101373.html</url>
-    <content><![CDATA[<p>我们简单介绍了相对熵的概念，知道了相对熵可以用来表达真实事件和理论拟合出来的事件之间的差异。</p>
-<p>相对熵的公式如下：<br>$$<br>D _ { K L } ( p | q ) = \sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log p \left( x _ { i } \right)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>可以看到前面一项是真实事件的信息熵取反，我们可以直接写成<br>$$<br>D _ { K L } ( p | q ) = -H(p)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>在神经网络训练中，我们要训练的是<br>$$<br>q ( x _ { i })<br>$$<br>使得其与真实事件的分布越接近越好，也就是说在神经网络的训练中，相对熵会变的部分只有后面的部分，我们希望它越小越好，而前面的那部分是不变的。因此我们可以把后面的部分单独取出来，那部分就是交叉熵，写作：<br>$$<br>H(p，q) = -\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>这就是我们经常在神经网络训练中看到的交叉熵损失函数。如果要了解它的内涵，要回头去看相对熵。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -1829,6 +1802,54 @@
       </tags>
   </entry>
   <entry>
+    <title>决策树中结点的特征选择方法</title>
+    <url>/post/e5078155.html</url>
+    <content><![CDATA[<h3 id="一、信息增益"><a href="#一、信息增益" class="headerlink" title="一、信息增益"></a>一、信息增益</h3><p> 信息增益用在ID3决策树中，信息增益是依据熵的变化值来决定的值。</p>
+<p> 熵：随机变量不确定性大小的度量。熵越大，变量的不确定性就越大。</p>
+<p> 熵的公式表示：</p>
+<p>​     X的概率分布为P(x=xi) = pi, i=1,2,3…(x可能的取值)，随机变量X熵为<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">，并且0log0=1。</p>
+<p>​    条件熵：H(Y|X)表示在随机变量X的条件下随机变量Y的不确定性。<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img"></p>
+<p>​    在决策树中，Y即是数据集，X即是某个特征，即条件熵就是数据集在特征A划分条件下的熵。</p>
+<p>​    信息增益：数据集D的熵H(D)与特征A给定条件下D的条件熵H(D|A)之差。g(D|A)=H(D)-H(D|A)</p>
+<p>​    因此根据信息增益决策划分节点时特征选择方法是：对训练数据集D，计算其每隔特征的信息增益，并比较它们的大小，选择信息增益最大的特征。</p>
+<h3 id="二、信息增益比"><a href="#二、信息增益比" class="headerlink" title="二、信息增益比"></a>二、信息增益比</h3><p>​    以信息增益作为划分数据集的特征，存在偏向于选择去取值较多的特征的问题，这时候可以使用信息增益比对这一问题进行修正。C4.5决策树正是基于信息增益比进行特征的选择进行结点的分割。</p>
+<p>​    信息增益比定义：特征A对于训练集D的信息增益比定义为信息增益g(D|A)与数据集D关于特征A的值得熵之比。</p>
+<p>​    公式定义：<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">,其中<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">。</p>
+<p>​    关于为什么信息增益比可以修正信息增益存在偏向去选择取值较多的特征的问题，可以认为当一个特征取值特别多时，会分出很多个子结点，当数据集不是很大时，每个子结点只能有很少的数据，大数定律满足条件性更差，不能体现整体数据集的分布，从而使得不确定性减小，比如这个特征有N个取值，且数据集恰好有N个例子，从而每个结点只有一个数据，从而每点的熵均为0，从而加起来也为0，从而信息增益最大。然而，当数据集十分大足够大时，就不会存在这种问题了。</p>
+<h3 id="三、基尼指数-Gini"><a href="#三、基尼指数-Gini" class="headerlink" title="三、基尼指数(Gini)"></a>三、基尼指数(Gini)</h3><p>​    CART树分为回归树和分类树，CART分类树结点选择特征进行分裂时选择特征的方法就是基尼指数。</p>
+<p>​    分类问题中，假设有K个类，样本点属于第k类的概率为<img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">,则概率分布的基尼指数定义为：</p>
+<p>​    <img src="/../images/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%AD%E7%BB%93%E7%82%B9%E7%9A%84%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/gif.latex" alt="img">.</p>
+<p>​    基尼指数Gini(D)表示集合D的不确定性，基尼指数Gini(D，A)表示经A=a分割后集合D的不确定性，基尼指数越大，样本集合的不确定性也就越大，与熵类似。</p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>-大数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何让Win7开机不输入密码直接登录的方法</title>
+    <url>/post/65be3812.html</url>
+    <content><![CDATA[<p>电脑是win7的系统，然而也很少别人来玩，但是为了安全还是设置了一个密码，但是每次开机后都需要在本地登录的时候填写密码，那么该如何让Win7开机不输入密码直接登录呢？</p>
+<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
+<li><p>点击屏幕左下角开始菜单</p>
+<p> 点击运行，若没有运行，那么按win+R键也可以</p>
+<p> 在运行的“打开”一行中输入“netplwiz” 点击”确定“</p>
+<p> 在弹出的窗口中点中你需要输入密码的那个账号，默认是Administrator 点中之后该帐户背景会变为蓝色</p>
+<p> 去掉”要使用本机，用户必须输入用户名和密码“前面框框中的勾。</p>
+<p> 最后点击”应用“–在弹出的窗口中输入你电脑的登录密码   最后点击”确定“—“确定” 重启后生效。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>win7</category>
+      </categories>
+      <tags>
+        <tag>-win7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于TensorFlow框架搭建一个最简单的CNN框架</title>
     <url>/post/85ca40.html</url>
     <content><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p>本文将使用python，并借助TensorFlow框架搭建一个最简单的CNN框架，来实现对手写数字的识别。</p>
@@ -1873,27 +1894,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何让Win7开机不输入密码直接登录的方法</title>
-    <url>/post/65be3812.html</url>
-    <content><![CDATA[<p>电脑是win7的系统，然而也很少别人来玩，但是为了安全还是设置了一个密码，但是每次开机后都需要在本地登录的时候填写密码，那么该如何让Win7开机不输入密码直接登录呢？</p>
-<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
-<li><p>点击屏幕左下角开始菜单</p>
-<p> 点击运行，若没有运行，那么按win+R键也可以</p>
-<p> 在运行的“打开”一行中输入“netplwiz” 点击”确定“</p>
-<p> 在弹出的窗口中点中你需要输入密码的那个账号，默认是Administrator 点中之后该帐户背景会变为蓝色</p>
-<p> 去掉”要使用本机，用户必须输入用户名和密码“前面框框中的勾。</p>
-<p> 最后点击”应用“–在弹出的窗口中输入你电脑的登录密码   最后点击”确定“—“确定” 重启后生效。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>win7</category>
-      </categories>
-      <tags>
-        <tag>-win7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装 - LNMP一键安装包</title>
     <url>/post/398958a0.html</url>
     <content><![CDATA[<p> <a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a></p>
@@ -1926,6 +1926,21 @@
 <p><strong>6、eAccelerator、xcache、memcached、imageMagick、ionCube、redis、opcache的安装</strong><br><a href="https://lnmp.org/faq/addons.html">https://lnmp.org/faq/addons.html</a></p>
 <p><strong>7、LNMP相关软件目录及文件位置</strong><br><a href="https://lnmp.org/faq/lnmp-software-list.html">https://lnmp.org/faq/lnmp-software-list.html</a></p>
 <p><strong>8、LNMP状态管理命令</strong><br><a href="https://lnmp.org/faq/lnmp-status-manager.html">https://lnmp.org/faq/lnmp-status-manager.html</a></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拷贝网页上的公式到本地</title>
+    <url>/post/d1234036.html</url>
+    <content><![CDATA[<h3 id="有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。"><a href="#有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。" class="headerlink" title="有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。"></a>有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。<img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227174410743.png" alt="img"></h3><h3 id="就像上面这个，一截就变成了下面的这一串latex公式描述"><a href="#就像上面这个，一截就变成了下面的这一串latex公式描述" class="headerlink" title="就像上面这个，一截就变成了下面的这一串latex公式描述"></a>就像上面这个，一截就变成了下面的这一串latex公式描述</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\alpha &#x3D; - \arctan \left( \frac &#123; z _ &#123; 2 &#125; \sin \vartheta _ &#123; 2 &#125; - z _ &#123; 1 &#125; \sin \vartheta _ &#123; 1 &#125; &#125; &#123; z _ &#123; 2 &#125; \cos \vartheta _ &#123; 2 &#125; - z _ &#123; 1 &#125; \cos \vartheta _ &#123; 1 &#125; &#125; \right)</span><br></pre></td></tr></table></figure>
+<h3 id="接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。"><a href="#接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。" class="headerlink" title="接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。"></a>接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。</h3><h3 id="当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？"><a href="#当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？" class="headerlink" title="当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？"></a>当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？</h3><h3 id="有。还是以Typora为例，如下图所示选择“复制到-MS-Word”"><a href="#有。还是以Typora为例，如下图所示选择“复制到-MS-Word”" class="headerlink" title="有。还是以Typora为例，如下图所示选择“复制到 MS Word”"></a>有。还是以Typora为例，如下图所示选择“复制到 MS Word”</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227174837162.png" alt="img"></p>
+<h3 id="在word或者PowerPoint中右键选择"><a href="#在word或者PowerPoint中右键选择" class="headerlink" title="在word或者PowerPoint中右键选择"></a>在word或者PowerPoint中右键选择</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227175130769.png" alt="img"></p>
+<h3 id="公式就优雅的过来啦！！！"><a href="#公式就优雅的过来啦！！！" class="headerlink" title="公式就优雅的过来啦！！！"></a>公式就优雅的过来啦！！！</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227175214295.png" alt="img"></p>
 ]]></content>
       <categories>
         <category>其他</category>
@@ -1987,21 +2002,6 @@
       </categories>
       <tags>
         <tag>-杂记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拷贝网页上的公式到本地</title>
-    <url>/post/d1234036.html</url>
-    <content><![CDATA[<h3 id="有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。"><a href="#有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。" class="headerlink" title="有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。"></a>有时在写文章或者搞别的东西的时候需要用到别人的公式，然而一般这些公式都是复制不了的，如果这个时候一个个去打可以说相当要命。然而我们可以通过：mathpix这个神器轻轻松松解决这个问题。有了它之后，在哪看到公式直接截图就可以帮我们翻译成latex公式。<img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227174410743.png" alt="img"></h3><h3 id="就像上面这个，一截就变成了下面的这一串latex公式描述"><a href="#就像上面这个，一截就变成了下面的这一串latex公式描述" class="headerlink" title="就像上面这个，一截就变成了下面的这一串latex公式描述"></a>就像上面这个，一截就变成了下面的这一串latex公式描述</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\alpha &#x3D; - \arctan \left( \frac &#123; z _ &#123; 2 &#125; \sin \vartheta _ &#123; 2 &#125; - z _ &#123; 1 &#125; \sin \vartheta _ &#123; 1 &#125; &#125; &#123; z _ &#123; 2 &#125; \cos \vartheta _ &#123; 2 &#125; - z _ &#123; 1 &#125; \cos \vartheta _ &#123; 1 &#125; &#125; \right)</span><br></pre></td></tr></table></figure>
-<h3 id="接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。"><a href="#接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。" class="headerlink" title="接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。"></a>接着，我们可以把这段描述放到Typora等markdown工具中，公式又将美好的出现在我们面前。</h3><h3 id="当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？"><a href="#当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？" class="headerlink" title="当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？"></a>当然到这里其实是不完整的。因为word虽然也可以支持latex公式，但还是比较麻烦。有没有方法能直接将上面的代码转成word直接能识别的格式呢？</h3><h3 id="有。还是以Typora为例，如下图所示选择“复制到-MS-Word”"><a href="#有。还是以Typora为例，如下图所示选择“复制到-MS-Word”" class="headerlink" title="有。还是以Typora为例，如下图所示选择“复制到 MS Word”"></a>有。还是以Typora为例，如下图所示选择“复制到 MS Word”</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227174837162.png" alt="img"></p>
-<h3 id="在word或者PowerPoint中右键选择"><a href="#在word或者PowerPoint中右键选择" class="headerlink" title="在word或者PowerPoint中右键选择"></a>在word或者PowerPoint中右键选择</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227175130769.png" alt="img"></p>
-<h3 id="公式就优雅的过来啦！！！"><a href="#公式就优雅的过来啦！！！" class="headerlink" title="公式就优雅的过来啦！！！"></a>公式就优雅的过来啦！！！</h3><p><img src="/../images/%E6%8B%B7%E8%B4%9D%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%9A%84%E5%85%AC%E5%BC%8F%E5%88%B0%E6%9C%AC%E5%9C%B0/20190227175214295.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2085,6 +2085,35 @@
       </categories>
       <tags>
         <tag>-斐讯 -技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习经典算法之-----最小二乘法</title>
+    <url>/post/46e20187.html</url>
+    <content><![CDATA[<p>最小二乘法</p>
+<p>  我们以最简单的一元线性模型来解释最小二乘法。什么是一元线性模型呢？ 监督学习中，如果预测的变量是离散的，我们称其为分类（如决策树，支持向量机等），如果预测的变量是连续的，我们称其为回归。回归分析中，如果只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且因变量和自变量之间是线性关系，则称为多元线性回归分析。对于二维空间线性是一条直线；对于三维空间线性是一个平面，对于多维空间线性是一个超平面…</p>
+<p>  对于一元线性回归模型, 假设从总体中获取了n组观察值（X1，Y1），（X2，Y2）， …，（Xn，Yn）。对于平面中的这n个点，可以使用无数条曲线来拟合。要求样本回归函数尽可能好地拟合这组值。综合起来看，这条直线处于样本数据的中心位置最合理。 选择最佳拟合曲线的标准可以确定为：使总的拟合误差（即总残差）达到最小。有以下三个标准可以选择：</p>
+<p>​    （1）用“残差和最小”确定直线位置是一个途径。但很快发现计算“残差和”存在相互抵消的问题。<br>​    （2）用“残差绝对值和最小”确定直线位置也是一个途径。但绝对值的计算比较麻烦。<br>​    （3）最小二乘法的原则是以“残差平方和最小”确定直线位置。用最小二乘法除了计算比较方便外，得到的估计量还具有优良特性。这种方法对异常值非常敏感。</p>
+<p>　 最常用的是普通最小二乘法（ Ordinary  Least Square，OLS）：所选择的回归模型应该使所有观察值的残差平方和达到最小。（Q为残差平方和）- 即采用平方损失函数。</p>
+<p> 样本回归模型：</p>
+<p>​         <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428434_7303.jpg" alt="img">          其中ei为样本（Xi, Yi）的误差</p>
+<p>  平方损失函数：</p>
+<p>​           <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428515_1582.jpg" alt="img"></p>
+<p>  则通过Q最小确定这条直线，即确定<img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428590_9906.jpg" alt="img">，以<img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428601_4150.jpg" alt="img">为变量，把它们看作是Q的函数，就变成了一个求极值的问题，可以通过求导数得到。求Q对两个待估参数的偏导数：</p>
+<p>​          <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428700_9699.jpg" alt="img">  </p>
+<p>  根据数学知识我们知道，函数的极值点为偏导为0的点。</p>
+<p>  解得：</p>
+<p>​          <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428824_3244.jpg" alt="img"></p>
+<p>这就是最小二乘法的解法，就是求得平方损失函数的极值点。</p>
+<p>下面通过一个例子来说明最小二乘法：</p>
+<p><img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/20160926100546115" alt="img"></p>
+<p><img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/20160926100605037" alt="img"></p>
+]]></content>
+      <categories>
+        <category>大数据</category>
+      </categories>
+      <tags>
+        <tag>-大数据 -机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -2281,35 +2310,6 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习经典算法之-----最小二乘法</title>
-    <url>/post/46e20187.html</url>
-    <content><![CDATA[<p>最小二乘法</p>
-<p>  我们以最简单的一元线性模型来解释最小二乘法。什么是一元线性模型呢？ 监督学习中，如果预测的变量是离散的，我们称其为分类（如决策树，支持向量机等），如果预测的变量是连续的，我们称其为回归。回归分析中，如果只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且因变量和自变量之间是线性关系，则称为多元线性回归分析。对于二维空间线性是一条直线；对于三维空间线性是一个平面，对于多维空间线性是一个超平面…</p>
-<p>  对于一元线性回归模型, 假设从总体中获取了n组观察值（X1，Y1），（X2，Y2）， …，（Xn，Yn）。对于平面中的这n个点，可以使用无数条曲线来拟合。要求样本回归函数尽可能好地拟合这组值。综合起来看，这条直线处于样本数据的中心位置最合理。 选择最佳拟合曲线的标准可以确定为：使总的拟合误差（即总残差）达到最小。有以下三个标准可以选择：</p>
-<p>​    （1）用“残差和最小”确定直线位置是一个途径。但很快发现计算“残差和”存在相互抵消的问题。<br>​    （2）用“残差绝对值和最小”确定直线位置也是一个途径。但绝对值的计算比较麻烦。<br>​    （3）最小二乘法的原则是以“残差平方和最小”确定直线位置。用最小二乘法除了计算比较方便外，得到的估计量还具有优良特性。这种方法对异常值非常敏感。</p>
-<p>　 最常用的是普通最小二乘法（ Ordinary  Least Square，OLS）：所选择的回归模型应该使所有观察值的残差平方和达到最小。（Q为残差平方和）- 即采用平方损失函数。</p>
-<p> 样本回归模型：</p>
-<p>​         <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428434_7303.jpg" alt="img">          其中ei为样本（Xi, Yi）的误差</p>
-<p>  平方损失函数：</p>
-<p>​           <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428515_1582.jpg" alt="img"></p>
-<p>  则通过Q最小确定这条直线，即确定<img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428590_9906.jpg" alt="img">，以<img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428601_4150.jpg" alt="img">为变量，把它们看作是Q的函数，就变成了一个求极值的问题，可以通过求导数得到。求Q对两个待估参数的偏导数：</p>
-<p>​          <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428700_9699.jpg" alt="img">  </p>
-<p>  根据数学知识我们知道，函数的极值点为偏导为0的点。</p>
-<p>  解得：</p>
-<p>​          <img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/1354428824_3244.jpg" alt="img"></p>
-<p>这就是最小二乘法的解法，就是求得平方损失函数的极值点。</p>
-<p>下面通过一个例子来说明最小二乘法：</p>
-<p><img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/20160926100546115" alt="img"></p>
-<p><img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E4%B9%8B-----%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/20160926100605037" alt="img"></p>
-]]></content>
-      <categories>
-        <category>大数据</category>
-      </categories>
-      <tags>
-        <tag>-大数据 -机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>极大似然估计（MLE）</title>
     <url>/post/107224d5.html</url>
     <content><![CDATA[<p>我们已经了解了似然函数是什么，但怎么去把里面的θ给求出来是个更加关键的问题。这篇我们将来探讨下这个问题。</p>
@@ -2406,81 +2406,6 @@
       </categories>
       <tags>
         <tag>-其他</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英国广播公司：《人类星球 第一季》(BBC Human Planet Season 1)【YYeTs人人影视出品】【中英双语字幕】【更新番外篇III】【完结】【BDRip】</title>
-    <url>/post/e9b1e83d.html</url>
-    <content><![CDATA[<p><a href="http://www.ed2000.com/ShowFile/250303.html">http://www.ed2000.com/ShowFile/250303.html</a> </p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E01.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733350684|71ba1fbf1a5ff5d536e33b50310620c6|h=zmfa2fgth6udm4kjckjr6lbzzz7f6uvn|/">人类星球.Human.Planet.S01E01.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>699.38 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E02.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733204896|973e503a87128d16366608ae882bbbfe|/">人类星球.Human.Planet.S01E02.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>699.24 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E03.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733417791|f9decbb04c2cf3204f86d5b6b29b41bd|/">人类星球.Human.Planet.S01E03.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>699.44 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E04.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732792914|9ad5d6528ba68db778dd57e94dfd3160|/">人类星球.Human.Planet.S01E04.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>698.85 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E05.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732790791|aa4271a0d52ab560446f448e9556ac13|/">人类星球.Human.Planet.S01E05.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>698.84 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E06.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732563535|4ccae7973262bcca6e64ab28c1105a32|/">人类星球.Human.Planet.S01E06.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>698.63 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E07.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732735197|5c60d64595b8237bd3cefb9c878c1418|/">人类星球.Human.Planet.S01E07.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>698.79 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E08.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733064183|84778ea88dd75856b8e26932e9811ac4|/">人类星球.Human.Planet.S01E08.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>699.10 MB</td>
-</tr>
-<tr>
-<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.%E7%95%AA%E5%A4%96%E7%AF%87.Human.Planet.Extra.3.Chi_Eng.WEBRip.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|243302285|45fea0c54d42772300a2f5f867511f7d|/">人类星球.番外篇.Human.Planet.Extra.3.Chi_Eng.WEBRip.1024X576.x264-YYeTs人人影视.mkv</a></td>
-<td>232.03 MB</td>
-</tr>
-</tbody></table>
-<p> <strong>中文名</strong>: 英国广播公司：人类星球 第一季</p>
-<p><strong>英文名</strong>: BBC: Human Planet Season 1</p>
-<p><strong>资源格式</strong>: BDRip</p>
-<p><strong>版本</strong>: [YYeTs人人影视出品][中英双语字幕][更新番外篇III][完结]</p>
-<p><strong>发行时间</strong>: 2011年01月03日</p>
-<p><strong>制作发行</strong>: 英国广播公司</p>
-<p><strong>地区</strong>: 英国</p>
-<p><strong>语言</strong>: 英语</p>
-<p><strong>简介</strong>:</p>
-<p> <img src="/../images/%E8%8B%B1%E5%9B%BD%E5%B9%BF%E6%92%AD%E5%85%AC%E5%8F%B8%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83%E7%AC%AC%E4%B8%80%E5%AD%A3/thumb.jpg" alt="img"></p>
-<p>【类型】: 科教 【影片长度】: 60 Minutes 【集数】: 8集 【字幕】: 无 【服务器】: 随机 【分享时间】: 全天</p>
-<blockquote>
-<p><strong>多版本下载：</strong><a href="http://yyets.com/showresource-juji-793.html">http://yyets.com/showresource-juji-793.html</a></p>
-</blockquote>
-<p>【内容介绍】： BBC8集大型电视系列片 - Human Planet （人类星球），探讨人与自然的关系。8集节目分别探讨极地、山区、海洋、丛林、草原、河流、沙漠和城市的人类活动。世界一流的自然与人类专家以及摄影师，从空中、陆地和水下抓拍珍贵镜头。BBC摄制组前往世界80个地方，抓拍了从未在电视屏幕上出现过的罕见精彩的人类活动。 Human Planet is is narrated by John Hurt and also features original music by composer Nitin Sawhney. The series looks at how human beings have been the only animals that have been able to adapt to life in every habitat on Earth. The series looks at man’s ability to survive in the most extreme environments on the planet. </p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-      <tags>
-        <tag>-电影</tag>
       </tags>
   </entry>
   <entry>
@@ -2668,6 +2593,93 @@
       </tags>
   </entry>
   <entry>
+    <title>英国广播公司：《人类星球 第一季》(BBC Human Planet Season 1)【YYeTs人人影视出品】【中英双语字幕】【更新番外篇III】【完结】【BDRip】</title>
+    <url>/post/e9b1e83d.html</url>
+    <content><![CDATA[<p><a href="http://www.ed2000.com/ShowFile/250303.html">http://www.ed2000.com/ShowFile/250303.html</a> </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E01.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733350684|71ba1fbf1a5ff5d536e33b50310620c6|h=zmfa2fgth6udm4kjckjr6lbzzz7f6uvn|/">人类星球.Human.Planet.S01E01.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>699.38 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E02.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733204896|973e503a87128d16366608ae882bbbfe|/">人类星球.Human.Planet.S01E02.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>699.24 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E03.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733417791|f9decbb04c2cf3204f86d5b6b29b41bd|/">人类星球.Human.Planet.S01E03.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>699.44 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E04.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732792914|9ad5d6528ba68db778dd57e94dfd3160|/">人类星球.Human.Planet.S01E04.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>698.85 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E05.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732790791|aa4271a0d52ab560446f448e9556ac13|/">人类星球.Human.Planet.S01E05.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>698.84 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E06.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732563535|4ccae7973262bcca6e64ab28c1105a32|/">人类星球.Human.Planet.S01E06.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>698.63 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E07.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|732735197|5c60d64595b8237bd3cefb9c878c1418|/">人类星球.Human.Planet.S01E07.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>698.79 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.Human.Planet.S01E08.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|733064183|84778ea88dd75856b8e26932e9811ac4|/">人类星球.Human.Planet.S01E08.Chi_Eng.BDRip.AC3.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>699.10 MB</td>
+</tr>
+<tr>
+<td><a href="http://ed2k//|file|%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83.%E7%95%AA%E5%A4%96%E7%AF%87.Human.Planet.Extra.3.Chi_Eng.WEBRip.1024X576.x264-YYeTs%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86(ED2000.COM).mkv|243302285|45fea0c54d42772300a2f5f867511f7d|/">人类星球.番外篇.Human.Planet.Extra.3.Chi_Eng.WEBRip.1024X576.x264-YYeTs人人影视.mkv</a></td>
+<td>232.03 MB</td>
+</tr>
+</tbody></table>
+<p> <strong>中文名</strong>: 英国广播公司：人类星球 第一季</p>
+<p><strong>英文名</strong>: BBC: Human Planet Season 1</p>
+<p><strong>资源格式</strong>: BDRip</p>
+<p><strong>版本</strong>: [YYeTs人人影视出品][中英双语字幕][更新番外篇III][完结]</p>
+<p><strong>发行时间</strong>: 2011年01月03日</p>
+<p><strong>制作发行</strong>: 英国广播公司</p>
+<p><strong>地区</strong>: 英国</p>
+<p><strong>语言</strong>: 英语</p>
+<p><strong>简介</strong>:</p>
+<p> <img src="/../images/%E8%8B%B1%E5%9B%BD%E5%B9%BF%E6%92%AD%E5%85%AC%E5%8F%B8%E4%BA%BA%E7%B1%BB%E6%98%9F%E7%90%83%E7%AC%AC%E4%B8%80%E5%AD%A3/thumb.jpg" alt="img"></p>
+<p>【类型】: 科教 【影片长度】: 60 Minutes 【集数】: 8集 【字幕】: 无 【服务器】: 随机 【分享时间】: 全天</p>
+<blockquote>
+<p><strong>多版本下载：</strong><a href="http://yyets.com/showresource-juji-793.html">http://yyets.com/showresource-juji-793.html</a></p>
+</blockquote>
+<p>【内容介绍】： BBC8集大型电视系列片 - Human Planet （人类星球），探讨人与自然的关系。8集节目分别探讨极地、山区、海洋、丛林、草原、河流、沙漠和城市的人类活动。世界一流的自然与人类专家以及摄影师，从空中、陆地和水下抓拍珍贵镜头。BBC摄制组前往世界80个地方，抓拍了从未在电视屏幕上出现过的罕见精彩的人类活动。 Human Planet is is narrated by John Hurt and also features original music by composer Nitin Sawhney. The series looks at how human beings have been the only animals that have been able to adapt to life in every habitat on Earth. The series looks at man’s ability to survive in the most extreme environments on the planet. </p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+      <tags>
+        <tag>-电影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>进远景论坛方法</title>
+    <url>/post/edb70a23.html</url>
+    <content><![CDATA[<p>修改hosts<br>218.93.127.136 pcbeta.com<br>218.93.127.136 uc.pcbeta.com<br>218.93.127.136 m.pcbeta.com<br>218.93.127.136 web.pcbeta.com<br>218.93.127.136 i.pcbeta.com<br>218.93.127.136 bbs.pcbeta.com<br>218.93.127.136 <a href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAu6psTyi+uBNSwM5kbsgXOExclEQBwqCNr7LAYdITHoVOgaj8AbWjZRMVJWer8MmNrc99WDfAa0fDx0jpvVAOecZVybKVEXRvGgj6bhyjG6iHY9qHh6BM0y">http://www.pcbeta.com</a><br>218.93.127.136 cdn.pcbeta.attachment.inimc.com<br>218.93.127.136 cdn.pcbeta.static.inimc.com<br>218.93.127.136 cdn.pcbeta.css.inimc.com<br>218.93.127.136 static.template.pcbeta.com</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>-其他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>西部数据 NAS 红盘 WD20EFRX 假货识别</title>
     <url>/post/36149d23.html</url>
     <content><![CDATA[<p>电脑外设鱼龙混杂，尤其像网上购买硬件，很多不懂得消费者很容易被JS得小伎俩欺骗。下面介绍简单的购买技巧来识别买到的硬盘是否为假货。</p>
@@ -2713,18 +2725,6 @@
       </categories>
       <tags>
         <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>进远景论坛方法</title>
-    <url>/post/edb70a23.html</url>
-    <content><![CDATA[<p>修改hosts<br>218.93.127.136 pcbeta.com<br>218.93.127.136 uc.pcbeta.com<br>218.93.127.136 m.pcbeta.com<br>218.93.127.136 web.pcbeta.com<br>218.93.127.136 i.pcbeta.com<br>218.93.127.136 bbs.pcbeta.com<br>218.93.127.136 <a href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAu6psTyi+uBNSwM5kbsgXOExclEQBwqCNr7LAYdITHoVOgaj8AbWjZRMVJWer8MmNrc99WDfAa0fDx0jpvVAOecZVybKVEXRvGgj6bhyjG6iHY9qHh6BM0y">http://www.pcbeta.com</a><br>218.93.127.136 cdn.pcbeta.attachment.inimc.com<br>218.93.127.136 cdn.pcbeta.static.inimc.com<br>218.93.127.136 cdn.pcbeta.css.inimc.com<br>218.93.127.136 static.template.pcbeta.com</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>-其他</tag>
       </tags>
   </entry>
   <entry>
@@ -2795,30 +2795,6 @@
       </categories>
       <tags>
         <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>香农信息量</title>
-    <url>/post/6375c8f0.html</url>
-    <content><![CDATA[<p>如果是连续型随机变量的情况，设p为随机变量X的概率分布，即p(x)为随机变量X在X=x处的概率密度函数值，则随机变量X在X=x处的香农信息量定义为：-<br>$$<br>log_2p(x)=log_2\frac{1}{p(x)}<br>$$<br>这时香农信息量的单位为比特。（如果非连续型随机变量，则为某一具体随机事件的概率，其他的同上）</p>
-<p>香农信息量用于刻画消除随机变量在处的不确定性所需的信息量的大小。</p>
-<p>上面是香农信息量的完整而严谨的表达，基本上读完就只剩下一个问题，为什么是这个式子？为了方便理解我们先看一下香农信息量在数据压缩应用的一般流程。</p>
-<p>假设我们有一段数据长下面这样：aaBaaaVaaaaa</p>
-<p>可以算出三个字母出现的概率分别为：</p>
-<p>$$<br>a:\frac{10}{12}，B:\frac{1}{12}，V:\frac{1}{12}<br>$$<br>香农信息量为：a:0.263，B:3.585，V:3.585</p>
-<p>也就是说如果我们要用比特来表述这几个字母，分别需要0.263，3.585，3.585个这样的比特。当然，由于比特是整数的，因此应该向上取整，变为1，4，4个比特。</p>
-<p>这个时候我们就可以按照这个指导对字母进行编码，比如把a编码为”00”，把B编码为”10001000”，V编码为”10011001”，然后用编码替换掉字母来完成压缩编码，数据压缩结果为：001000000100100000。</p>
-<p>上面例子看起来有点不合理，因为如果我们去搞，我们会编码出不一样的东西，如a编码为”00”，B编码为”1010”，V编码为”1111”，因此可以把数据压缩的更小。那么问题出现在哪呢？</p>
-<p>出现在这里的B和V这两个字母只用两个比特进行编码对于他们自身而言并不是充分的。在另外一个压缩的例子中，可以一下子就看出来：abBcdeVfhgim</p>
-<p>上面的每一个字母出现的概率都为<br>$$<br>\frac{1}{12}<br>$$<br>，假设我们还是以两个比特去编码B和V，那么就无法完全区分出12个字母。而如果是4个比特，便有16种可能性，可以足够区分这12个字母。</p>
-<p>现在回过头来看香农信息量的公式，它正是告诉我们，如果已经知道一个事件出现的概率，至少需要多少的比特数才能完整描绘这个事件（无论外部其他事件的概率怎么变化），其中为底的2就是比特的两种可能性，而因为二分是一个除的关系，因此自变量是概率分之一而不是概率本身。</p>
-<p>感性的看，如果我们知道a出现的概率为<br>$$<br>\frac{5}{6}<br>$$<br>，那么用比特中的”0”状态来表述它是完全合理的，因为其他事件的概率总和只有<br>$$<br>\frac{1}{6}<br>$$<br>，但我们给这<br>$$<br>\frac{1}{6}<br>$$<br>空出了比特的”1”这<br>$$<br>\frac{1}{2}<br>$$<br>的空间来表达他们，是完全足够的。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -2905,6 +2881,30 @@
       </categories>
       <tags>
         <tag>-python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>香农信息量</title>
+    <url>/post/6375c8f0.html</url>
+    <content><![CDATA[<p>如果是连续型随机变量的情况，设p为随机变量X的概率分布，即p(x)为随机变量X在X=x处的概率密度函数值，则随机变量X在X=x处的香农信息量定义为：-<br>$$<br>log_2p(x)=log_2\frac{1}{p(x)}<br>$$<br>这时香农信息量的单位为比特。（如果非连续型随机变量，则为某一具体随机事件的概率，其他的同上）</p>
+<p>香农信息量用于刻画消除随机变量在处的不确定性所需的信息量的大小。</p>
+<p>上面是香农信息量的完整而严谨的表达，基本上读完就只剩下一个问题，为什么是这个式子？为了方便理解我们先看一下香农信息量在数据压缩应用的一般流程。</p>
+<p>假设我们有一段数据长下面这样：aaBaaaVaaaaa</p>
+<p>可以算出三个字母出现的概率分别为：</p>
+<p>$$<br>a:\frac{10}{12}，B:\frac{1}{12}，V:\frac{1}{12}<br>$$<br>香农信息量为：a:0.263，B:3.585，V:3.585</p>
+<p>也就是说如果我们要用比特来表述这几个字母，分别需要0.263，3.585，3.585个这样的比特。当然，由于比特是整数的，因此应该向上取整，变为1，4，4个比特。</p>
+<p>这个时候我们就可以按照这个指导对字母进行编码，比如把a编码为”00”，把B编码为”10001000”，V编码为”10011001”，然后用编码替换掉字母来完成压缩编码，数据压缩结果为：001000000100100000。</p>
+<p>上面例子看起来有点不合理，因为如果我们去搞，我们会编码出不一样的东西，如a编码为”00”，B编码为”1010”，V编码为”1111”，因此可以把数据压缩的更小。那么问题出现在哪呢？</p>
+<p>出现在这里的B和V这两个字母只用两个比特进行编码对于他们自身而言并不是充分的。在另外一个压缩的例子中，可以一下子就看出来：abBcdeVfhgim</p>
+<p>上面的每一个字母出现的概率都为<br>$$<br>\frac{1}{12}<br>$$<br>，假设我们还是以两个比特去编码B和V，那么就无法完全区分出12个字母。而如果是4个比特，便有16种可能性，可以足够区分这12个字母。</p>
+<p>现在回过头来看香农信息量的公式，它正是告诉我们，如果已经知道一个事件出现的概率，至少需要多少的比特数才能完整描绘这个事件（无论外部其他事件的概率怎么变化），其中为底的2就是比特的两种可能性，而因为二分是一个除的关系，因此自变量是概率分之一而不是概率本身。</p>
+<p>感性的看，如果我们知道a出现的概率为<br>$$<br>\frac{5}{6}<br>$$<br>，那么用比特中的”0”状态来表述它是完全合理的，因为其他事件的概率总和只有<br>$$<br>\frac{1}{6}<br>$$<br>，但我们给这<br>$$<br>\frac{1}{6}<br>$$<br>空出了比特的”1”这<br>$$<br>\frac{1}{2}<br>$$<br>的空间来表达他们，是完全足够的。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -4783,7 +4783,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#99;&#x6f;&#x6e;&#x65;&#x79;&#x70;&#x6f;&#64;&#102;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#99;&#x6f;&#x6e;&#x65;&#x79;&#x70;&#x6f;&#64;&#102;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
+<p># Mail:   <a href="mailto:&#99;&#111;&#x6e;&#x65;&#x79;&#112;&#111;&#64;&#x66;&#x6f;&#120;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#99;&#111;&#x6e;&#x65;&#x79;&#112;&#111;&#64;&#x66;&#x6f;&#120;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p>import dlib     # 人脸处理的库 Dlib</p>
@@ -4909,7 +4909,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#99;&#111;&#x6e;&#101;&#121;&#112;&#111;&#x40;&#x66;&#x6f;&#120;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#99;&#111;&#x6e;&#101;&#121;&#112;&#111;&#x40;&#x66;&#x6f;&#120;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
+<p># Mail:   <a href="mailto:&#99;&#x6f;&#110;&#101;&#121;&#x70;&#111;&#x40;&#x66;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#99;&#x6f;&#110;&#101;&#121;&#x70;&#111;&#x40;&#x66;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p># 增加录入多张人脸到 CSV 的功能</p>
