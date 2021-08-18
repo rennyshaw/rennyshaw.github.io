@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/link/index.html</loc>
+    <loc>https://aichn.cn/tags/index.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aichn.cn/tags/index.html</loc>
+    <loc>https://aichn.cn/link/index.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
@@ -163,6 +163,13 @@
   </url>
   
   <url>
+    <loc>https://aichn.cn/post/edb70a23.html</loc>
+    
+    <lastmod>2021-03-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aichn.cn/post/e9b1e83d.html</loc>
     
     <lastmod>2021-03-15</lastmod>
@@ -178,13 +185,6 @@
   
   <url>
     <loc>https://aichn.cn/post/36149d23.html</loc>
-    
-    <lastmod>2021-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aichn.cn/post/edb70a23.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/post/e85f0a87.html</loc>
+    <loc>https://aichn.cn/post/1176dd62.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aichn.cn/post/1176dd62.html</loc>
+    <loc>https://aichn.cn/post/e85f0a87.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/post/ea101373.html</loc>
+    <loc>https://aichn.cn/post/7c5ef9ec.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aichn.cn/post/7c5ef9ec.html</loc>
+    <loc>https://aichn.cn/post/ea101373.html</loc>
     
     <lastmod>2021-03-15</lastmod>
     
@@ -606,7 +606,7 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>https://aichn.cn/tags/Python/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -620,7 +620,7 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/tags/Python/</loc>
+    <loc>https://aichn.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -783,14 +783,14 @@
   </url>
   
   <url>
-    <loc>https://aichn.cn/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <loc>https://aichn.cn/categories/python/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://aichn.cn/categories/python/</loc>
+    <loc>https://aichn.cn/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
