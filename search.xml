@@ -145,6 +145,21 @@
       </tags>
   </entry>
   <entry>
+    <title>JS散度</title>
+    <url>/post/c7d146d6.html</url>
+    <content><![CDATA[<p>前面我们介绍了<a href="https://aichn.cn/index/article/show/id/81.html">相对熵（KL散度）</a>的概念，知道了它可以用来表示两个概率分布之间的差异，但有个不大好的地方是它并不是对称的，因此有时用它来训练神经网络会有顺序不同造成不一样的训练结果的情况（其实个人觉得也就是训练时间差异罢了，也没那么严重）。为了克服这个问题，有人就提出了一个新的衡量公式，叫做JS散度，式子如下：<br>$$<br>J S \left( P _ { 1 } | P _ { 2 } \right) = \frac { 1 } { 2 } K L \left( P _ { 1 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right) + \frac { 1 } { 2 } K L \left( P _ { 2 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right)JS(P1∥P2)=21KL(P1∥2P1+P2)+21KL(P2∥2P1+P2)<br>$$<br>如果有一点数学功底的人可以轻易看出这个公式对于<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>是对称的，而且因为是两个KL的叠加，由相对熵的文章我们知道KL的值一定是大于等于0的，因此这个公式也一定大于等于0。</p>
+<p>现在只剩下一个关键问题，就是什么时候等于0的问题了。同样参考相对熵的文章我们知道当两个分布相同的时候等于0，那么换到这里，也就是：<br>$$<br>P _ { 1 }=\frac { P _ { 1 } + P _ { 2 } }{ 2 }\ \qquad 且 \qquad P _ { 2 }=\frac { P _ { 1 } + P _ { 2 } } { 2 }P_ { 1 }=2P_ { 1 }+P_ { 2 } 且P_ { 2 }=2P_ { 1 }+P_ { 2 }<br>$$<br>的时候。可以轻易看出来，JS散度等于0的时候跟KL散度一样，就是<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>完全一样的时候。那么推到这里，用JS散度来表达两个概率分布的差异就问题不大了。</p>
+<p>其实本人在看相对熵和JS散度的时候一直有疑问，就是当两个概率分布不一样的时候，它们的值是不是会随着距离的变大而变大，也就是说这两个公式跟概率分布的距离到底是不是一个单调的关系，但我没有看到别人在说这件事情。我自己想了半天之后得出的结论是不一定，可能随着概率分布的表达式不一样而有所变化。</p>
+<p>当然因为没有人讲这件事我至今也不知道这样想是不是对的，因此有老哥想明白了麻烦留个言告诉我。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能 -大数据</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GAN的数学推导和案例应用</title>
     <url>/post/2379.html</url>
     <content><![CDATA[<blockquote>
@@ -240,21 +255,6 @@
       </categories>
       <tags>
         <tag>-人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS散度</title>
-    <url>/post/c7d146d6.html</url>
-    <content><![CDATA[<p>前面我们介绍了<a href="https://aichn.cn/index/article/show/id/81.html">相对熵（KL散度）</a>的概念，知道了它可以用来表示两个概率分布之间的差异，但有个不大好的地方是它并不是对称的，因此有时用它来训练神经网络会有顺序不同造成不一样的训练结果的情况（其实个人觉得也就是训练时间差异罢了，也没那么严重）。为了克服这个问题，有人就提出了一个新的衡量公式，叫做JS散度，式子如下：<br>$$<br>J S \left( P _ { 1 } | P _ { 2 } \right) = \frac { 1 } { 2 } K L \left( P _ { 1 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right) + \frac { 1 } { 2 } K L \left( P _ { 2 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right)JS(P1∥P2)=21KL(P1∥2P1+P2)+21KL(P2∥2P1+P2)<br>$$<br>如果有一点数学功底的人可以轻易看出这个公式对于<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>是对称的，而且因为是两个KL的叠加，由相对熵的文章我们知道KL的值一定是大于等于0的，因此这个公式也一定大于等于0。</p>
-<p>现在只剩下一个关键问题，就是什么时候等于0的问题了。同样参考相对熵的文章我们知道当两个分布相同的时候等于0，那么换到这里，也就是：<br>$$<br>P _ { 1 }=\frac { P _ { 1 } + P _ { 2 } }{ 2 }\ \qquad 且 \qquad P _ { 2 }=\frac { P _ { 1 } + P _ { 2 } } { 2 }P_ { 1 }=2P_ { 1 }+P_ { 2 } 且P_ { 2 }=2P_ { 1 }+P_ { 2 }<br>$$<br>的时候。可以轻易看出来，JS散度等于0的时候跟KL散度一样，就是<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>完全一样的时候。那么推到这里，用JS散度来表达两个概率分布的差异就问题不大了。</p>
-<p>其实本人在看相对熵和JS散度的时候一直有疑问，就是当两个概率分布不一样的时候，它们的值是不是会随着距离的变大而变大，也就是说这两个公式跟概率分布的距离到底是不是一个单调的关系，但我没有看到别人在说这件事情。我自己想了半天之后得出的结论是不一定，可能随着概率分布的表达式不一样而有所变化。</p>
-<p>当然因为没有人讲这件事我至今也不知道这样想是不是对的，因此有老哥想明白了麻烦留个言告诉我。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能 -大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -680,128 +680,6 @@
       </tags>
   </entry>
   <entry>
-    <title>php7 windows版本启动提示丢失vcruntime140.dll</title>
-    <url>/post/d058b584.html</url>
-    <content><![CDATA[<p>php7 windows版本启动提示丢失vcruntime140.dll</p>
-<p>6月13日 php7终于没有跳票发布了alpha 版本啦，于是在自己的windows8.1上面安装准备体验一下，没想到启动的时候还是提示丢失vcruntime140.dll这个文件，于是上网百度搜索了半天没任何内容（这里严重鄙视百度） 天朝又不让用google 所以只能去官方网站爬一爬英文说明了，发现了点端倪，原来需要安装微软的vc++2015版本才行，下载地址在下方：</p>
-<p>VC14需要</p>
-<p><a href="https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145">https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145</a></p>
-<p>VC11需要</p>
-<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">http://www.microsoft.com/en-us/download/details.aspx?id=30679</a></p>
-<p>VC9需要</p>
-<p>64bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">http://www.microsoft.com/en-us/download/details.aspx?id=15336</a></p>
-<p>32bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582">http://www.microsoft.com/en-us/download/details.aspx?id=5582</a></p>
-]]></content>
-      <categories>
-        <category>php</category>
-      </categories>
-      <tags>
-        <tag>-php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>php实现事件监听与触发的方法</title>
-    <url>/post/a76a0e8c.html</url>
-    <content><![CDATA[<p>这篇文章主要介绍了php实现事件监听与触发的方法,可实现时间的绑定、触发与注销等功能,具有一定的参考借鉴价值,需要的朋友可以参考下</p>
-<p>..本文实例讲述了php实现事件监听与触发的方法。分享给大家供大家参考。具体分析如下：</p>
-<p>闲来无事，想了想PHP如何实现事件监听，参考了jQuery的事件绑定思路，简单的实现了一下。</p>
-<p>主要功能：</p>
-<p>1.绑定事件 支持一个事件绑定多个动作，支持绑定一次性事件</p>
-<p>2.触发事件</p>
-<p>3.注销事件</p>
-<p>复制代码 代码如下:</p>
-<p>class Event</p>
-<p>{</p>
-<p>protected static $listens    = array();</p>
-<p>public static function listen($event, $callback, $once=false){</p>
-<p>if(!is_callable($callback)) return false;</p>
-<p>self::$listens[$event][]   = array(‘callback’=&gt;$callback, ‘once’=&gt;$once);</p>
-<p>return true;</p>
-<p>}</p>
-<p>public static function one($event, $callback){</p>
-<p>return self::listen($event, $callback, true);</p>
-<p>}</p>
-<p>public static function remove($event, $index=null){</p>
-<p>if(is_null($index))</p>
-<p>unset(self::$listens[$event]);</p>
-<p>else</p>
-<p>unset(self::$listens[$event][$index]);</p>
-<p>}</p>
-<p>public static function trigger(){</p>
-<p>if(!func_num_args()) return;</p>
-<p>$args            = func_get_args();</p>
-<p>$event            = array_shift($args);</p>
-<p>if(!isset(self::$listens[$event])) return false;</p>
-<p>foreach((array) self::$listens[$event] as $index=&gt;$listen){</p>
-<p>$callback        = $listen[‘callback’];</p>
-<p>$listen[‘once’] &amp;&amp; self::remove($event, $index);</p>
-<p>call_user_func_array($callback, $args);</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>以下是一些调用的例子：</p>
-<p>复制代码 代码如下:// 增加监听walk事件</p>
-<p>Event::listen(‘walk’, function(){</p>
-<p>echo “I am walking…n”;</p>
-<p>});</p>
-<p>// 增加监听walk一次性事件</p>
-<p>Event::listen(‘walk’, function(){</p>
-<p>echo “I am listening…n”;</p>
-<p>}, true);</p>
-<p>// 触发walk事件</p>
-<p>Event::trigger(‘walk’);</p>
-<p>/*</p>
-<p>I am walking…</p>
-<p>I am listening…</p>
-<p>*/</p>
-<p>Event::trigger(‘walk’);</p>
-<p>/*</p>
-<p>I am walking…</p>
-<p>*/</p>
-<p>Event::one(‘say’, function($name=’’){</p>
-<p>echo “I am {$name}n”;</p>
-<p>});</p>
-<p>Event::trigger(‘say’, ‘deeka’); // 输出 I am deeka</p>
-<p>Event::trigger(‘say’, ‘deeka’); // not run</p>
-<p>class Foo</p>
-<p>{</p>
-<p>public function bar(){</p>
-<p>echo “Foo::bar() is calledn”;</p>
-<p>}</p>
-<p>public function test(){</p>
-<p>echo “Foo::foo() is called, agrs:”.json_encode(func_get_args()).”n”;</p>
-<p>}</p>
-<p>}</p>
-<p>$foo   = new Foo;</p>
-<p>Event::listen(‘bar’, array($foo, ‘bar’));</p>
-<p>Event::trigger(‘bar’);</p>
-<p>Event::listen(‘test’, array($foo, ‘test’));</p>
-<p>Event::trigger(‘test’, 1, 2, 3);</p>
-<p>class Bar</p>
-<p>{</p>
-<p>public static function foo(){</p>
-<p>echo “Bar::foo() is calledn”;</p>
-<p>}</p>
-<p>}</p>
-<p>Event::listen(‘bar1’, array(‘Bar’, ‘foo’));</p>
-<p>Event::trigger(‘bar1’);</p>
-<p>Event::listen(‘bar2’, ‘Bar::foo’);</p>
-<p>Event::trigger(‘bar2’);</p>
-<p>function bar(){</p>
-<p>echo “bar() is calledn”;</p>
-<p>}</p>
-<p>Event::listen(‘bar3’, ‘bar’);</p>
-<p>Event::trigger(‘bar3’);</p>
-<p>希望本文所述对大家的PHP程序设计有所帮助。</p>
-]]></content>
-      <categories>
-        <category>php</category>
-      </categories>
-      <tags>
-        <tag>-php</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python三步实现人脸识别</title>
     <url>/post/e86121cf.html</url>
     <content><![CDATA[<p>Face Recognition软件包</p>
@@ -978,6 +856,26 @@
       </tags>
   </entry>
   <entry>
+    <title>php7 windows版本启动提示丢失vcruntime140.dll</title>
+    <url>/post/d058b584.html</url>
+    <content><![CDATA[<p>php7 windows版本启动提示丢失vcruntime140.dll</p>
+<p>6月13日 php7终于没有跳票发布了alpha 版本啦，于是在自己的windows8.1上面安装准备体验一下，没想到启动的时候还是提示丢失vcruntime140.dll这个文件，于是上网百度搜索了半天没任何内容（这里严重鄙视百度） 天朝又不让用google 所以只能去官方网站爬一爬英文说明了，发现了点端倪，原来需要安装微软的vc++2015版本才行，下载地址在下方：</p>
+<p>VC14需要</p>
+<p><a href="https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145">https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145</a></p>
+<p>VC11需要</p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">http://www.microsoft.com/en-us/download/details.aspx?id=30679</a></p>
+<p>VC9需要</p>
+<p>64bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">http://www.microsoft.com/en-us/download/details.aspx?id=15336</a></p>
+<p>32bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582">http://www.microsoft.com/en-us/download/details.aspx?id=5582</a></p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>-php</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【刷机教程】【四核RK3128芯迪优美特X5】4个最新安卓固件〖附详细教程〗</title>
     <url>/post/a50b72fa.html</url>
     <content><![CDATA[<p>（1月24日更新添加2个固件，3月6日再增加一个最快固件，共4个固件供大家选择)四核RK3128芯片刷安卓最新刷机包教程和固件：</p>
@@ -1037,6 +935,108 @@
       </categories>
       <tags>
         <tag>-音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php实现事件监听与触发的方法</title>
+    <url>/post/a76a0e8c.html</url>
+    <content><![CDATA[<p>这篇文章主要介绍了php实现事件监听与触发的方法,可实现时间的绑定、触发与注销等功能,具有一定的参考借鉴价值,需要的朋友可以参考下</p>
+<p>..本文实例讲述了php实现事件监听与触发的方法。分享给大家供大家参考。具体分析如下：</p>
+<p>闲来无事，想了想PHP如何实现事件监听，参考了jQuery的事件绑定思路，简单的实现了一下。</p>
+<p>主要功能：</p>
+<p>1.绑定事件 支持一个事件绑定多个动作，支持绑定一次性事件</p>
+<p>2.触发事件</p>
+<p>3.注销事件</p>
+<p>复制代码 代码如下:</p>
+<p>class Event</p>
+<p>{</p>
+<p>protected static $listens    = array();</p>
+<p>public static function listen($event, $callback, $once=false){</p>
+<p>if(!is_callable($callback)) return false;</p>
+<p>self::$listens[$event][]   = array(‘callback’=&gt;$callback, ‘once’=&gt;$once);</p>
+<p>return true;</p>
+<p>}</p>
+<p>public static function one($event, $callback){</p>
+<p>return self::listen($event, $callback, true);</p>
+<p>}</p>
+<p>public static function remove($event, $index=null){</p>
+<p>if(is_null($index))</p>
+<p>unset(self::$listens[$event]);</p>
+<p>else</p>
+<p>unset(self::$listens[$event][$index]);</p>
+<p>}</p>
+<p>public static function trigger(){</p>
+<p>if(!func_num_args()) return;</p>
+<p>$args            = func_get_args();</p>
+<p>$event            = array_shift($args);</p>
+<p>if(!isset(self::$listens[$event])) return false;</p>
+<p>foreach((array) self::$listens[$event] as $index=&gt;$listen){</p>
+<p>$callback        = $listen[‘callback’];</p>
+<p>$listen[‘once’] &amp;&amp; self::remove($event, $index);</p>
+<p>call_user_func_array($callback, $args);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>以下是一些调用的例子：</p>
+<p>复制代码 代码如下:// 增加监听walk事件</p>
+<p>Event::listen(‘walk’, function(){</p>
+<p>echo “I am walking…n”;</p>
+<p>});</p>
+<p>// 增加监听walk一次性事件</p>
+<p>Event::listen(‘walk’, function(){</p>
+<p>echo “I am listening…n”;</p>
+<p>}, true);</p>
+<p>// 触发walk事件</p>
+<p>Event::trigger(‘walk’);</p>
+<p>/*</p>
+<p>I am walking…</p>
+<p>I am listening…</p>
+<p>*/</p>
+<p>Event::trigger(‘walk’);</p>
+<p>/*</p>
+<p>I am walking…</p>
+<p>*/</p>
+<p>Event::one(‘say’, function($name=’’){</p>
+<p>echo “I am {$name}n”;</p>
+<p>});</p>
+<p>Event::trigger(‘say’, ‘deeka’); // 输出 I am deeka</p>
+<p>Event::trigger(‘say’, ‘deeka’); // not run</p>
+<p>class Foo</p>
+<p>{</p>
+<p>public function bar(){</p>
+<p>echo “Foo::bar() is calledn”;</p>
+<p>}</p>
+<p>public function test(){</p>
+<p>echo “Foo::foo() is called, agrs:”.json_encode(func_get_args()).”n”;</p>
+<p>}</p>
+<p>}</p>
+<p>$foo   = new Foo;</p>
+<p>Event::listen(‘bar’, array($foo, ‘bar’));</p>
+<p>Event::trigger(‘bar’);</p>
+<p>Event::listen(‘test’, array($foo, ‘test’));</p>
+<p>Event::trigger(‘test’, 1, 2, 3);</p>
+<p>class Bar</p>
+<p>{</p>
+<p>public static function foo(){</p>
+<p>echo “Bar::foo() is calledn”;</p>
+<p>}</p>
+<p>}</p>
+<p>Event::listen(‘bar1’, array(‘Bar’, ‘foo’));</p>
+<p>Event::trigger(‘bar1’);</p>
+<p>Event::listen(‘bar2’, ‘Bar::foo’);</p>
+<p>Event::trigger(‘bar2’);</p>
+<p>function bar(){</p>
+<p>echo “bar() is calledn”;</p>
+<p>}</p>
+<p>Event::listen(‘bar3’, ‘bar’);</p>
+<p>Event::trigger(‘bar3’);</p>
+<p>希望本文所述对大家的PHP程序设计有所帮助。</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>-php</tag>
       </tags>
   </entry>
   <entry>
@@ -1275,27 +1275,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一条短信直接崩溃iPhone，几乎所有iOS设备躺枪</title>
-    <url>/post/3420606c.html</url>
-    <content><![CDATA[<p>iPhone 又出 Bug 了！国外有网友发现，只要给用 iPhone 的好友发送一段含有特殊字符的短信或者是 iMessage 消息，就会让对方的 iPhone 崩溃重启，这条信息最先出现在 Reddit 网站。这段字符信息包含了英文、阿拉伯文、中文和特殊符号：</p>
-<p><img src="/" alt="messagescrashingbug.jpg"></p>
-<blockquote>
-<p>Power<br>لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ<br>冗</p>
-</blockquote>
-<p>如果用户接收到这条短信，就会导致短信程序崩溃，手机重启。如果以短信应用的消息列表打开收到的短信，则会发生再次崩溃，如果进入了这条包含特殊字符的消息列表，这个对话窗口并不会崩溃，但如果再跳转到其他对话，消息应用又会崩溃，进入一个死循环。</p>
-<p>这个 BUG 目前影响苹果运行 iOS 8.3 的设备，包括 iPhone 和 iPad，也包括其他版本的 iOS 系统。如果 iPhone 处于安全模式下，则攻击不会生效，如果 iPhone 已经越狱，则越狱的 iPhone 会转入到安全模式。</p>
-<p>这可能是 iOS 通知中心预览功能处理 Unicode 字符时存在的一个 BUG，通知中心会在推送时会直接打开预览功能，所以会导致整个系统崩溃。</p>
-<p>如果收到这种短信，解决的办法有以下几种，例如能够在短信应用打开这条短信，可以回复对方一条短信来解决崩溃（例如再发送一条同样的短信进行报复 XD），如果是在消息列表中收到这种短信，可以尝试使用其他方法例如语音控制或者是社交软件分享一条消息给自己来解决崩溃。</p>
-<p>目前苹果已经知道了这个问题，正在进行修复，会不会提前发布小更新或者让 iOS 8.4 提前发布暂时还未清楚。</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>-其他</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【解决方案】WordPress无法建立到WordPress。org的安全连接</title>
     <url>/post/17062.html</url>
     <content><![CDATA[<p>服务器一直使用03系统，为了更好的满足需求决定升级系统，然而升级的路程的坎坷的，各种问题不曾间断，经过一夜努力终于在第二天的天明前完成了系统的各项配置。</p>
@@ -1320,6 +1299,27 @@
       </categories>
       <tags>
         <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一条短信直接崩溃iPhone，几乎所有iOS设备躺枪</title>
+    <url>/post/3420606c.html</url>
+    <content><![CDATA[<p>iPhone 又出 Bug 了！国外有网友发现，只要给用 iPhone 的好友发送一段含有特殊字符的短信或者是 iMessage 消息，就会让对方的 iPhone 崩溃重启，这条信息最先出现在 Reddit 网站。这段字符信息包含了英文、阿拉伯文、中文和特殊符号：</p>
+<p><img src="/" alt="messagescrashingbug.jpg"></p>
+<blockquote>
+<p>Power<br>لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ<br>冗</p>
+</blockquote>
+<p>如果用户接收到这条短信，就会导致短信程序崩溃，手机重启。如果以短信应用的消息列表打开收到的短信，则会发生再次崩溃，如果进入了这条包含特殊字符的消息列表，这个对话窗口并不会崩溃，但如果再跳转到其他对话，消息应用又会崩溃，进入一个死循环。</p>
+<p>这个 BUG 目前影响苹果运行 iOS 8.3 的设备，包括 iPhone 和 iPad，也包括其他版本的 iOS 系统。如果 iPhone 处于安全模式下，则攻击不会生效，如果 iPhone 已经越狱，则越狱的 iPhone 会转入到安全模式。</p>
+<p>这可能是 iOS 通知中心预览功能处理 Unicode 字符时存在的一个 BUG，通知中心会在推送时会直接打开预览功能，所以会导致整个系统崩溃。</p>
+<p>如果收到这种短信，解决的办法有以下几种，例如能够在短信应用打开这条短信，可以回复对方一条短信来解决崩溃（例如再发送一条同样的短信进行报复 XD），如果是在消息列表中收到这种短信，可以尝试使用其他方法例如语音控制或者是社交软件分享一条消息给自己来解决崩溃。</p>
+<p>目前苹果已经知道了这个问题，正在进行修复，会不会提前发布小更新或者让 iOS 8.4 提前发布暂时还未清楚。</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>-其他</tag>
       </tags>
   </entry>
   <entry>
@@ -1544,6 +1544,22 @@
       </tags>
   </entry>
   <entry>
+    <title>信息熵</title>
+    <url>/post/4c350e9d.html</url>
+    <content><![CDATA[<p>我们简单介绍了<a href="https://aichn.cn/post/6375c8f0.html">香农信息量</a>的概念，由香农信息量我们可以知道对于一个已知概率的事件，我们需要多少的数据量能完整地把它表达清楚，不与外界产生歧义。但对于整个系统而言，其实我们更加关心的是表达系统整体所需要的信息量。比如我们上面举例的aaBaaaVaaaaa这段字母，虽然B和V的香农信息量比较大，但他们出现的次数明显要比a少很多，因此我们需要有一个方法来评估整体系统的信息量。</p>
+<p>相信你可以很容易想到利用期望这个东西，因此评估的方法可以是：“事件香农信息量×事件概率”的累加。这也正是信息熵的概念。</p>
+<p>如aaBaaaVaaaaa这段字母，信息熵为：<br>$$<br>-\frac{5}{6}log_2\frac{5}{6}-2×\frac{1}{12}log_2\frac{1}{12}=0.817<br>$$<br>abBcdeVfhgim这段字母，信息熵为：<br>$$<br>-12×\frac{1}{12}log_2\frac{1}{12}=3.585<br>$$<br>从数值上可以很直观地看出，第二段字母信息量大，和观察相一致。</p>
+<p>对于连续型随机变量，信息熵公式变为积分的形式，如下：</p>
+<p>$$<br>H ( p ) = H ( X ) = \mathrm { E } _ { x \sim p ( x ) } [ - \log p ( x ) ] = - \int p ( x ) \log p ( x ) d x<br>$$</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>共轭函数</title>
     <url>/post/e66f8853.html</url>
     <content><![CDATA[<p>共轭函数在最近火的不行的Gan生成对抗神经网络进阶版本的数学推理中有着神奇的作用，因此在这边记录下。</p>
@@ -1562,22 +1578,6 @@
 <p>这样当我们跑完整个t之后，就可以得到<br>$$<br>f ^ { * } ( t )<br>$$<br>的表达式。</p>
 <p><img src="/../images/%E5%85%B1%E8%BD%AD%E5%87%BD%E6%95%B0/20190108163103218.png" alt="在这里插入图片描述"><br>这个时候通过观察可以直接看出，<br>$$<br>f ^ { * } ( t )<br>$$<br>的斜率一定是不断增大的！那么它就是凸函数。当然从图上看可能会觉得虽然斜率是一直在增大，但在有些地方是不变的，这里无法直接从图上看出它是严格的凸函数，因此在这里存疑。但凸函数这点是一定的。</p>
 <p>再来看第二点。假设现在t固定，而我们要求xt−f(x)的最大值其实就是要求式子对x求导后为0的位置。很容易可以算出最大值在f′(x)=t时取得。而因为f(x)是凸函数，因此只有唯一的一个x使得f′(x)=t，也就是说从原函数到其共轭函数x和t是一对一一对应关系。又从性质一我们知道反过来也是成立的。结合两个函数都是凸函数且变量互相一一对应，可以得出凸函数的共轭函数的共轭函数一定是它自己，如下图：<br><img src="/../images/%E5%85%B1%E8%BD%AD%E5%87%BD%E6%95%B0/20190108163723173.png" alt="在这里插入图片描述"><br>假设<br>$$<br>x_?\not=x_1<br>$$<br>则虚线部分将存在无映射的情况，与已知相背。当然这解释有点抽象，但实在是水平有限，不知道怎么从公式本身来证明这件事情。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息熵</title>
-    <url>/post/4c350e9d.html</url>
-    <content><![CDATA[<p>我们简单介绍了<a href="https://aichn.cn/post/6375c8f0.html">香农信息量</a>的概念，由香农信息量我们可以知道对于一个已知概率的事件，我们需要多少的数据量能完整地把它表达清楚，不与外界产生歧义。但对于整个系统而言，其实我们更加关心的是表达系统整体所需要的信息量。比如我们上面举例的aaBaaaVaaaaa这段字母，虽然B和V的香农信息量比较大，但他们出现的次数明显要比a少很多，因此我们需要有一个方法来评估整体系统的信息量。</p>
-<p>相信你可以很容易想到利用期望这个东西，因此评估的方法可以是：“事件香农信息量×事件概率”的累加。这也正是信息熵的概念。</p>
-<p>如aaBaaaVaaaaa这段字母，信息熵为：<br>$$<br>-\frac{5}{6}log_2\frac{5}{6}-2×\frac{1}{12}log_2\frac{1}{12}=0.817<br>$$<br>abBcdeVfhgim这段字母，信息熵为：<br>$$<br>-12×\frac{1}{12}log_2\frac{1}{12}=3.585<br>$$<br>从数值上可以很直观地看出，第二段字母信息量大，和观察相一致。</p>
-<p>对于连续型随机变量，信息熵公式变为积分的形式，如下：</p>
-<p>$$<br>H ( p ) = H ( X ) = \mathrm { E } _ { x \sim p ( x ) } [ - \log p ( x ) ] = - \int p ( x ) \log p ( x ) d x<br>$$</p>
 ]]></content>
       <categories>
         <category>人工智能</category>
@@ -1715,6 +1715,47 @@
       </tags>
   </entry>
   <entry>
+    <title>VirtualminWebmin安装与使用强大的VPS服务器和虚拟主机管理系统</title>
+    <url>/post/8ff6ed20.html</url>
+    <content><![CDATA[<h2 id="在FreeNAS-BSD搭建基于Nginx-FastCGI-MySQL-PHP的WebServer"><a href="#在FreeNAS-BSD搭建基于Nginx-FastCGI-MySQL-PHP的WebServer" class="headerlink" title="在FreeNAS/BSD搭建基于Nginx+FastCGI+MySQL+PHP的WebServer"></a>在FreeNAS/BSD搭建基于Nginx+FastCGI+MySQL+PHP的WebServer</h2><p>使用FreeNAS也快半月月了，在上一篇文章介绍了利用FreeNAS能做的一些事情，其中一项是WebServer。搭建了FreeNAS之后，这项功能也是必不可少的，简单分享一下配置步骤，希望能帮助到同我一样的刚刚接触FreeNAS（同样适用于FreeBSD）的朋友。</p>
+<p>在FreeNAS之前，一直都是在Atom上跑Windows，因为作为文件服务器，除了存储文件/共享（Windows的局域网共享做这个确实很方便，但相比FreeNAS内置的SMB，还是稍显复杂，因为还需要通过一些不算简单的设置，才能解决NTFS权限问题，而FreeNAS中，都为你做好了），还有一个更重要的功能就是下载，虽然迅雷的资源共享方式稍显流氓，但其下载速度和资源探索能力也是无需置疑的（之后也会介绍一下如何利用FreeNAS/BSD打造属于自己的全能下载机）。</p>
+<p>说实话，相比Windows用了十数年，对于类unix系统，我是相当的不熟悉，也是毕业以后，由于工作需要，才渐渐的接触一些。时至至今，也只会通过apt-get pkg_add等方式来安装软件。在Windows下，一直都是用几年前自己写的一套脚本来安装基于Apache+MySQL+PHP的服务器，初次接触FreeBSD，参考了网上很多资料也终于实现了基于Nginx+FastCGI+MySQL+PHP的WebServer。</p>
+<p>以下所有的操作步骤都是在Shell下完成，可以在FreeNAS启动后，通过Console菜单6 Shell或在WebGUI中开启SSH服务登录。</p>
+<h3 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h3><p>如果你是在FreeNAS上安装PHP，请特别注意下面的几步，若是在FreeBSD上安装，可以忽略cp，mv的步骤，直接通过pkg_add安装PHP。</p>
+<p>因为安装FreeNAS的WebGUI是基于Lighttpd+PHP，重新安装PHP会引起系统崩溃，不仅WebGUI无法启动，连系统都无法引导，因此将PHP的安装放在第一步，如果这一步没有问题，后面的就都简单了。当时我也是经过N次失败才找到这个问题，分享出来，希望大家不要走弯路。</p>
+<p>首先，需要备份一个重要的文件，因为在PHP的安装后，会覆盖掉这个文件，而正是这个文件引起系统无法启动和WebGUI不能访问。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalliblibxml2.so.5 tmplibxml2.so.5</span><br></pre></td></tr></table></figure>
+<p>然后开始安装PHP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  php5</span><br><span class="line">pkg_add  php5-extensions</span><br><span class="line">pkg_add  php5-xmlrpc</span><br><span class="line">pkg_add  php5-gettext</span><br><span class="line">pkg_add  php5-mcrypt</span><br><span class="line">pkg_add  php5-mbstring</span><br></pre></td></tr></table></figure>
+<p>注意安装完后切忌不要重启，再继续输入下面的命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalbinphp usrlocalbinphp-cli usrlocalbinphp-cgi usrlocalbinphp usrlocalliblibxml2.so.5 tmplibxml2.so.5 usrlocalliblibxml2.so.5</span><br></pre></td></tr></table></figure>
+<p>至此PHP安装完成，请重启你的FreeNAS，如果能够正常访问WebGUI，恭喜你，接下去的步骤就简单多了。</p>
+<h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  mysql50-serverusrlocalbinmysql_install_db  mysql vardbmysqlusrlocalbinmysqld_safe usrlocalbinmysqladmin  root password</span><br></pre></td></tr></table></figure>
+<p>修改/etc/rc.conf加入mysql_enable=”YES”，至此MySQL安装完成。</p>
+<h3 id="安装Nginx-FastCGI"><a href="#安装Nginx-FastCGI" class="headerlink" title="安装Nginx+FastCGI"></a>安装Nginx+FastCGI</h3><p>由于FreeNAS的WebGUI已占用了80端口，因此建议先通过WebGUI&gt;System&gt;General&gt;WebGUI&gt;Port将WebGUI的端口改为其他，例如88。</p>
+<p>参阅了大量网上的Nginx+PHP的配置方案，无一例外都是通过lighttpd的spawn-fcgi来实现，这个脚本找了很久也没找到，虽然FreeNAS自带Lighttpd，我也没在系统内找到……，于是我只好重新安装了一遍Lighttpd。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  nginx</span><br><span class="line">pkg_add   lighttpd 0777 usrlocaletcnginxnginx.conf</span><br></pre></td></tr></table></figure>
+<p>编辑/usr/local/etc/nginx/nginx.conf，找到以下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &#x2F; &#123;</span><br><span class="line">        root   &#x2F;usr&#x2F;local&#x2F;www&#x2F;nginx;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在index最后增加index.php</p>
+<p>找到以下配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#location ~ \.php$ &#123;#    root           html;#    fastcgi_pass   127.0.0.1:9000;#    fastcgi_index  index.php;#    fastcgi_param  SCRIPT_FILENAME  &#x2F;scripts$fastcgi_script_name;#    include        fastcgi_params;#&#125;</span><br></pre></td></tr></table></figure>
+<p>去掉行首的注释符#，并改为以下内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> ~ \.php$ &#123;</span><br><span class="line">        root           html;</span><br><span class="line">        fastcgi_pass   127.0.0.1:;</span><br><span class="line">        fastcgi_index  index.php;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  &#x2F;usr&#x2F;local&#x2F;www&#x2F;nginx$fastcgi_script_name;                fastcgi_params;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此Nginx安装完成，然后通过下面的脚本分别启动FastCGI和Nginx。此脚本建议加入/etc/rc.local随机启动</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalbinspawn-fcgi  127.0.0.1    www  www    usrlocalbinphp-cgiusrlocalsbinnginx</span><br></pre></td></tr></table></figure>
+<p>然后在/usr/local/www/nginx目录下新建index.php。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?php echo phpinfo();</span><br></pre></td></tr></table></figure>
+<p>输入<a href="http://nas-ip/index.php%EF%BC%8C%E6%98%AF%E4%B8%8D%E6%98%AF%E7%9C%8B%E5%88%B0%E4%BA%86%E4%B9%85%E8%BF%9D%E7%9A%84phpinfo%EF%BC%9F">http://nas-ip/index.php，是不是看到了久违的phpinfo？</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>-linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在windows环境下让XAMPP使用Nginx作为Web服务器</title>
     <url>/post/a40b0852.html</url>
     <content><![CDATA[<h1 id="windows中下载（xampp）apache后使用nginx作为服务器"><a href="#windows中下载（xampp）apache后使用nginx作为服务器" class="headerlink" title="windows中下载（xampp）apache后使用nginx作为服务器"></a>windows中下载（xampp）apache后使用nginx作为服务器</h1><p>首先去php文件夹那里, 把那个php.ini Copy一份, 命名为php-cli.ini 让nginx使用. 而不会影响Apache 的使用。</p>
@@ -1788,47 +1829,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VirtualminWebmin安装与使用强大的VPS服务器和虚拟主机管理系统</title>
-    <url>/post/8ff6ed20.html</url>
-    <content><![CDATA[<h2 id="在FreeNAS-BSD搭建基于Nginx-FastCGI-MySQL-PHP的WebServer"><a href="#在FreeNAS-BSD搭建基于Nginx-FastCGI-MySQL-PHP的WebServer" class="headerlink" title="在FreeNAS/BSD搭建基于Nginx+FastCGI+MySQL+PHP的WebServer"></a>在FreeNAS/BSD搭建基于Nginx+FastCGI+MySQL+PHP的WebServer</h2><p>使用FreeNAS也快半月月了，在上一篇文章介绍了利用FreeNAS能做的一些事情，其中一项是WebServer。搭建了FreeNAS之后，这项功能也是必不可少的，简单分享一下配置步骤，希望能帮助到同我一样的刚刚接触FreeNAS（同样适用于FreeBSD）的朋友。</p>
-<p>在FreeNAS之前，一直都是在Atom上跑Windows，因为作为文件服务器，除了存储文件/共享（Windows的局域网共享做这个确实很方便，但相比FreeNAS内置的SMB，还是稍显复杂，因为还需要通过一些不算简单的设置，才能解决NTFS权限问题，而FreeNAS中，都为你做好了），还有一个更重要的功能就是下载，虽然迅雷的资源共享方式稍显流氓，但其下载速度和资源探索能力也是无需置疑的（之后也会介绍一下如何利用FreeNAS/BSD打造属于自己的全能下载机）。</p>
-<p>说实话，相比Windows用了十数年，对于类unix系统，我是相当的不熟悉，也是毕业以后，由于工作需要，才渐渐的接触一些。时至至今，也只会通过apt-get pkg_add等方式来安装软件。在Windows下，一直都是用几年前自己写的一套脚本来安装基于Apache+MySQL+PHP的服务器，初次接触FreeBSD，参考了网上很多资料也终于实现了基于Nginx+FastCGI+MySQL+PHP的WebServer。</p>
-<p>以下所有的操作步骤都是在Shell下完成，可以在FreeNAS启动后，通过Console菜单6 Shell或在WebGUI中开启SSH服务登录。</p>
-<h3 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h3><p>如果你是在FreeNAS上安装PHP，请特别注意下面的几步，若是在FreeBSD上安装，可以忽略cp，mv的步骤，直接通过pkg_add安装PHP。</p>
-<p>因为安装FreeNAS的WebGUI是基于Lighttpd+PHP，重新安装PHP会引起系统崩溃，不仅WebGUI无法启动，连系统都无法引导，因此将PHP的安装放在第一步，如果这一步没有问题，后面的就都简单了。当时我也是经过N次失败才找到这个问题，分享出来，希望大家不要走弯路。</p>
-<p>首先，需要备份一个重要的文件，因为在PHP的安装后，会覆盖掉这个文件，而正是这个文件引起系统无法启动和WebGUI不能访问。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalliblibxml2.so.5 tmplibxml2.so.5</span><br></pre></td></tr></table></figure>
-<p>然后开始安装PHP</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  php5</span><br><span class="line">pkg_add  php5-extensions</span><br><span class="line">pkg_add  php5-xmlrpc</span><br><span class="line">pkg_add  php5-gettext</span><br><span class="line">pkg_add  php5-mcrypt</span><br><span class="line">pkg_add  php5-mbstring</span><br></pre></td></tr></table></figure>
-<p>注意安装完后切忌不要重启，再继续输入下面的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalbinphp usrlocalbinphp-cli usrlocalbinphp-cgi usrlocalbinphp usrlocalliblibxml2.so.5 tmplibxml2.so.5 usrlocalliblibxml2.so.5</span><br></pre></td></tr></table></figure>
-<p>至此PHP安装完成，请重启你的FreeNAS，如果能够正常访问WebGUI，恭喜你，接下去的步骤就简单多了。</p>
-<h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  mysql50-serverusrlocalbinmysql_install_db  mysql vardbmysqlusrlocalbinmysqld_safe usrlocalbinmysqladmin  root password</span><br></pre></td></tr></table></figure>
-<p>修改/etc/rc.conf加入mysql_enable=”YES”，至此MySQL安装完成。</p>
-<h3 id="安装Nginx-FastCGI"><a href="#安装Nginx-FastCGI" class="headerlink" title="安装Nginx+FastCGI"></a>安装Nginx+FastCGI</h3><p>由于FreeNAS的WebGUI已占用了80端口，因此建议先通过WebGUI&gt;System&gt;General&gt;WebGUI&gt;Port将WebGUI的端口改为其他，例如88。</p>
-<p>参阅了大量网上的Nginx+PHP的配置方案，无一例外都是通过lighttpd的spawn-fcgi来实现，这个脚本找了很久也没找到，虽然FreeNAS自带Lighttpd，我也没在系统内找到……，于是我只好重新安装了一遍Lighttpd。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pkg_add  nginx</span><br><span class="line">pkg_add   lighttpd 0777 usrlocaletcnginxnginx.conf</span><br></pre></td></tr></table></figure>
-<p>编辑/usr/local/etc/nginx/nginx.conf，找到以下配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &#x2F; &#123;</span><br><span class="line">        root   &#x2F;usr&#x2F;local&#x2F;www&#x2F;nginx;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在index最后增加index.php</p>
-<p>找到以下配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#location ~ \.php$ &#123;#    root           html;#    fastcgi_pass   127.0.0.1:9000;#    fastcgi_index  index.php;#    fastcgi_param  SCRIPT_FILENAME  &#x2F;scripts$fastcgi_script_name;#    include        fastcgi_params;#&#125;</span><br></pre></td></tr></table></figure>
-<p>去掉行首的注释符#，并改为以下内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> ~ \.php$ &#123;</span><br><span class="line">        root           html;</span><br><span class="line">        fastcgi_pass   127.0.0.1:;</span><br><span class="line">        fastcgi_index  index.php;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  &#x2F;usr&#x2F;local&#x2F;www&#x2F;nginx$fastcgi_script_name;                fastcgi_params;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>至此Nginx安装完成，然后通过下面的脚本分别启动FastCGI和Nginx。此脚本建议加入/etc/rc.local随机启动</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">usrlocalbinspawn-fcgi  127.0.0.1    www  www    usrlocalbinphp-cgiusrlocalsbinnginx</span><br></pre></td></tr></table></figure>
-<p>然后在/usr/local/www/nginx目录下新建index.php。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?php echo phpinfo();</span><br></pre></td></tr></table></figure>
-<p>输入<a href="http://nas-ip/index.php%EF%BC%8C%E6%98%AF%E4%B8%8D%E6%98%AF%E7%9C%8B%E5%88%B0%E4%BA%86%E4%B9%85%E8%BF%9D%E7%9A%84phpinfo%EF%BC%9F">http://nas-ip/index.php，是不是看到了久违的phpinfo？</a></p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>-linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于TensorFlow框架搭建一个最简单的CNN框架</title>
     <url>/post/85ca40.html</url>
     <content><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p>本文将使用python，并借助TensorFlow框架搭建一个最简单的CNN框架，来实现对手写数字的识别。</p>
@@ -1873,6 +1873,27 @@
       </tags>
   </entry>
   <entry>
+    <title>如何让Win7开机不输入密码直接登录的方法</title>
+    <url>/post/65be3812.html</url>
+    <content><![CDATA[<p>电脑是win7的系统，然而也很少别人来玩，但是为了安全还是设置了一个密码，但是每次开机后都需要在本地登录的时候填写密码，那么该如何让Win7开机不输入密码直接登录呢？</p>
+<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
+<li><p>点击屏幕左下角开始菜单</p>
+<p> 点击运行，若没有运行，那么按win+R键也可以</p>
+<p> 在运行的“打开”一行中输入“netplwiz” 点击”确定“</p>
+<p> 在弹出的窗口中点中你需要输入密码的那个账号，默认是Administrator 点中之后该帐户背景会变为蓝色</p>
+<p> 去掉”要使用本机，用户必须输入用户名和密码“前面框框中的勾。</p>
+<p> 最后点击”应用“–在弹出的窗口中输入你电脑的登录密码   最后点击”确定“—“确定” 重启后生效。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>win7</category>
+      </categories>
+      <tags>
+        <tag>-win7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装 - LNMP一键安装包</title>
     <url>/post/398958a0.html</url>
     <content><![CDATA[<p> <a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a></p>
@@ -1911,27 +1932,6 @@
       </categories>
       <tags>
         <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何让Win7开机不输入密码直接登录的方法</title>
-    <url>/post/65be3812.html</url>
-    <content><![CDATA[<p>电脑是win7的系统，然而也很少别人来玩，但是为了安全还是设置了一个密码，但是每次开机后都需要在本地登录的时候填写密码，那么该如何让Win7开机不输入密码直接登录呢？</p>
-<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
-<li><p>点击屏幕左下角开始菜单</p>
-<p> 点击运行，若没有运行，那么按win+R键也可以</p>
-<p> 在运行的“打开”一行中输入“netplwiz” 点击”确定“</p>
-<p> 在弹出的窗口中点中你需要输入密码的那个账号，默认是Administrator 点中之后该帐户背景会变为蓝色</p>
-<p> 去掉”要使用本机，用户必须输入用户名和密码“前面框框中的勾。</p>
-<p> 最后点击”应用“–在弹出的窗口中输入你电脑的登录密码   最后点击”确定“—“确定” 重启后生效。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>win7</category>
-      </categories>
-      <tags>
-        <tag>-win7</tag>
       </tags>
   </entry>
   <entry>
@@ -2908,6 +2908,39 @@
       </tags>
   </entry>
   <entry>
+    <title>GAN生成对抗式神经网络实际操作</title>
+    <url>/post/22f26062.html</url>
+    <content><![CDATA[<p><a href="https://aichn.cn/post/5b91f628.html">上一篇文章</a>我们强力推导了GAN的数学公式，它就是：<br>$$<br>V = E _ { x \sim P _ { \text {data} } } [ \log D ( x ) ] + E _ { x \sim P _ { G } } [ \log ( 1 - D ( x ) ) ]<br>$$<br>在我们训练D网络的时候，我们要让V最大化，当我们训练G网络的时候我们要让V最小化，就是这么简单。因此哪怕数学推导那篇五六千字的博客不想看，实做也可以做。</p>
+<p>实做上比较大的一个问题是我们实际上不能获取到全部真实图像样本和全部拟合图像样本。因此上面这道公式在实做上是搞不成的。</p>
+<p>我们采取的方法是抽样。也就是从<br>$$<br>P _ { \text {data} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ x ^ { 1 } , x ^ { 2 } , \ldots , x ^ { m } }，<br>$$<br>再从<br>$$<br>P _ { \text {G} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ \tilde { x } ^ { 1 } , \tilde { x } ^ { 2 } , \ldots , \tilde { x } ^ { m } }，<br>$$<br>然后我们认为这m个样本的分布和总体的分布就差不多了。那么上面的公式就变成下面这个样子：<br>$$<br>\tilde { V } = \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right) + \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>当然可能有人会说，这样不就存在着误差吗？</p>
+<p>是的，但这个误差会随着样本的增多和样本分布的合理化而减小，因此我们在选样本的时候还是要注意样本的数量和分布的合理性。不要搞10张样本就拿来训练，起码是“万”级别的，且如果你想生成的是猫的图像，不要选几万张“白”猫，因为那样生成网络和判别网络均会认为猫就是白色的，没有别的颜色。</p>
+<p>OK，分析完误差之后我们假定样本是十分给力的，那么我们就能根据面这道公式来做计算。</p>
+<p>首先看到D网络，我们要做的是最大化上面这个<br>$$<br>\tilde { V }<br>$$<br>，先来看看logx长什么样。<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105228842.png" alt="在这里插入图片描述"><br>可以看出它是一个单调递增的函数，因此要<br>$$<br>\tilde { V }<br>$$<br>取得最大值，其实就是要<br>$$<br>\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right)和\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>分别取得最大值。也就是要<br>$$<br>D \left( x ^ { i } \right)<br>$$<br>取得最大值，<br>$$<br>1 - D \left( \tilde { x } ^ { i } \right)<br>$$<br>取得最大值。因此，我们只需要在输入真实样本的时候尽量让D网络输出1，而输入拟合样本的时候让网络尽量输出0就搞定了。</p>
+<p>这里有个非常神奇的地方，就是我们要求的这道式子跟二分类问题的交叉熵损失函数居然长的是一样的。我们先看看二分类问题的交叉熵损失函数长什么样：<br>$$<br>-\sum _ { i = 1 } ^ { m }p \left( x _ { i } \right)\log q \left( x _ { i } \right)-\sum _ { i = 1 } ^ { m }(1-p \left( x _ { i } \right))\log (1-q \left( \tilde { x } _ { i } \right))<br>$$<br>这里因为是二分问题，因此<br>$$<br>p \left( x _ { i } \right)<br>$$<br>在正样本中等于1，在负样本中等于0，这个时候上面的式子变成：<br>$$<br>-\sum _ { i = 1 } ^ { m }\log q \left( x _ { i } \right)-\sum _ { i = 1 } ^ { m }\log (1-q \left( \tilde { x } _ { i } \right))<br>$$<br>这道式子忽略掉常数项刚刚好是V取反。而我们本来求D网络就是求V取最大值的情况，一旦给V取反，则变成求最小值，直接等于损失函数的目标！真是不要太方便！</p>
+<p>那么具体流程是什么呢？</p>
+<p>1.从<br>$$<br>P _ { \text {data} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ x ^ { 1 } , x ^ { 2 } , \ldots , x ^ { m } }，<br>$$<br>再从<br>$$<br>P _ { \text {G} }(x)<br>$$<br>中抽出m个样本（也就是让G网络生成m个样本），写作<br>$$<br>{ \tilde { x } ^ { 1 } , \tilde { x } ^ { 2 } , \ldots , \tilde { x } ^ { m } }<br>$$<br>2.用二分问题的交叉熵损失函数作为损失函数，然后用样本对网络进行训练，完事，就是这么简单。</p>
+<p>再来看看G网络，我们从前面已经知道G网络的目标是最小化：<br>$$<br>\tilde { V } = \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right) + \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>因为在训练G网络的时候，D网络是不变的，因此上面式子左边的一项是不变的，相当于一个常数。而对于最小化问题来说，常数是不影响结果的，因此我们其实是在最小化：<br>$$<br>\tilde { V }_G= \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>按理说按照上面所述已经可以开始写代码了。但实际上还有个操作上的问题，这个问题出在log(1−x)这个函数上，它长这样：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105242348.png" alt="在这里插入图片描述"><br>可以看到当x接近1的时候该函数相当的陡峭，而在0附近它却不是很陡（其实对log(1−x)求下导就可以知道它的导数的绝对值是逐步增大的，也就是它渐渐变陡）。这有什么问题呢？</p>
+<p>问题就在于一开始的时候因为G网络的参数是接近随机的，基本上骗不过D网络，因此<br>$$<br>D \left( \tilde { x } ^ { i } \right)<br>$$<br>这个东西在一开始的时候总会输出接近0的数。而从上面我们知道，如果越接近0，那么log(1−x)这个损失函数就越平。而在训练后期，<br>$$<br>D \left( \tilde { x } ^ { i } \right)<br>$$<br>会慢慢增加（最理想是0.5），这个时候log(1−x)损失函数却越变越陡。这跟我们需要的是完全相反的！我们希望的是一开始训练快速收缩到最优解附近，然后慢慢调整找到最优解，而它反过来。因此虽然理论上那么列式是完全合理的，但实际上用这么一个损失函数会使得训练比较崩溃，十分的反直觉。因此为了解决这个问题，GAN用的损失函数并不是log(1−x)，而是−log(x)：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228112241677.png" alt="在这里插入图片描述"><br>这个损失函数就牛逼了，单调性和log(1−x)一样，且陡峭程度变化完全符合我们的要求。因此我们真正训练G网络的时候用的是它。但这么改有个问题，就是我们本来G网络训练的是一个JS距离，现在训练的却不知道是个啥，只知道它大致等价于JS距离。不过这个问题好像也不是很要紧，总之我们训练的是这个式子：<br>$$<br>\tilde { V }_G= -\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left(D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>看到这个式子再联系上面的D网络，聪明的你可能发现它长得和二分类问题的交叉熵损失函数输入正样本的情况又是一模一样的（除了个没多大所谓的常数项）。这在我们实际操作中简直不要太方便！具体流程是：</p>
+<p>1.从z中抽出m个样本，写作<br>$$<br>{ \tilde { z } ^ { 1 } , \tilde { z } ^ { 2 } , \ldots , \tilde { z } ^ { m } }<br>$$<br>2.用二分问题的交叉熵损失函数作为损失函数，然后用样本对网络进行训练，大功告成！</p>
+<p>那么具体的训练过程大概总结下是这个样子的，先定住G网络训练几次D网络，再定住D网络训练一次G网络，循环往复就行了。为什么是几次和一次呢？</p>
+<p>首先，因为我们希望D网络这把尺子准一点，最好每次都找到全局最优解，这样能更好的指导G网络。</p>
+<p>其次，我们希望G网络每次不要更新太多，具体可见下图：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105313523.png" alt="在这里插入图片描述"><br>如果更新太多，G网络的形状可能会从左边变到右边，这样D网络的最大值点会到处飘，比较难训练。</p>
+<p>下面放上实现代码，非常简单。主要参考的《深度学习框架PyTorch：入门与实践》这本书的代码，本人把其他复杂的东西删掉了，就剩下最简单的实现部分，这样看起来清楚点。</p>
+<p><a href="http://model.py/">model.py</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">from torch import nn</span><br><span class="line"></span><br><span class="line">class NetG(nn.Module):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    生成器定义</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    def __init__(self, opt):</span><br><span class="line">        super(NetG, self).__init__()</span><br><span class="line">        ngf &#x3D; opt.ngf  # 生成器feature map数</span><br><span class="line"></span><br><span class="line">        self.main &#x3D; nn.Sequential(</span><br><span class="line">            # 输入是一个nz维度的噪声，我们可以认为它是一个1*1*nz的feature map</span><br><span class="line">            nn.ConvTranspose2d(opt.nz, ngf * 8, 4, 1, 0, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 8),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状：(ngf*8) x 4 x 4</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 8, ngf * 4, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 4),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状： (ngf*4) x 8 x 8</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 4, ngf * 2, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 2),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状： (ngf*2) x 16 x 16</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 2, ngf, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状：(ngf) x 32 x 32</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf, 3, 5, 3, 1, bias&#x3D;False),</span><br><span class="line">            nn.Tanh()  # 输出范围 -1~1 故而采用Tanh</span><br><span class="line">            # 输出形状：3 x 96 x 96</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        return self.main(input)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class NetD(nn.Module):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    判别器定义</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    def __init__(self, opt):</span><br><span class="line">        super(NetD, self).__init__()</span><br><span class="line">        ndf &#x3D; opt.ndf</span><br><span class="line">        self.main &#x3D; nn.Sequential(</span><br><span class="line">            # 输入 3 x 96 x 96</span><br><span class="line">            nn.Conv2d(3, ndf, 5, 3, 1, bias&#x3D;False),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf) x 32 x 32</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf, ndf * 2, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 2),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*2) x 16 x 16</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 2, ndf * 4, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 4),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*4) x 8 x 8</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 4, ndf * 8, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 8),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*8) x 4 x 4</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 8, 1, 4, 1, 0, bias&#x3D;False),</span><br><span class="line">            nn.Sigmoid()  # 输出一个数(概率)</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        return self.main(input).view(-1)</span><br></pre></td></tr></table></figure>
+<p><a href="http://main.py/">main.py</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">import os</span><br><span class="line">import torch as t</span><br><span class="line">import torchvision as tv</span><br><span class="line">import tqdm</span><br><span class="line">from model import NetG, NetD</span><br><span class="line"></span><br><span class="line">class Config(object):</span><br><span class="line">    data_path &#x3D; &#39;data&#x2F;&#39;  # 数据集存放路径</span><br><span class="line">    num_workers &#x3D; 4  # 多进程加载数据所用的进程数</span><br><span class="line">    image_size &#x3D; 96  # 图片尺寸</span><br><span class="line">    batch_size &#x3D; 256  #一次训练样本数</span><br><span class="line">    max_epoch &#x3D; 200  #最大训练次数</span><br><span class="line">    lr1 &#x3D; 2e-4  # 生成器的学习率</span><br><span class="line">    lr2 &#x3D; 2e-4  # 判别器的学习率</span><br><span class="line">    beta1 &#x3D; 0.5  # Adam优化器的beta1参数</span><br><span class="line">    gpu &#x3D; True  # 是否使用GPU</span><br><span class="line">    nz &#x3D; 100  # 噪声维度</span><br><span class="line">    ngf &#x3D; 64  # 生成器feature map数</span><br><span class="line">    ndf &#x3D; 64  # 判别器feature map数</span><br><span class="line"></span><br><span class="line">    save_path &#x3D; &#39;imgs&#x2F;&#39;  # 生成图片保存路径</span><br><span class="line">    d_every &#x3D; 1  # 每1个batch训练一次判别器</span><br><span class="line">    g_every &#x3D; 5  # 每5个batch训练一次生成器</span><br><span class="line">    save_every &#x3D; 1  # 每1个epoch保存一次模型</span><br><span class="line">    #netd_path &#x3D; &#39;checkpoints&#x2F;netd.pth&#39;</span><br><span class="line">    #netg_path &#x3D; &#39;checkpoints&#x2F;netg.pth&#39;</span><br><span class="line">    netd_path &#x3D; None</span><br><span class="line">    netg_path &#x3D; None</span><br><span class="line"></span><br><span class="line">opt &#x3D; Config()</span><br><span class="line"></span><br><span class="line">def train():</span><br><span class="line">    device&#x3D;t.device(&#39;cuda&#39;) if opt.gpu else t.device(&#39;cpu&#39;)</span><br><span class="line"></span><br><span class="line">    # 读入数据格式转换</span><br><span class="line">    transforms &#x3D; tv.transforms.Compose([</span><br><span class="line">        tv.transforms.Resize(opt.image_size),#图像尺寸缩放</span><br><span class="line">        tv.transforms.ToTensor(),</span><br><span class="line">        tv.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))#先将数据归一化到（0,1），再用公式(x-mean)&#x2F;std将每个元素分布到（-1,1）</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line">    dataset &#x3D; tv.datasets.ImageFolder(opt.data_path, transform&#x3D;transforms)</span><br><span class="line">    dataloader &#x3D; t.utils.data.DataLoader(dataset,</span><br><span class="line">                                         batch_size&#x3D;opt.batch_size,</span><br><span class="line">                                         shuffle&#x3D;True,</span><br><span class="line">                                         num_workers&#x3D;opt.num_workers,</span><br><span class="line">                                         drop_last&#x3D;True</span><br><span class="line">                                         )</span><br><span class="line"></span><br><span class="line">    # 网络初始化，如有预训练模型则读入</span><br><span class="line">    netg, netd &#x3D; NetG(opt), NetD(opt)</span><br><span class="line">    map_location &#x3D; lambda storage, loc: storage</span><br><span class="line">    if opt.netd_path:</span><br><span class="line">        netd.load_state_dict(t.load(opt.netd_path, map_location&#x3D;map_location))</span><br><span class="line">    if opt.netg_path:</span><br><span class="line">        netg.load_state_dict(t.load(opt.netg_path, map_location&#x3D;map_location))</span><br><span class="line">    netd.to(device)</span><br><span class="line">    netg.to(device)</span><br><span class="line"></span><br><span class="line">    # 定义优化器和损失函数</span><br><span class="line">    optimizer_g &#x3D; t.optim.Adam(netg.parameters(), opt.lr1, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    optimizer_d &#x3D; t.optim.Adam(netd.parameters(), opt.lr2, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    criterion &#x3D; t.nn.BCELoss().to(device)</span><br><span class="line"></span><br><span class="line">    # 真图片label为1，假图片label为0</span><br><span class="line">    # noises为生成网络的输入</span><br><span class="line">    true_labels &#x3D; t.ones(opt.batch_size).to(device)</span><br><span class="line">    fake_labels &#x3D; t.zeros(opt.batch_size).to(device)</span><br><span class="line">    fix_noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)#产生正态分布的随机数，也就是G网络的z</span><br><span class="line">    noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)</span><br><span class="line"></span><br><span class="line">    epochs &#x3D; range(opt.max_epoch)</span><br><span class="line">    for epoch in iter(epochs):</span><br><span class="line">        for ii, (img, _) in tqdm.tqdm(enumerate(dataloader)):</span><br><span class="line">            real_img &#x3D; img.to(device)</span><br><span class="line"></span><br><span class="line">            if ii % opt.d_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练判别器</span><br><span class="line">                optimizer_d.zero_grad()#清空节点值</span><br><span class="line">                ## 尽可能的把真图片判别为正确</span><br><span class="line">                output &#x3D; netd(real_img)</span><br><span class="line">                error_d_real &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_d_real.backward()</span><br><span class="line"></span><br><span class="line">                ## 尽可能把假图片判别为错误</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises).detach()  # 根据噪声生成假图</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_d_fake &#x3D; criterion(output, fake_labels)</span><br><span class="line">                error_d_fake.backward()</span><br><span class="line">                optimizer_d.step()</span><br><span class="line"></span><br><span class="line">            if ii % opt.g_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练生成器</span><br><span class="line">                optimizer_g.zero_grad()</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises)</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_g &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_g.backward()</span><br><span class="line">                optimizer_g.step()</span><br><span class="line"></span><br><span class="line">        if (epoch+1) % opt.save_every &#x3D;&#x3D; 0:</span><br><span class="line">            # 保存模型、图片</span><br><span class="line">            fix_fake_imgs &#x3D; netg(fix_noises)</span><br><span class="line">            tv.utils.save_image(fix_fake_imgs.data[:64], &#39;%s&#x2F;%s.png&#39; % (opt.save_path, epoch), normalize&#x3D;True,range&#x3D;(-1, 1))</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd.pth&#39;)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg.pth&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd_%s.pth&#39; % epoch)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg_%s.pth&#39; % epoch)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    train()</span><br></pre></td></tr></table></figure>
+<p>一开始训练得到的图如下的一坨：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105416232.png" alt="在这里插入图片描述"><br>后面训练了一百多个轮次之后渐渐好了起来：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105426838.png" alt="在这里插入图片描述"><br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20190210180619325.png" alt="在这里插入图片描述"><br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20190210180625909.png" alt="在这里插入图片描述"><br>可以看到有些图片已经有模有样了，但有些还蛮崩坏的。这跟原生GAN的一些缺陷有关系，比如说DD网络容易过拟合，或者GG网络分布远远不足以覆盖目标子集，距离一直很大等等。这个在后面的改进版本逐步得到解决，会在以后研究到的时候跟大家分享。当然也可以直接去Bilibili看看李宏毅教授的视频，讲得非常给力！</p>
+<p>另外如果希望用可视化工具visdom，可以将main.py的代码修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">import os</span><br><span class="line">import torch as t</span><br><span class="line">import torchvision as tv</span><br><span class="line">import tqdm</span><br><span class="line">from model import NetG, NetD</span><br><span class="line">import visdom</span><br><span class="line"></span><br><span class="line">class Config(object):</span><br><span class="line">    data_path &#x3D; &#39;data&#x2F;&#39;  # 数据集存放路径</span><br><span class="line">    num_workers &#x3D; 4  # 多进程加载数据所用的进程数</span><br><span class="line">    image_size &#x3D; 96  # 图片尺寸</span><br><span class="line">    batch_size &#x3D; 256  #一次训练样本数</span><br><span class="line">    max_epoch &#x3D; 200  #最大训练次数</span><br><span class="line">    lr1 &#x3D; 2e-4  # 生成器的学习率</span><br><span class="line">    lr2 &#x3D; 2e-4  # 判别器的学习率</span><br><span class="line">    beta1 &#x3D; 0.5  # Adam优化器的beta1参数</span><br><span class="line">    gpu &#x3D; True  # 是否使用GPU</span><br><span class="line">    nz &#x3D; 100  # 噪声维度</span><br><span class="line">    ngf &#x3D; 64  # 生成器feature map数</span><br><span class="line">    ndf &#x3D; 64  # 判别器feature map数</span><br><span class="line"></span><br><span class="line">    save_path &#x3D; &#39;imgs&#x2F;&#39;  # 生成图片保存路径</span><br><span class="line">    d_every &#x3D; 1  # 每1个batch训练一次判别器</span><br><span class="line">    g_every &#x3D; 5  # 每5个batch训练一次生成器</span><br><span class="line">    save_every &#x3D; 1  # 每1个epoch保存一次模型</span><br><span class="line">    #netd_path &#x3D; &#39;checkpoints&#x2F;netd.pth&#39;</span><br><span class="line">    #netg_path &#x3D; &#39;checkpoints&#x2F;netg.pth&#39;</span><br><span class="line">    netd_path &#x3D; None</span><br><span class="line">    netg_path &#x3D; None</span><br><span class="line"></span><br><span class="line">opt &#x3D; Config()</span><br><span class="line"></span><br><span class="line">def train():</span><br><span class="line">    device&#x3D;t.device(&#39;cuda&#39;) if opt.gpu else t.device(&#39;cpu&#39;)</span><br><span class="line"></span><br><span class="line">    # 读入数据格式转换</span><br><span class="line">    transforms &#x3D; tv.transforms.Compose([</span><br><span class="line">        tv.transforms.Resize(opt.image_size),#图像尺寸缩放</span><br><span class="line">        tv.transforms.ToTensor(),</span><br><span class="line">        tv.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))#先将数据归一化到（0,1），再用公式(x-mean)&#x2F;std将每个元素分布到（-1,1）</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line">    dataset &#x3D; tv.datasets.ImageFolder(opt.data_path, transform&#x3D;transforms)</span><br><span class="line">    dataloader &#x3D; t.utils.data.DataLoader(dataset,</span><br><span class="line">                                         batch_size&#x3D;opt.batch_size,</span><br><span class="line">                                         shuffle&#x3D;True,</span><br><span class="line">                                         num_workers&#x3D;opt.num_workers,</span><br><span class="line">                                         drop_last&#x3D;True</span><br><span class="line">                                         )</span><br><span class="line"></span><br><span class="line">    # 网络初始化，如有预训练模型则读入</span><br><span class="line">    netg, netd &#x3D; NetG(opt), NetD(opt)</span><br><span class="line">    map_location &#x3D; lambda storage, loc: storage</span><br><span class="line">    if opt.netd_path:</span><br><span class="line">        netd.load_state_dict(t.load(opt.netd_path, map_location&#x3D;map_location))</span><br><span class="line">    if opt.netg_path:</span><br><span class="line">        netg.load_state_dict(t.load(opt.netg_path, map_location&#x3D;map_location))</span><br><span class="line">    netd.to(device)</span><br><span class="line">    netg.to(device)</span><br><span class="line"></span><br><span class="line">    # 定义优化器和损失函数</span><br><span class="line">    optimizer_g &#x3D; t.optim.Adam(netg.parameters(), opt.lr1, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    optimizer_d &#x3D; t.optim.Adam(netd.parameters(), opt.lr2, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    criterion &#x3D; t.nn.BCELoss().to(device)</span><br><span class="line"></span><br><span class="line">    # 真图片label为1，假图片label为0</span><br><span class="line">    # noises为生成网络的输入</span><br><span class="line">    true_labels &#x3D; t.ones(opt.batch_size).to(device)</span><br><span class="line">    fake_labels &#x3D; t.zeros(opt.batch_size).to(device)</span><br><span class="line">    fix_noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)#产生正态分布的随机数，也就是G网络的z</span><br><span class="line">    noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)</span><br><span class="line"></span><br><span class="line">    #可视化</span><br><span class="line">    vis &#x3D; visdom.Visdom()</span><br><span class="line"></span><br><span class="line">    epochs &#x3D; range(opt.max_epoch)</span><br><span class="line">    for epoch in iter(epochs):</span><br><span class="line">        for ii, (img, _) in tqdm.tqdm(enumerate(dataloader)):</span><br><span class="line">            real_img &#x3D; img.to(device)</span><br><span class="line"></span><br><span class="line">            if ii % opt.d_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练判别器</span><br><span class="line">                optimizer_d.zero_grad()#清空节点值</span><br><span class="line">                ## 尽可能的把真图片判别为正确</span><br><span class="line">                output &#x3D; netd(real_img)</span><br><span class="line">                error_d_real &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_d_real.backward()</span><br><span class="line"></span><br><span class="line">                ## 尽可能把假图片判别为错误</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises).detach()  # 根据噪声生成假图</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_d_fake &#x3D; criterion(output, fake_labels)</span><br><span class="line">                error_d_fake.backward()</span><br><span class="line">                optimizer_d.step()</span><br><span class="line"></span><br><span class="line">            if ii % opt.g_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练生成器</span><br><span class="line">                optimizer_g.zero_grad()</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises)</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_g &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_g.backward()</span><br><span class="line">                optimizer_g.step()</span><br><span class="line"></span><br><span class="line">        if (epoch+1) % opt.save_every &#x3D;&#x3D; 0:</span><br><span class="line">            # 保存模型、图片</span><br><span class="line">            fix_fake_imgs &#x3D; netg(fix_noises)</span><br><span class="line">            tv.utils.save_image(fix_fake_imgs.data[:64], &#39;%s&#x2F;%s.png&#39; % (opt.save_path, epoch), normalize&#x3D;True,range&#x3D;(-1, 1))</span><br><span class="line">            vis.images(fix_fake_imgs.detach().cpu().numpy()[:64] * 0.5 + 0.5, win&#x3D;&#39;fixfake&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd.pth&#39;)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg.pth&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd_%s.pth&#39; % epoch)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg_%s.pth&#39; % epoch)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    train()</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GAN生成对抗式神经网络数学推导</title>
     <url>/post/5b91f628.html</url>
     <content><![CDATA[<p>由<a href="https://aichn.cn/post/fbf175a6.html">上面一篇文章</a>我们已经知道了，如果我们从真实数据分布里面取n个样本，根据给定样本我们可以列出其出现概率的表达式，那么生成这N个样本数据的似然(likelihood)就是<br>$$<br>l ( \theta )= \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)<br>$$<br>我们要找到\thetaθ来最大化这个函数，便是极大似然估计，公式如下：<br>$$<br>\hat { \theta } = \arg \max _ { \theta } H ( \theta ) = \arg \max _ { \theta } \ln l ( \theta ) = \arg \max _ { \theta } \sum _ { i = 1 } ^ { N } \ln p \left( x _ { i } | \theta \right)<br>$$<br>那么下面我们来看看GAN的推导。</p>
@@ -2960,39 +2993,6 @@
 <p>还有更牛逼的，假设<br>$$<br>G ^ { * } = \arg \min _ { G } \max _ { D } V ( G , D )<br>$$<br>这倒公式的D定住了，我们可以把<br>$$<br>\max _ { D } V ( G , D )<br>$$<br>写成L(G)，它牛逼在哪？牛逼在于L(G)直接就是我们G网络的损失函数，我们要让L(G)取得最小值，不就是我们神经网络的目标吗！？完美！每每看到这里就不禁感慨大自然的神奇，数学的伟大和人类的渺小啥的。。。</p>
 <p>到此我们就把全部数学推导过程全部做完了，感觉真是一把老泪掉下来，不知不觉写了五千多字，应该是写过的最长的一篇博客了。到此你可能已经明白了数学怎么来的了，但其实还有另外一半，那就是实际该怎么实现，<a href="https://aichn.cn/index/article/show/id/87.html">下篇文章</a>将讨论这个问题。</p>
 ]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GAN生成对抗式神经网络实际操作</title>
-    <url>/post/22f26062.html</url>
-    <content><![CDATA[<p><a href="https://aichn.cn/post/5b91f628.html">上一篇文章</a>我们强力推导了GAN的数学公式，它就是：<br>$$<br>V = E _ { x \sim P _ { \text {data} } } [ \log D ( x ) ] + E _ { x \sim P _ { G } } [ \log ( 1 - D ( x ) ) ]<br>$$<br>在我们训练D网络的时候，我们要让V最大化，当我们训练G网络的时候我们要让V最小化，就是这么简单。因此哪怕数学推导那篇五六千字的博客不想看，实做也可以做。</p>
-<p>实做上比较大的一个问题是我们实际上不能获取到全部真实图像样本和全部拟合图像样本。因此上面这道公式在实做上是搞不成的。</p>
-<p>我们采取的方法是抽样。也就是从<br>$$<br>P _ { \text {data} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ x ^ { 1 } , x ^ { 2 } , \ldots , x ^ { m } }，<br>$$<br>再从<br>$$<br>P _ { \text {G} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ \tilde { x } ^ { 1 } , \tilde { x } ^ { 2 } , \ldots , \tilde { x } ^ { m } }，<br>$$<br>然后我们认为这m个样本的分布和总体的分布就差不多了。那么上面的公式就变成下面这个样子：<br>$$<br>\tilde { V } = \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right) + \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>当然可能有人会说，这样不就存在着误差吗？</p>
-<p>是的，但这个误差会随着样本的增多和样本分布的合理化而减小，因此我们在选样本的时候还是要注意样本的数量和分布的合理性。不要搞10张样本就拿来训练，起码是“万”级别的，且如果你想生成的是猫的图像，不要选几万张“白”猫，因为那样生成网络和判别网络均会认为猫就是白色的，没有别的颜色。</p>
-<p>OK，分析完误差之后我们假定样本是十分给力的，那么我们就能根据面这道公式来做计算。</p>
-<p>首先看到D网络，我们要做的是最大化上面这个<br>$$<br>\tilde { V }<br>$$<br>，先来看看logx长什么样。<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105228842.png" alt="在这里插入图片描述"><br>可以看出它是一个单调递增的函数，因此要<br>$$<br>\tilde { V }<br>$$<br>取得最大值，其实就是要<br>$$<br>\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right)和\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>分别取得最大值。也就是要<br>$$<br>D \left( x ^ { i } \right)<br>$$<br>取得最大值，<br>$$<br>1 - D \left( \tilde { x } ^ { i } \right)<br>$$<br>取得最大值。因此，我们只需要在输入真实样本的时候尽量让D网络输出1，而输入拟合样本的时候让网络尽量输出0就搞定了。</p>
-<p>这里有个非常神奇的地方，就是我们要求的这道式子跟二分类问题的交叉熵损失函数居然长的是一样的。我们先看看二分类问题的交叉熵损失函数长什么样：<br>$$<br>-\sum _ { i = 1 } ^ { m }p \left( x _ { i } \right)\log q \left( x _ { i } \right)-\sum _ { i = 1 } ^ { m }(1-p \left( x _ { i } \right))\log (1-q \left( \tilde { x } _ { i } \right))<br>$$<br>这里因为是二分问题，因此<br>$$<br>p \left( x _ { i } \right)<br>$$<br>在正样本中等于1，在负样本中等于0，这个时候上面的式子变成：<br>$$<br>-\sum _ { i = 1 } ^ { m }\log q \left( x _ { i } \right)-\sum _ { i = 1 } ^ { m }\log (1-q \left( \tilde { x } _ { i } \right))<br>$$<br>这道式子忽略掉常数项刚刚好是V取反。而我们本来求D网络就是求V取最大值的情况，一旦给V取反，则变成求最小值，直接等于损失函数的目标！真是不要太方便！</p>
-<p>那么具体流程是什么呢？</p>
-<p>1.从<br>$$<br>P _ { \text {data} }(x)<br>$$<br>中抽出m个样本，写作<br>$$<br>{ x ^ { 1 } , x ^ { 2 } , \ldots , x ^ { m } }，<br>$$<br>再从<br>$$<br>P _ { \text {G} }(x)<br>$$<br>中抽出m个样本（也就是让G网络生成m个样本），写作<br>$$<br>{ \tilde { x } ^ { 1 } , \tilde { x } ^ { 2 } , \ldots , \tilde { x } ^ { m } }<br>$$<br>2.用二分问题的交叉熵损失函数作为损失函数，然后用样本对网络进行训练，完事，就是这么简单。</p>
-<p>再来看看G网络，我们从前面已经知道G网络的目标是最小化：<br>$$<br>\tilde { V } = \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log D \left( x ^ { i } \right) + \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>因为在训练G网络的时候，D网络是不变的，因此上面式子左边的一项是不变的，相当于一个常数。而对于最小化问题来说，常数是不影响结果的，因此我们其实是在最小化：<br>$$<br>\tilde { V }_G= \frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left( 1 - D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>按理说按照上面所述已经可以开始写代码了。但实际上还有个操作上的问题，这个问题出在log(1−x)这个函数上，它长这样：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105242348.png" alt="在这里插入图片描述"><br>可以看到当x接近1的时候该函数相当的陡峭，而在0附近它却不是很陡（其实对log(1−x)求下导就可以知道它的导数的绝对值是逐步增大的，也就是它渐渐变陡）。这有什么问题呢？</p>
-<p>问题就在于一开始的时候因为G网络的参数是接近随机的，基本上骗不过D网络，因此<br>$$<br>D \left( \tilde { x } ^ { i } \right)<br>$$<br>这个东西在一开始的时候总会输出接近0的数。而从上面我们知道，如果越接近0，那么log(1−x)这个损失函数就越平。而在训练后期，<br>$$<br>D \left( \tilde { x } ^ { i } \right)<br>$$<br>会慢慢增加（最理想是0.5），这个时候log(1−x)损失函数却越变越陡。这跟我们需要的是完全相反的！我们希望的是一开始训练快速收缩到最优解附近，然后慢慢调整找到最优解，而它反过来。因此虽然理论上那么列式是完全合理的，但实际上用这么一个损失函数会使得训练比较崩溃，十分的反直觉。因此为了解决这个问题，GAN用的损失函数并不是log(1−x)，而是−log(x)：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228112241677.png" alt="在这里插入图片描述"><br>这个损失函数就牛逼了，单调性和log(1−x)一样，且陡峭程度变化完全符合我们的要求。因此我们真正训练G网络的时候用的是它。但这么改有个问题，就是我们本来G网络训练的是一个JS距离，现在训练的却不知道是个啥，只知道它大致等价于JS距离。不过这个问题好像也不是很要紧，总之我们训练的是这个式子：<br>$$<br>\tilde { V }_G= -\frac { 1 } { m } \sum _ { i = 1 } ^ { m } \log \left(D \left( \tilde { x } ^ { i } \right) \right)<br>$$<br>看到这个式子再联系上面的D网络，聪明的你可能发现它长得和二分类问题的交叉熵损失函数输入正样本的情况又是一模一样的（除了个没多大所谓的常数项）。这在我们实际操作中简直不要太方便！具体流程是：</p>
-<p>1.从z中抽出m个样本，写作<br>$$<br>{ \tilde { z } ^ { 1 } , \tilde { z } ^ { 2 } , \ldots , \tilde { z } ^ { m } }<br>$$<br>2.用二分问题的交叉熵损失函数作为损失函数，然后用样本对网络进行训练，大功告成！</p>
-<p>那么具体的训练过程大概总结下是这个样子的，先定住G网络训练几次D网络，再定住D网络训练一次G网络，循环往复就行了。为什么是几次和一次呢？</p>
-<p>首先，因为我们希望D网络这把尺子准一点，最好每次都找到全局最优解，这样能更好的指导G网络。</p>
-<p>其次，我们希望G网络每次不要更新太多，具体可见下图：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105313523.png" alt="在这里插入图片描述"><br>如果更新太多，G网络的形状可能会从左边变到右边，这样D网络的最大值点会到处飘，比较难训练。</p>
-<p>下面放上实现代码，非常简单。主要参考的《深度学习框架PyTorch：入门与实践》这本书的代码，本人把其他复杂的东西删掉了，就剩下最简单的实现部分，这样看起来清楚点。</p>
-<p><a href="http://model.py/">model.py</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">from torch import nn</span><br><span class="line"></span><br><span class="line">class NetG(nn.Module):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    生成器定义</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    def __init__(self, opt):</span><br><span class="line">        super(NetG, self).__init__()</span><br><span class="line">        ngf &#x3D; opt.ngf  # 生成器feature map数</span><br><span class="line"></span><br><span class="line">        self.main &#x3D; nn.Sequential(</span><br><span class="line">            # 输入是一个nz维度的噪声，我们可以认为它是一个1*1*nz的feature map</span><br><span class="line">            nn.ConvTranspose2d(opt.nz, ngf * 8, 4, 1, 0, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 8),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状：(ngf*8) x 4 x 4</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 8, ngf * 4, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 4),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状： (ngf*4) x 8 x 8</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 4, ngf * 2, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf * 2),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状： (ngf*2) x 16 x 16</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf * 2, ngf, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ngf),</span><br><span class="line">            nn.ReLU(True),</span><br><span class="line">            # 上一步的输出形状：(ngf) x 32 x 32</span><br><span class="line"></span><br><span class="line">            nn.ConvTranspose2d(ngf, 3, 5, 3, 1, bias&#x3D;False),</span><br><span class="line">            nn.Tanh()  # 输出范围 -1~1 故而采用Tanh</span><br><span class="line">            # 输出形状：3 x 96 x 96</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        return self.main(input)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class NetD(nn.Module):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    判别器定义</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    def __init__(self, opt):</span><br><span class="line">        super(NetD, self).__init__()</span><br><span class="line">        ndf &#x3D; opt.ndf</span><br><span class="line">        self.main &#x3D; nn.Sequential(</span><br><span class="line">            # 输入 3 x 96 x 96</span><br><span class="line">            nn.Conv2d(3, ndf, 5, 3, 1, bias&#x3D;False),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf) x 32 x 32</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf, ndf * 2, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 2),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*2) x 16 x 16</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 2, ndf * 4, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 4),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*4) x 8 x 8</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 4, ndf * 8, 4, 2, 1, bias&#x3D;False),</span><br><span class="line">            nn.BatchNorm2d(ndf * 8),</span><br><span class="line">            nn.LeakyReLU(0.2, inplace&#x3D;True),</span><br><span class="line">            # 输出 (ndf*8) x 4 x 4</span><br><span class="line"></span><br><span class="line">            nn.Conv2d(ndf * 8, 1, 4, 1, 0, bias&#x3D;False),</span><br><span class="line">            nn.Sigmoid()  # 输出一个数(概率)</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        return self.main(input).view(-1)</span><br></pre></td></tr></table></figure>
-<p><a href="http://main.py/">main.py</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">import os</span><br><span class="line">import torch as t</span><br><span class="line">import torchvision as tv</span><br><span class="line">import tqdm</span><br><span class="line">from model import NetG, NetD</span><br><span class="line"></span><br><span class="line">class Config(object):</span><br><span class="line">    data_path &#x3D; &#39;data&#x2F;&#39;  # 数据集存放路径</span><br><span class="line">    num_workers &#x3D; 4  # 多进程加载数据所用的进程数</span><br><span class="line">    image_size &#x3D; 96  # 图片尺寸</span><br><span class="line">    batch_size &#x3D; 256  #一次训练样本数</span><br><span class="line">    max_epoch &#x3D; 200  #最大训练次数</span><br><span class="line">    lr1 &#x3D; 2e-4  # 生成器的学习率</span><br><span class="line">    lr2 &#x3D; 2e-4  # 判别器的学习率</span><br><span class="line">    beta1 &#x3D; 0.5  # Adam优化器的beta1参数</span><br><span class="line">    gpu &#x3D; True  # 是否使用GPU</span><br><span class="line">    nz &#x3D; 100  # 噪声维度</span><br><span class="line">    ngf &#x3D; 64  # 生成器feature map数</span><br><span class="line">    ndf &#x3D; 64  # 判别器feature map数</span><br><span class="line"></span><br><span class="line">    save_path &#x3D; &#39;imgs&#x2F;&#39;  # 生成图片保存路径</span><br><span class="line">    d_every &#x3D; 1  # 每1个batch训练一次判别器</span><br><span class="line">    g_every &#x3D; 5  # 每5个batch训练一次生成器</span><br><span class="line">    save_every &#x3D; 1  # 每1个epoch保存一次模型</span><br><span class="line">    #netd_path &#x3D; &#39;checkpoints&#x2F;netd.pth&#39;</span><br><span class="line">    #netg_path &#x3D; &#39;checkpoints&#x2F;netg.pth&#39;</span><br><span class="line">    netd_path &#x3D; None</span><br><span class="line">    netg_path &#x3D; None</span><br><span class="line"></span><br><span class="line">opt &#x3D; Config()</span><br><span class="line"></span><br><span class="line">def train():</span><br><span class="line">    device&#x3D;t.device(&#39;cuda&#39;) if opt.gpu else t.device(&#39;cpu&#39;)</span><br><span class="line"></span><br><span class="line">    # 读入数据格式转换</span><br><span class="line">    transforms &#x3D; tv.transforms.Compose([</span><br><span class="line">        tv.transforms.Resize(opt.image_size),#图像尺寸缩放</span><br><span class="line">        tv.transforms.ToTensor(),</span><br><span class="line">        tv.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))#先将数据归一化到（0,1），再用公式(x-mean)&#x2F;std将每个元素分布到（-1,1）</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line">    dataset &#x3D; tv.datasets.ImageFolder(opt.data_path, transform&#x3D;transforms)</span><br><span class="line">    dataloader &#x3D; t.utils.data.DataLoader(dataset,</span><br><span class="line">                                         batch_size&#x3D;opt.batch_size,</span><br><span class="line">                                         shuffle&#x3D;True,</span><br><span class="line">                                         num_workers&#x3D;opt.num_workers,</span><br><span class="line">                                         drop_last&#x3D;True</span><br><span class="line">                                         )</span><br><span class="line"></span><br><span class="line">    # 网络初始化，如有预训练模型则读入</span><br><span class="line">    netg, netd &#x3D; NetG(opt), NetD(opt)</span><br><span class="line">    map_location &#x3D; lambda storage, loc: storage</span><br><span class="line">    if opt.netd_path:</span><br><span class="line">        netd.load_state_dict(t.load(opt.netd_path, map_location&#x3D;map_location))</span><br><span class="line">    if opt.netg_path:</span><br><span class="line">        netg.load_state_dict(t.load(opt.netg_path, map_location&#x3D;map_location))</span><br><span class="line">    netd.to(device)</span><br><span class="line">    netg.to(device)</span><br><span class="line"></span><br><span class="line">    # 定义优化器和损失函数</span><br><span class="line">    optimizer_g &#x3D; t.optim.Adam(netg.parameters(), opt.lr1, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    optimizer_d &#x3D; t.optim.Adam(netd.parameters(), opt.lr2, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    criterion &#x3D; t.nn.BCELoss().to(device)</span><br><span class="line"></span><br><span class="line">    # 真图片label为1，假图片label为0</span><br><span class="line">    # noises为生成网络的输入</span><br><span class="line">    true_labels &#x3D; t.ones(opt.batch_size).to(device)</span><br><span class="line">    fake_labels &#x3D; t.zeros(opt.batch_size).to(device)</span><br><span class="line">    fix_noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)#产生正态分布的随机数，也就是G网络的z</span><br><span class="line">    noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)</span><br><span class="line"></span><br><span class="line">    epochs &#x3D; range(opt.max_epoch)</span><br><span class="line">    for epoch in iter(epochs):</span><br><span class="line">        for ii, (img, _) in tqdm.tqdm(enumerate(dataloader)):</span><br><span class="line">            real_img &#x3D; img.to(device)</span><br><span class="line"></span><br><span class="line">            if ii % opt.d_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练判别器</span><br><span class="line">                optimizer_d.zero_grad()#清空节点值</span><br><span class="line">                ## 尽可能的把真图片判别为正确</span><br><span class="line">                output &#x3D; netd(real_img)</span><br><span class="line">                error_d_real &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_d_real.backward()</span><br><span class="line"></span><br><span class="line">                ## 尽可能把假图片判别为错误</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises).detach()  # 根据噪声生成假图</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_d_fake &#x3D; criterion(output, fake_labels)</span><br><span class="line">                error_d_fake.backward()</span><br><span class="line">                optimizer_d.step()</span><br><span class="line"></span><br><span class="line">            if ii % opt.g_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练生成器</span><br><span class="line">                optimizer_g.zero_grad()</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises)</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_g &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_g.backward()</span><br><span class="line">                optimizer_g.step()</span><br><span class="line"></span><br><span class="line">        if (epoch+1) % opt.save_every &#x3D;&#x3D; 0:</span><br><span class="line">            # 保存模型、图片</span><br><span class="line">            fix_fake_imgs &#x3D; netg(fix_noises)</span><br><span class="line">            tv.utils.save_image(fix_fake_imgs.data[:64], &#39;%s&#x2F;%s.png&#39; % (opt.save_path, epoch), normalize&#x3D;True,range&#x3D;(-1, 1))</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd.pth&#39;)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg.pth&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd_%s.pth&#39; % epoch)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg_%s.pth&#39; % epoch)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    train()</span><br></pre></td></tr></table></figure>
-<p>一开始训练得到的图如下的一坨：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105416232.png" alt="在这里插入图片描述"><br>后面训练了一百多个轮次之后渐渐好了起来：<br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105426838.png" alt="在这里插入图片描述"><br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20190210180619325.png" alt="在这里插入图片描述"><br><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20190210180625909.png" alt="在这里插入图片描述"><br>可以看到有些图片已经有模有样了，但有些还蛮崩坏的。这跟原生GAN的一些缺陷有关系，比如说DD网络容易过拟合，或者GG网络分布远远不足以覆盖目标子集，距离一直很大等等。这个在后面的改进版本逐步得到解决，会在以后研究到的时候跟大家分享。当然也可以直接去Bilibili看看李宏毅教授的视频，讲得非常给力！</p>
-<p>另外如果希望用可视化工具visdom，可以将main.py的代码修改如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding:utf-8</span><br><span class="line">import os</span><br><span class="line">import torch as t</span><br><span class="line">import torchvision as tv</span><br><span class="line">import tqdm</span><br><span class="line">from model import NetG, NetD</span><br><span class="line">import visdom</span><br><span class="line"></span><br><span class="line">class Config(object):</span><br><span class="line">    data_path &#x3D; &#39;data&#x2F;&#39;  # 数据集存放路径</span><br><span class="line">    num_workers &#x3D; 4  # 多进程加载数据所用的进程数</span><br><span class="line">    image_size &#x3D; 96  # 图片尺寸</span><br><span class="line">    batch_size &#x3D; 256  #一次训练样本数</span><br><span class="line">    max_epoch &#x3D; 200  #最大训练次数</span><br><span class="line">    lr1 &#x3D; 2e-4  # 生成器的学习率</span><br><span class="line">    lr2 &#x3D; 2e-4  # 判别器的学习率</span><br><span class="line">    beta1 &#x3D; 0.5  # Adam优化器的beta1参数</span><br><span class="line">    gpu &#x3D; True  # 是否使用GPU</span><br><span class="line">    nz &#x3D; 100  # 噪声维度</span><br><span class="line">    ngf &#x3D; 64  # 生成器feature map数</span><br><span class="line">    ndf &#x3D; 64  # 判别器feature map数</span><br><span class="line"></span><br><span class="line">    save_path &#x3D; &#39;imgs&#x2F;&#39;  # 生成图片保存路径</span><br><span class="line">    d_every &#x3D; 1  # 每1个batch训练一次判别器</span><br><span class="line">    g_every &#x3D; 5  # 每5个batch训练一次生成器</span><br><span class="line">    save_every &#x3D; 1  # 每1个epoch保存一次模型</span><br><span class="line">    #netd_path &#x3D; &#39;checkpoints&#x2F;netd.pth&#39;</span><br><span class="line">    #netg_path &#x3D; &#39;checkpoints&#x2F;netg.pth&#39;</span><br><span class="line">    netd_path &#x3D; None</span><br><span class="line">    netg_path &#x3D; None</span><br><span class="line"></span><br><span class="line">opt &#x3D; Config()</span><br><span class="line"></span><br><span class="line">def train():</span><br><span class="line">    device&#x3D;t.device(&#39;cuda&#39;) if opt.gpu else t.device(&#39;cpu&#39;)</span><br><span class="line"></span><br><span class="line">    # 读入数据格式转换</span><br><span class="line">    transforms &#x3D; tv.transforms.Compose([</span><br><span class="line">        tv.transforms.Resize(opt.image_size),#图像尺寸缩放</span><br><span class="line">        tv.transforms.ToTensor(),</span><br><span class="line">        tv.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))#先将数据归一化到（0,1），再用公式(x-mean)&#x2F;std将每个元素分布到（-1,1）</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line">    dataset &#x3D; tv.datasets.ImageFolder(opt.data_path, transform&#x3D;transforms)</span><br><span class="line">    dataloader &#x3D; t.utils.data.DataLoader(dataset,</span><br><span class="line">                                         batch_size&#x3D;opt.batch_size,</span><br><span class="line">                                         shuffle&#x3D;True,</span><br><span class="line">                                         num_workers&#x3D;opt.num_workers,</span><br><span class="line">                                         drop_last&#x3D;True</span><br><span class="line">                                         )</span><br><span class="line"></span><br><span class="line">    # 网络初始化，如有预训练模型则读入</span><br><span class="line">    netg, netd &#x3D; NetG(opt), NetD(opt)</span><br><span class="line">    map_location &#x3D; lambda storage, loc: storage</span><br><span class="line">    if opt.netd_path:</span><br><span class="line">        netd.load_state_dict(t.load(opt.netd_path, map_location&#x3D;map_location))</span><br><span class="line">    if opt.netg_path:</span><br><span class="line">        netg.load_state_dict(t.load(opt.netg_path, map_location&#x3D;map_location))</span><br><span class="line">    netd.to(device)</span><br><span class="line">    netg.to(device)</span><br><span class="line"></span><br><span class="line">    # 定义优化器和损失函数</span><br><span class="line">    optimizer_g &#x3D; t.optim.Adam(netg.parameters(), opt.lr1, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    optimizer_d &#x3D; t.optim.Adam(netd.parameters(), opt.lr2, betas&#x3D;(opt.beta1, 0.999))</span><br><span class="line">    criterion &#x3D; t.nn.BCELoss().to(device)</span><br><span class="line"></span><br><span class="line">    # 真图片label为1，假图片label为0</span><br><span class="line">    # noises为生成网络的输入</span><br><span class="line">    true_labels &#x3D; t.ones(opt.batch_size).to(device)</span><br><span class="line">    fake_labels &#x3D; t.zeros(opt.batch_size).to(device)</span><br><span class="line">    fix_noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)#产生正态分布的随机数，也就是G网络的z</span><br><span class="line">    noises &#x3D; t.randn(opt.batch_size, opt.nz, 1, 1).to(device)</span><br><span class="line"></span><br><span class="line">    #可视化</span><br><span class="line">    vis &#x3D; visdom.Visdom()</span><br><span class="line"></span><br><span class="line">    epochs &#x3D; range(opt.max_epoch)</span><br><span class="line">    for epoch in iter(epochs):</span><br><span class="line">        for ii, (img, _) in tqdm.tqdm(enumerate(dataloader)):</span><br><span class="line">            real_img &#x3D; img.to(device)</span><br><span class="line"></span><br><span class="line">            if ii % opt.d_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练判别器</span><br><span class="line">                optimizer_d.zero_grad()#清空节点值</span><br><span class="line">                ## 尽可能的把真图片判别为正确</span><br><span class="line">                output &#x3D; netd(real_img)</span><br><span class="line">                error_d_real &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_d_real.backward()</span><br><span class="line"></span><br><span class="line">                ## 尽可能把假图片判别为错误</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises).detach()  # 根据噪声生成假图</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_d_fake &#x3D; criterion(output, fake_labels)</span><br><span class="line">                error_d_fake.backward()</span><br><span class="line">                optimizer_d.step()</span><br><span class="line"></span><br><span class="line">            if ii % opt.g_every &#x3D;&#x3D; 0:</span><br><span class="line">                # 训练生成器</span><br><span class="line">                optimizer_g.zero_grad()</span><br><span class="line">                noises.data.copy_(t.randn(opt.batch_size, opt.nz, 1, 1))</span><br><span class="line">                fake_img &#x3D; netg(noises)</span><br><span class="line">                output &#x3D; netd(fake_img)</span><br><span class="line">                error_g &#x3D; criterion(output, true_labels)</span><br><span class="line">                error_g.backward()</span><br><span class="line">                optimizer_g.step()</span><br><span class="line"></span><br><span class="line">        if (epoch+1) % opt.save_every &#x3D;&#x3D; 0:</span><br><span class="line">            # 保存模型、图片</span><br><span class="line">            fix_fake_imgs &#x3D; netg(fix_noises)</span><br><span class="line">            tv.utils.save_image(fix_fake_imgs.data[:64], &#39;%s&#x2F;%s.png&#39; % (opt.save_path, epoch), normalize&#x3D;True,range&#x3D;(-1, 1))</span><br><span class="line">            vis.images(fix_fake_imgs.detach().cpu().numpy()[:64] * 0.5 + 0.5, win&#x3D;&#39;fixfake&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd.pth&#39;)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg.pth&#39;)</span><br><span class="line">            t.save(netd.state_dict(), &#39;checkpoints&#x2F;netd_%s.pth&#39; % epoch)</span><br><span class="line">            t.save(netg.state_dict(), &#39;checkpoints&#x2F;netg_%s.pth&#39; % epoch)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    train()</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>人工智能</category>
       </categories>
@@ -4783,7 +4783,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#x63;&#x6f;&#x6e;&#101;&#x79;&#112;&#x6f;&#x40;&#102;&#111;&#120;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x63;&#x6f;&#x6e;&#101;&#x79;&#112;&#x6f;&#x40;&#102;&#111;&#120;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p># Mail:   <a href="mailto:&#99;&#x6f;&#110;&#101;&#x79;&#112;&#111;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#99;&#x6f;&#110;&#101;&#x79;&#112;&#111;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p>import dlib     # 人脸处理的库 Dlib</p>
@@ -4909,7 +4909,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#x63;&#111;&#110;&#x65;&#x79;&#112;&#111;&#64;&#x66;&#x6f;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x63;&#111;&#110;&#x65;&#x79;&#112;&#111;&#64;&#x66;&#x6f;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p># Mail:   <a href="mailto:&#99;&#111;&#x6e;&#101;&#x79;&#112;&#111;&#64;&#102;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#99;&#111;&#x6e;&#101;&#x79;&#112;&#111;&#64;&#102;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p># 增加录入多张人脸到 CSV 的功能</p>
