@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>EFI系统分区设定盘符 取消盘符</title>
+    <url>/post/7f94f96a.html</url>
+    <content><![CDATA[<p>给EFI系统分区设定盘符Win7 64bit安装后的出现EFI分区，在磁盘管理中右键点击无法指定盘符，可以进行下面的操作。</p>
+<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><ul>
+<li>efi分区格式硬盘</li>
+<li>64位系统</li>
+</ul>
+<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
+<li>—-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7 assign letter=y (y为分配的盘符，任意)</li>
+<li>返回EFI系统分区隐藏 —-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=c12a7328-f81f-11d2-ba4b-00a0c93ec93b （EFI系统分区ID）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2013年7月flash游戏推荐</title>
     <url>/post/aecb2428.html</url>
     <content><![CDATA[<p><img src="/../images/2013%E5%B9%B47%E6%9C%88flash%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90/clip_image001.jpg" alt="http://cdn.aixifan.com/dotnet/artemis/u/cms/www/201307/301624317w88.jpg"></p>
@@ -31,26 +51,6 @@
       </categories>
       <tags>
         <tag>-电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EFI系统分区设定盘符 取消盘符</title>
-    <url>/post/7f94f96a.html</url>
-    <content><![CDATA[<p>给EFI系统分区设定盘符Win7 64bit安装后的出现EFI分区，在磁盘管理中右键点击无法指定盘符，可以进行下面的操作。</p>
-<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><ul>
-<li>efi分区格式硬盘</li>
-<li>64位系统</li>
-</ul>
-<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
-<li>—-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7 assign letter=y (y为分配的盘符，任意)</li>
-<li>返回EFI系统分区隐藏 —-以管理员身份运行cmd，输入： diskpart sel disk M(M为你的efi分区所在磁盘号，一般为数字0) list part sel part x (x为EFI分区分区号，我的是分区1，类型为“主要”) set id=c12a7328-f81f-11d2-ba4b-00a0c93ec93b （EFI系统分区ID）</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
       </tags>
   </entry>
   <entry>
@@ -142,21 +142,6 @@
       </categories>
       <tags>
         <tag>-linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS散度</title>
-    <url>/post/c7d146d6.html</url>
-    <content><![CDATA[<p>前面我们介绍了<a href="https://aichn.cn/index/article/show/id/81.html">相对熵（KL散度）</a>的概念，知道了它可以用来表示两个概率分布之间的差异，但有个不大好的地方是它并不是对称的，因此有时用它来训练神经网络会有顺序不同造成不一样的训练结果的情况（其实个人觉得也就是训练时间差异罢了，也没那么严重）。为了克服这个问题，有人就提出了一个新的衡量公式，叫做JS散度，式子如下：<br>$$<br>J S \left( P _ { 1 } | P _ { 2 } \right) = \frac { 1 } { 2 } K L \left( P _ { 1 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right) + \frac { 1 } { 2 } K L \left( P _ { 2 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right)JS(P1∥P2)=21KL(P1∥2P1+P2)+21KL(P2∥2P1+P2)<br>$$<br>如果有一点数学功底的人可以轻易看出这个公式对于<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>是对称的，而且因为是两个KL的叠加，由相对熵的文章我们知道KL的值一定是大于等于0的，因此这个公式也一定大于等于0。</p>
-<p>现在只剩下一个关键问题，就是什么时候等于0的问题了。同样参考相对熵的文章我们知道当两个分布相同的时候等于0，那么换到这里，也就是：<br>$$<br>P _ { 1 }=\frac { P _ { 1 } + P _ { 2 } }{ 2 }\ \qquad 且 \qquad P _ { 2 }=\frac { P _ { 1 } + P _ { 2 } } { 2 }P_ { 1 }=2P_ { 1 }+P_ { 2 } 且P_ { 2 }=2P_ { 1 }+P_ { 2 }<br>$$<br>的时候。可以轻易看出来，JS散度等于0的时候跟KL散度一样，就是<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>完全一样的时候。那么推到这里，用JS散度来表达两个概率分布的差异就问题不大了。</p>
-<p>其实本人在看相对熵和JS散度的时候一直有疑问，就是当两个概率分布不一样的时候，它们的值是不是会随着距离的变大而变大，也就是说这两个公式跟概率分布的距离到底是不是一个单调的关系，但我没有看到别人在说这件事情。我自己想了半天之后得出的结论是不一定，可能随着概率分布的表达式不一样而有所变化。</p>
-<p>当然因为没有人讲这件事我至今也不知道这样想是不是对的，因此有老哥想明白了麻烦留个言告诉我。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能 -大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -255,6 +240,21 @@
       </categories>
       <tags>
         <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS散度</title>
+    <url>/post/c7d146d6.html</url>
+    <content><![CDATA[<p>前面我们介绍了<a href="https://aichn.cn/index/article/show/id/81.html">相对熵（KL散度）</a>的概念，知道了它可以用来表示两个概率分布之间的差异，但有个不大好的地方是它并不是对称的，因此有时用它来训练神经网络会有顺序不同造成不一样的训练结果的情况（其实个人觉得也就是训练时间差异罢了，也没那么严重）。为了克服这个问题，有人就提出了一个新的衡量公式，叫做JS散度，式子如下：<br>$$<br>J S \left( P _ { 1 } | P _ { 2 } \right) = \frac { 1 } { 2 } K L \left( P _ { 1 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right) + \frac { 1 } { 2 } K L \left( P _ { 2 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right)JS(P1∥P2)=21KL(P1∥2P1+P2)+21KL(P2∥2P1+P2)<br>$$<br>如果有一点数学功底的人可以轻易看出这个公式对于<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>是对称的，而且因为是两个KL的叠加，由相对熵的文章我们知道KL的值一定是大于等于0的，因此这个公式也一定大于等于0。</p>
+<p>现在只剩下一个关键问题，就是什么时候等于0的问题了。同样参考相对熵的文章我们知道当两个分布相同的时候等于0，那么换到这里，也就是：<br>$$<br>P _ { 1 }=\frac { P _ { 1 } + P _ { 2 } }{ 2 }\ \qquad 且 \qquad P _ { 2 }=\frac { P _ { 1 } + P _ { 2 } } { 2 }P_ { 1 }=2P_ { 1 }+P_ { 2 } 且P_ { 2 }=2P_ { 1 }+P_ { 2 }<br>$$<br>的时候。可以轻易看出来，JS散度等于0的时候跟KL散度一样，就是<br>$$<br>P _ { 1 }和P _ { 2 }<br>$$<br>完全一样的时候。那么推到这里，用JS散度来表达两个概率分布的差异就问题不大了。</p>
+<p>其实本人在看相对熵和JS散度的时候一直有疑问，就是当两个概率分布不一样的时候，它们的值是不是会随着距离的变大而变大，也就是说这两个公式跟概率分布的距离到底是不是一个单调的关系，但我没有看到别人在说这件事情。我自己想了半天之后得出的结论是不一定，可能随着概率分布的表达式不一样而有所变化。</p>
+<p>当然因为没有人讲这件事我至今也不知道这样想是不是对的，因此有老哥想明白了麻烦留个言告诉我。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能 -大数据</tag>
       </tags>
   </entry>
   <entry>
@@ -680,6 +680,128 @@
       </tags>
   </entry>
   <entry>
+    <title>php7 windows版本启动提示丢失vcruntime140.dll</title>
+    <url>/post/d058b584.html</url>
+    <content><![CDATA[<p>php7 windows版本启动提示丢失vcruntime140.dll</p>
+<p>6月13日 php7终于没有跳票发布了alpha 版本啦，于是在自己的windows8.1上面安装准备体验一下，没想到启动的时候还是提示丢失vcruntime140.dll这个文件，于是上网百度搜索了半天没任何内容（这里严重鄙视百度） 天朝又不让用google 所以只能去官方网站爬一爬英文说明了，发现了点端倪，原来需要安装微软的vc++2015版本才行，下载地址在下方：</p>
+<p>VC14需要</p>
+<p><a href="https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145">https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145</a></p>
+<p>VC11需要</p>
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">http://www.microsoft.com/en-us/download/details.aspx?id=30679</a></p>
+<p>VC9需要</p>
+<p>64bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">http://www.microsoft.com/en-us/download/details.aspx?id=15336</a></p>
+<p>32bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582">http://www.microsoft.com/en-us/download/details.aspx?id=5582</a></p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>-php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php实现事件监听与触发的方法</title>
+    <url>/post/a76a0e8c.html</url>
+    <content><![CDATA[<p>这篇文章主要介绍了php实现事件监听与触发的方法,可实现时间的绑定、触发与注销等功能,具有一定的参考借鉴价值,需要的朋友可以参考下</p>
+<p>..本文实例讲述了php实现事件监听与触发的方法。分享给大家供大家参考。具体分析如下：</p>
+<p>闲来无事，想了想PHP如何实现事件监听，参考了jQuery的事件绑定思路，简单的实现了一下。</p>
+<p>主要功能：</p>
+<p>1.绑定事件 支持一个事件绑定多个动作，支持绑定一次性事件</p>
+<p>2.触发事件</p>
+<p>3.注销事件</p>
+<p>复制代码 代码如下:</p>
+<p>class Event</p>
+<p>{</p>
+<p>protected static $listens    = array();</p>
+<p>public static function listen($event, $callback, $once=false){</p>
+<p>if(!is_callable($callback)) return false;</p>
+<p>self::$listens[$event][]   = array(‘callback’=&gt;$callback, ‘once’=&gt;$once);</p>
+<p>return true;</p>
+<p>}</p>
+<p>public static function one($event, $callback){</p>
+<p>return self::listen($event, $callback, true);</p>
+<p>}</p>
+<p>public static function remove($event, $index=null){</p>
+<p>if(is_null($index))</p>
+<p>unset(self::$listens[$event]);</p>
+<p>else</p>
+<p>unset(self::$listens[$event][$index]);</p>
+<p>}</p>
+<p>public static function trigger(){</p>
+<p>if(!func_num_args()) return;</p>
+<p>$args            = func_get_args();</p>
+<p>$event            = array_shift($args);</p>
+<p>if(!isset(self::$listens[$event])) return false;</p>
+<p>foreach((array) self::$listens[$event] as $index=&gt;$listen){</p>
+<p>$callback        = $listen[‘callback’];</p>
+<p>$listen[‘once’] &amp;&amp; self::remove($event, $index);</p>
+<p>call_user_func_array($callback, $args);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>以下是一些调用的例子：</p>
+<p>复制代码 代码如下:// 增加监听walk事件</p>
+<p>Event::listen(‘walk’, function(){</p>
+<p>echo “I am walking…n”;</p>
+<p>});</p>
+<p>// 增加监听walk一次性事件</p>
+<p>Event::listen(‘walk’, function(){</p>
+<p>echo “I am listening…n”;</p>
+<p>}, true);</p>
+<p>// 触发walk事件</p>
+<p>Event::trigger(‘walk’);</p>
+<p>/*</p>
+<p>I am walking…</p>
+<p>I am listening…</p>
+<p>*/</p>
+<p>Event::trigger(‘walk’);</p>
+<p>/*</p>
+<p>I am walking…</p>
+<p>*/</p>
+<p>Event::one(‘say’, function($name=’’){</p>
+<p>echo “I am {$name}n”;</p>
+<p>});</p>
+<p>Event::trigger(‘say’, ‘deeka’); // 输出 I am deeka</p>
+<p>Event::trigger(‘say’, ‘deeka’); // not run</p>
+<p>class Foo</p>
+<p>{</p>
+<p>public function bar(){</p>
+<p>echo “Foo::bar() is calledn”;</p>
+<p>}</p>
+<p>public function test(){</p>
+<p>echo “Foo::foo() is called, agrs:”.json_encode(func_get_args()).”n”;</p>
+<p>}</p>
+<p>}</p>
+<p>$foo   = new Foo;</p>
+<p>Event::listen(‘bar’, array($foo, ‘bar’));</p>
+<p>Event::trigger(‘bar’);</p>
+<p>Event::listen(‘test’, array($foo, ‘test’));</p>
+<p>Event::trigger(‘test’, 1, 2, 3);</p>
+<p>class Bar</p>
+<p>{</p>
+<p>public static function foo(){</p>
+<p>echo “Bar::foo() is calledn”;</p>
+<p>}</p>
+<p>}</p>
+<p>Event::listen(‘bar1’, array(‘Bar’, ‘foo’));</p>
+<p>Event::trigger(‘bar1’);</p>
+<p>Event::listen(‘bar2’, ‘Bar::foo’);</p>
+<p>Event::trigger(‘bar2’);</p>
+<p>function bar(){</p>
+<p>echo “bar() is calledn”;</p>
+<p>}</p>
+<p>Event::listen(‘bar3’, ‘bar’);</p>
+<p>Event::trigger(‘bar3’);</p>
+<p>希望本文所述对大家的PHP程序设计有所帮助。</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>-php</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python三步实现人脸识别</title>
     <url>/post/e86121cf.html</url>
     <content><![CDATA[<p>Face Recognition软件包</p>
@@ -856,26 +978,6 @@
       </tags>
   </entry>
   <entry>
-    <title>php7 windows版本启动提示丢失vcruntime140.dll</title>
-    <url>/post/d058b584.html</url>
-    <content><![CDATA[<p>php7 windows版本启动提示丢失vcruntime140.dll</p>
-<p>6月13日 php7终于没有跳票发布了alpha 版本啦，于是在自己的windows8.1上面安装准备体验一下，没想到启动的时候还是提示丢失vcruntime140.dll这个文件，于是上网百度搜索了半天没任何内容（这里严重鄙视百度） 天朝又不让用google 所以只能去官方网站爬一爬英文说明了，发现了点端倪，原来需要安装微软的vc++2015版本才行，下载地址在下方：</p>
-<p>VC14需要</p>
-<p><a href="https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145">https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=48145</a></p>
-<p>VC11需要</p>
-<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">http://www.microsoft.com/en-us/download/details.aspx?id=30679</a></p>
-<p>VC9需要</p>
-<p>64bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">http://www.microsoft.com/en-us/download/details.aspx?id=15336</a></p>
-<p>32bit: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=5582">http://www.microsoft.com/en-us/download/details.aspx?id=5582</a></p>
-]]></content>
-      <categories>
-        <category>php</category>
-      </categories>
-      <tags>
-        <tag>-php</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【刷机教程】【四核RK3128芯迪优美特X5】4个最新安卓固件〖附详细教程〗</title>
     <url>/post/a50b72fa.html</url>
     <content><![CDATA[<p>（1月24日更新添加2个固件，3月6日再增加一个最快固件，共4个固件供大家选择)四核RK3128芯片刷安卓最新刷机包教程和固件：</p>
@@ -925,118 +1027,37 @@
       </tags>
   </entry>
   <entry>
-    <title>【吉他伴奏版】See You Again【Igor Presnyakov】</title>
-    <url>/post/22e374f1.html</url>
-    <content><![CDATA[<p>【吉他伴奏版】See You Again【Igor Presnyakov】</p>
-<p><a href="http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1">http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1</a></p>
+    <title>【教程】自制解锁bios，加slic，改logo和添加序列号</title>
+    <url>/post/89080ece.html</url>
+    <content><![CDATA[<p>今日放假，给大家发些我的心得，其实技术就是一层纸，一捅就破解锁bios什么的听起来高大上，其实没什么难度。我现在就给大家分享一下。（各种电脑bios解锁原理大同小异，今天以p775dm2g为例）</p>
+<p>用到的工具有rw everything，AMIBCP5.01.0014 ，UEFITool ， ChangeLogo 5.0.0.2 ，phoenixtool 。</p>
+<p>教程开始</p>
+<p>首先根据电脑型号在<a href="http://jump.bdimg.com/safecheck/index?url=rN3wPs8te/qbcLzWBl/RW4zMiwubX/xvWaradDzoQEzXjPfwV/i0jfMRfhec8gePPLBQPbWwUIJiRR7/sVRYQw7xFUSAhTAdBah3aBIyVP8ZkoQYdFPNPPXl0gK0SNcDzgGXzQWatLPKq8EYKcRO9DA8Zu4mdgY0">https://repo.palkeo.com/clevo-mirror </a>里找到对应bios刷新包并下载，我的775下载后得到一个P7xxDM3G_B10602.zip文件，解压后找到到一个8m的P7xxDM3.bin和一个5m的P7xxDM3.rom因为要修改序列号（bios文件中没有序列号，需要我们自己添加，否则会导致修改后的bios刷入后没有序列号的问题，各种用了大神的解锁bios的已经中枪，因为fpt刷新bios会覆盖原来所以block，如果刷入的bios没有序列号，那么刷完就没有）所以我们用8m的P7xxDM3.bin进行修改。</p>
+<p>用AMIBCP打开P7xxDM3.bin打开DMI Tables</p>
+<p><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/142bd243ad4bd113fdb0fa6e53afa40f4afb05af.jpg" alt="img"></p>
+<p>再打开rw everything</p>
+<p><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/5d753adbb6fd5266ac527048a218972bd50736ab.jpg" alt="img"><br>点击上面的倒数第八项sm bios会出现上图，这时点击左侧第三项 bios board information<br>会出现下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/6080b23533fa828be9e3d2bff41f4134950a5aec.jpg" alt="img"><br>我们可以看到 serial number 对应的是string4 </p>
+<p>再到rw everything左侧点击第二项system information，也会看到一个 serial number条目，对应的也是string4，这时可以关闭rw everything了回到AMIBCP 我们之前就已经在DMI Tables选项卡了 如下图所示<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/82618eb1cb13495434f9a1385f4e9258d3094ac1.jpg" alt="img"></p>
+<p>右下角的第四条就是string4 但是我们需要修改2条这个号码，一个是左边第二个选项卡system information的string4 一个是左边第三个选项卡base board的string4，把它替换为自己的序列号，一般电脑后面都有贴，那些刷过大神制作的解锁bios的人可以通过这个补救（刚才在rw everything中serial number后面的引号里就是序列号，这里可以直接粘贴过来要是显示为Not Applicable说明序列号被刷掉了）然后点击上面的保存即可。</p>
+<p>下面开始解锁bios在AMIBCP中打开setup configuration选项卡<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/155416ce36d3d53942bc459f3387e950342ab02c.jpg" alt="img"><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/aab74836acaf2eddb38ffcb5841001e9380193aa.jpg" alt="img">点击上图所示加号弹出下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/8b9212dfa9ec8a13a10ae3bcfe03918fa1ecc09d.jpg" alt="img"></p>
+<p>打开setup的加号我这里为了示范打开main选项卡后弹出下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/ed13c8ef76094b36a109afb1aacc7cd98c109d15.jpg" alt="img"></p>
+<p>所谓解锁就是有些选项卡的Access/Use默认是Default可能是不开放的，我们把权限强制调整为user在低权限下开放就行这个bios有好多可以调整的地方，方便起见我解锁上面那页。<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/4bb4334e251f95ca9f9524eac0177f3e6609524c.jpg" alt="img"></p>
+<p>总之要解锁什么就把对应条目的Access/Use由Default改成user即可（有的Default在默认状态下也是显示的，不用改。还有些空条目如第十四行，这些保持Default就好，不用动了。）解锁完保存就行。添加slic模块<br>添加slic模块可以oem激活windows，除了win10 win8以外windows都可以激活，但是win10 可以用windows server 2016代替，win8可以用server 2012代替，所以其实变相激活了win10 win8 而且服务器版本windows更加稳定，功能齐全。就是有些繁琐。适合能琢磨的人。</p>
+<p>打开phoenixtool（最新版本2.66）用phoenixtool打开修改好的bios文件P7xxDM3.bin，选好主板厂商（主板厂商没有clevo，直接选个dell 戴尔）和slic文件这里我们刷dell的slic2.4（等下会提供地址）<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/d069922397dda1445019d1eebbb7d0a20df4869d.jpg" alt="img"><br>点击高级，并勾除常规选项里的2，3，5项<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/68318f5494eef01f1ce3a599e9fe9925bd317d31.jpg" alt="img"></p>
+<p>点击完成后回到主页面再点击执行，会生成一个P7xxDM3_SLIC.bin的文件，我们下面就用这个文件进行操作。</p>
+<p>为了安全起见，我们还需要再向P7xxDM3_SLIC.bin中加一个slic头文件来确保成功（不添加没试过，这里不评论，此处引用<a href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAsDFYW2HqnwkaDRjkrD11q/cYQkE10N22RcMgJTrvpu7I8isJhwUWTPGmT1ugAiyeQYQSBtpbfyfjywUD21sFCCYkUe/7FUWEMO8RVEgIUwHQWod2gSMlT/GZKEGHRTzTz15dICtEjXA84Bl80FmrSzyqvBGCnETvQwPGbuJnYGNA==">http://bbs.bios.net.cn/thread-4527211-1-1.html</a>)打开UEFItool，并用UEFItool打开P7xxDM3_SLIC.bin按照上面的引用贴的方法找到需要添加的位置（由于我们之前用了phoenixtool，会含有pubkey模块和marker模块所以我们直接搜索这些模块的GUID就可以直接确定位置）我们打开搜索框转到搜索GUID选项卡输入69009842<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/bf9961d0f703918f0c359396583d26975beec4c1.jpg" alt="img"><br>摁ok下面的messages框里会出现上面的消息，点击第二条消息，会把你直接带到要找的模块。<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/be6ef403918fa0eca523ca512f9759ee3f6ddbc1.jpg" alt="img"></p>
+<p>在那个模块上摁右键点击insert before，插入4C494E55-5849-5342-4554-544552212121.ffs文件（等下提供，这个不能用引用贴的slic表头文件，这里是slic2.4，引用贴是slic2.3，表头文件不同。然后点击UEFItool左上角的file，点save image file保存，这时软件会自动重新构架这个bios文件，并提示你是否打开修改过的文件，我们选择是，下面就是重点了。</p>
+<p>注意，这步很重要，要删除8m的bios文件中多余的部分，有些人会问为什么不直接用5m的P7xxDM3.rom，因为5m的bios可以解锁bios（有些不能），可以加slic2.4，可以改logo，但是不能改序列号，因此不选用。</p>
+<p>如图展开intel image项<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/a74a09d162d9f2d3f6868fb3a0ec8a136227cc12.jpg" alt="img"></p>
+<p>在bios region上摁右键点击extract as is…会让你保存。随便保存一个名字，但是扩展名为.rgn我们直接把.rgn改成.rom就行。这样提取的bios就是5m了，前面3m是校验用的。下面更改logo<br>用ChangeLogo 5.0.0.2打开上面的文件，直接用想用的logo替换里面的logo就行，但是要注意logo文件大小和画面大小还有文件格式，这里不做太多说明。</p>
+<p>最后就是刷入了，我们选用fpt方法刷入，用<a href="http://tieba.baidu.com/p/4936939406">@827270744</a><br>大神提供的工具<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/e994c55c103853432156137d9a13b07ecb808814.jpg" alt="img"></p>
+<p>做好启动盘后把我们修改完的bios重命名为P7DM2G.ROM，替换原来启动盘里的P7DM2G.ROM，然后重启进入dos，执行fpt.bat刷新就行。<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/6d8b30fa828ba61e8ee259734834970a314e5998.jpg" alt="img"> 下面提供所用工具和各种文件<br><img src="http://imgsrc.baidu.com/forum/w%3D580/sign=f76968d36581800a6ee58906813433d6/6d8b30fa828ba61e8ee259734834970a314e5998.jpg" alt="img"></p>
 ]]></content>
       <categories>
-        <category>音乐</category>
+        <category>其他</category>
       </categories>
       <tags>
-        <tag>-音乐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>php实现事件监听与触发的方法</title>
-    <url>/post/a76a0e8c.html</url>
-    <content><![CDATA[<p>这篇文章主要介绍了php实现事件监听与触发的方法,可实现时间的绑定、触发与注销等功能,具有一定的参考借鉴价值,需要的朋友可以参考下</p>
-<p>..本文实例讲述了php实现事件监听与触发的方法。分享给大家供大家参考。具体分析如下：</p>
-<p>闲来无事，想了想PHP如何实现事件监听，参考了jQuery的事件绑定思路，简单的实现了一下。</p>
-<p>主要功能：</p>
-<p>1.绑定事件 支持一个事件绑定多个动作，支持绑定一次性事件</p>
-<p>2.触发事件</p>
-<p>3.注销事件</p>
-<p>复制代码 代码如下:</p>
-<p>class Event</p>
-<p>{</p>
-<p>protected static $listens    = array();</p>
-<p>public static function listen($event, $callback, $once=false){</p>
-<p>if(!is_callable($callback)) return false;</p>
-<p>self::$listens[$event][]   = array(‘callback’=&gt;$callback, ‘once’=&gt;$once);</p>
-<p>return true;</p>
-<p>}</p>
-<p>public static function one($event, $callback){</p>
-<p>return self::listen($event, $callback, true);</p>
-<p>}</p>
-<p>public static function remove($event, $index=null){</p>
-<p>if(is_null($index))</p>
-<p>unset(self::$listens[$event]);</p>
-<p>else</p>
-<p>unset(self::$listens[$event][$index]);</p>
-<p>}</p>
-<p>public static function trigger(){</p>
-<p>if(!func_num_args()) return;</p>
-<p>$args            = func_get_args();</p>
-<p>$event            = array_shift($args);</p>
-<p>if(!isset(self::$listens[$event])) return false;</p>
-<p>foreach((array) self::$listens[$event] as $index=&gt;$listen){</p>
-<p>$callback        = $listen[‘callback’];</p>
-<p>$listen[‘once’] &amp;&amp; self::remove($event, $index);</p>
-<p>call_user_func_array($callback, $args);</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>以下是一些调用的例子：</p>
-<p>复制代码 代码如下:// 增加监听walk事件</p>
-<p>Event::listen(‘walk’, function(){</p>
-<p>echo “I am walking…n”;</p>
-<p>});</p>
-<p>// 增加监听walk一次性事件</p>
-<p>Event::listen(‘walk’, function(){</p>
-<p>echo “I am listening…n”;</p>
-<p>}, true);</p>
-<p>// 触发walk事件</p>
-<p>Event::trigger(‘walk’);</p>
-<p>/*</p>
-<p>I am walking…</p>
-<p>I am listening…</p>
-<p>*/</p>
-<p>Event::trigger(‘walk’);</p>
-<p>/*</p>
-<p>I am walking…</p>
-<p>*/</p>
-<p>Event::one(‘say’, function($name=’’){</p>
-<p>echo “I am {$name}n”;</p>
-<p>});</p>
-<p>Event::trigger(‘say’, ‘deeka’); // 输出 I am deeka</p>
-<p>Event::trigger(‘say’, ‘deeka’); // not run</p>
-<p>class Foo</p>
-<p>{</p>
-<p>public function bar(){</p>
-<p>echo “Foo::bar() is calledn”;</p>
-<p>}</p>
-<p>public function test(){</p>
-<p>echo “Foo::foo() is called, agrs:”.json_encode(func_get_args()).”n”;</p>
-<p>}</p>
-<p>}</p>
-<p>$foo   = new Foo;</p>
-<p>Event::listen(‘bar’, array($foo, ‘bar’));</p>
-<p>Event::trigger(‘bar’);</p>
-<p>Event::listen(‘test’, array($foo, ‘test’));</p>
-<p>Event::trigger(‘test’, 1, 2, 3);</p>
-<p>class Bar</p>
-<p>{</p>
-<p>public static function foo(){</p>
-<p>echo “Bar::foo() is calledn”;</p>
-<p>}</p>
-<p>}</p>
-<p>Event::listen(‘bar1’, array(‘Bar’, ‘foo’));</p>
-<p>Event::trigger(‘bar1’);</p>
-<p>Event::listen(‘bar2’, ‘Bar::foo’);</p>
-<p>Event::trigger(‘bar2’);</p>
-<p>function bar(){</p>
-<p>echo “bar() is calledn”;</p>
-<p>}</p>
-<p>Event::listen(‘bar3’, ‘bar’);</p>
-<p>Event::trigger(‘bar3’);</p>
-<p>希望本文所述对大家的PHP程序设计有所帮助。</p>
-]]></content>
-      <categories>
-        <category>php</category>
-      </categories>
-      <tags>
-        <tag>-php</tag>
+        <tag>-技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1070,37 +1091,37 @@
       </tags>
   </entry>
   <entry>
-    <title>【教程】自制解锁bios，加slic，改logo和添加序列号</title>
-    <url>/post/89080ece.html</url>
-    <content><![CDATA[<p>今日放假，给大家发些我的心得，其实技术就是一层纸，一捅就破解锁bios什么的听起来高大上，其实没什么难度。我现在就给大家分享一下。（各种电脑bios解锁原理大同小异，今天以p775dm2g为例）</p>
-<p>用到的工具有rw everything，AMIBCP5.01.0014 ，UEFITool ， ChangeLogo 5.0.0.2 ，phoenixtool 。</p>
-<p>教程开始</p>
-<p>首先根据电脑型号在<a href="http://jump.bdimg.com/safecheck/index?url=rN3wPs8te/qbcLzWBl/RW4zMiwubX/xvWaradDzoQEzXjPfwV/i0jfMRfhec8gePPLBQPbWwUIJiRR7/sVRYQw7xFUSAhTAdBah3aBIyVP8ZkoQYdFPNPPXl0gK0SNcDzgGXzQWatLPKq8EYKcRO9DA8Zu4mdgY0">https://repo.palkeo.com/clevo-mirror </a>里找到对应bios刷新包并下载，我的775下载后得到一个P7xxDM3G_B10602.zip文件，解压后找到到一个8m的P7xxDM3.bin和一个5m的P7xxDM3.rom因为要修改序列号（bios文件中没有序列号，需要我们自己添加，否则会导致修改后的bios刷入后没有序列号的问题，各种用了大神的解锁bios的已经中枪，因为fpt刷新bios会覆盖原来所以block，如果刷入的bios没有序列号，那么刷完就没有）所以我们用8m的P7xxDM3.bin进行修改。</p>
-<p>用AMIBCP打开P7xxDM3.bin打开DMI Tables</p>
-<p><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/142bd243ad4bd113fdb0fa6e53afa40f4afb05af.jpg" alt="img"></p>
-<p>再打开rw everything</p>
-<p><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/5d753adbb6fd5266ac527048a218972bd50736ab.jpg" alt="img"><br>点击上面的倒数第八项sm bios会出现上图，这时点击左侧第三项 bios board information<br>会出现下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/6080b23533fa828be9e3d2bff41f4134950a5aec.jpg" alt="img"><br>我们可以看到 serial number 对应的是string4 </p>
-<p>再到rw everything左侧点击第二项system information，也会看到一个 serial number条目，对应的也是string4，这时可以关闭rw everything了回到AMIBCP 我们之前就已经在DMI Tables选项卡了 如下图所示<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/82618eb1cb13495434f9a1385f4e9258d3094ac1.jpg" alt="img"></p>
-<p>右下角的第四条就是string4 但是我们需要修改2条这个号码，一个是左边第二个选项卡system information的string4 一个是左边第三个选项卡base board的string4，把它替换为自己的序列号，一般电脑后面都有贴，那些刷过大神制作的解锁bios的人可以通过这个补救（刚才在rw everything中serial number后面的引号里就是序列号，这里可以直接粘贴过来要是显示为Not Applicable说明序列号被刷掉了）然后点击上面的保存即可。</p>
-<p>下面开始解锁bios在AMIBCP中打开setup configuration选项卡<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/155416ce36d3d53942bc459f3387e950342ab02c.jpg" alt="img"><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/aab74836acaf2eddb38ffcb5841001e9380193aa.jpg" alt="img">点击上图所示加号弹出下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/8b9212dfa9ec8a13a10ae3bcfe03918fa1ecc09d.jpg" alt="img"></p>
-<p>打开setup的加号我这里为了示范打开main选项卡后弹出下图<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/ed13c8ef76094b36a109afb1aacc7cd98c109d15.jpg" alt="img"></p>
-<p>所谓解锁就是有些选项卡的Access/Use默认是Default可能是不开放的，我们把权限强制调整为user在低权限下开放就行这个bios有好多可以调整的地方，方便起见我解锁上面那页。<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/4bb4334e251f95ca9f9524eac0177f3e6609524c.jpg" alt="img"></p>
-<p>总之要解锁什么就把对应条目的Access/Use由Default改成user即可（有的Default在默认状态下也是显示的，不用改。还有些空条目如第十四行，这些保持Default就好，不用动了。）解锁完保存就行。添加slic模块<br>添加slic模块可以oem激活windows，除了win10 win8以外windows都可以激活，但是win10 可以用windows server 2016代替，win8可以用server 2012代替，所以其实变相激活了win10 win8 而且服务器版本windows更加稳定，功能齐全。就是有些繁琐。适合能琢磨的人。</p>
-<p>打开phoenixtool（最新版本2.66）用phoenixtool打开修改好的bios文件P7xxDM3.bin，选好主板厂商（主板厂商没有clevo，直接选个dell 戴尔）和slic文件这里我们刷dell的slic2.4（等下会提供地址）<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/d069922397dda1445019d1eebbb7d0a20df4869d.jpg" alt="img"><br>点击高级，并勾除常规选项里的2，3，5项<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/68318f5494eef01f1ce3a599e9fe9925bd317d31.jpg" alt="img"></p>
-<p>点击完成后回到主页面再点击执行，会生成一个P7xxDM3_SLIC.bin的文件，我们下面就用这个文件进行操作。</p>
-<p>为了安全起见，我们还需要再向P7xxDM3_SLIC.bin中加一个slic头文件来确保成功（不添加没试过，这里不评论，此处引用<a href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAsDFYW2HqnwkaDRjkrD11q/cYQkE10N22RcMgJTrvpu7I8isJhwUWTPGmT1ugAiyeQYQSBtpbfyfjywUD21sFCCYkUe/7FUWEMO8RVEgIUwHQWod2gSMlT/GZKEGHRTzTz15dICtEjXA84Bl80FmrSzyqvBGCnETvQwPGbuJnYGNA==">http://bbs.bios.net.cn/thread-4527211-1-1.html</a>)打开UEFItool，并用UEFItool打开P7xxDM3_SLIC.bin按照上面的引用贴的方法找到需要添加的位置（由于我们之前用了phoenixtool，会含有pubkey模块和marker模块所以我们直接搜索这些模块的GUID就可以直接确定位置）我们打开搜索框转到搜索GUID选项卡输入69009842<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/bf9961d0f703918f0c359396583d26975beec4c1.jpg" alt="img"><br>摁ok下面的messages框里会出现上面的消息，点击第二条消息，会把你直接带到要找的模块。<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/be6ef403918fa0eca523ca512f9759ee3f6ddbc1.jpg" alt="img"></p>
-<p>在那个模块上摁右键点击insert before，插入4C494E55-5849-5342-4554-544552212121.ffs文件（等下提供，这个不能用引用贴的slic表头文件，这里是slic2.4，引用贴是slic2.3，表头文件不同。然后点击UEFItool左上角的file，点save image file保存，这时软件会自动重新构架这个bios文件，并提示你是否打开修改过的文件，我们选择是，下面就是重点了。</p>
-<p>注意，这步很重要，要删除8m的bios文件中多余的部分，有些人会问为什么不直接用5m的P7xxDM3.rom，因为5m的bios可以解锁bios（有些不能），可以加slic2.4，可以改logo，但是不能改序列号，因此不选用。</p>
-<p>如图展开intel image项<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/a74a09d162d9f2d3f6868fb3a0ec8a136227cc12.jpg" alt="img"></p>
-<p>在bios region上摁右键点击extract as is…会让你保存。随便保存一个名字，但是扩展名为.rgn我们直接把.rgn改成.rom就行。这样提取的bios就是5m了，前面3m是校验用的。下面更改logo<br>用ChangeLogo 5.0.0.2打开上面的文件，直接用想用的logo替换里面的logo就行，但是要注意logo文件大小和画面大小还有文件格式，这里不做太多说明。</p>
-<p>最后就是刷入了，我们选用fpt方法刷入，用<a href="http://tieba.baidu.com/p/4936939406">@827270744</a><br>大神提供的工具<br><img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/e994c55c103853432156137d9a13b07ecb808814.jpg" alt="img"></p>
-<p>做好启动盘后把我们修改完的bios重命名为P7DM2G.ROM，替换原来启动盘里的P7DM2G.ROM，然后重启进入dos，执行fpt.bat刷新就行。<img src="/../images/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%87%AA%E5%88%B6%E8%A7%A3%E9%94%81bios%EF%BC%8C%E5%8A%A0slic%EF%BC%8C%E6%94%B9logo%E5%92%8C%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%88%97%E5%8F%B7/6d8b30fa828ba61e8ee259734834970a314e5998.jpg" alt="img"> 下面提供所用工具和各种文件<br><img src="http://imgsrc.baidu.com/forum/w%3D580/sign=f76968d36581800a6ee58906813433d6/6d8b30fa828ba61e8ee259734834970a314e5998.jpg" alt="img"></p>
+    <title>一条短信直接崩溃iPhone，几乎所有iOS设备躺枪</title>
+    <url>/post/3420606c.html</url>
+    <content><![CDATA[<p>iPhone 又出 Bug 了！国外有网友发现，只要给用 iPhone 的好友发送一段含有特殊字符的短信或者是 iMessage 消息，就会让对方的 iPhone 崩溃重启，这条信息最先出现在 Reddit 网站。这段字符信息包含了英文、阿拉伯文、中文和特殊符号：</p>
+<p><img src="/" alt="messagescrashingbug.jpg"></p>
+<blockquote>
+<p>Power<br>لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ<br>冗</p>
+</blockquote>
+<p>如果用户接收到这条短信，就会导致短信程序崩溃，手机重启。如果以短信应用的消息列表打开收到的短信，则会发生再次崩溃，如果进入了这条包含特殊字符的消息列表，这个对话窗口并不会崩溃，但如果再跳转到其他对话，消息应用又会崩溃，进入一个死循环。</p>
+<p>这个 BUG 目前影响苹果运行 iOS 8.3 的设备，包括 iPhone 和 iPad，也包括其他版本的 iOS 系统。如果 iPhone 处于安全模式下，则攻击不会生效，如果 iPhone 已经越狱，则越狱的 iPhone 会转入到安全模式。</p>
+<p>这可能是 iOS 通知中心预览功能处理 Unicode 字符时存在的一个 BUG，通知中心会在推送时会直接打开预览功能，所以会导致整个系统崩溃。</p>
+<p>如果收到这种短信，解决的办法有以下几种，例如能够在短信应用打开这条短信，可以回复对方一条短信来解决崩溃（例如再发送一条同样的短信进行报复 XD），如果是在消息列表中收到这种短信，可以尝试使用其他方法例如语音控制或者是社交软件分享一条消息给自己来解决崩溃。</p>
+<p>目前苹果已经知道了这个问题，正在进行修复，会不会提前发布小更新或者让 iOS 8.4 提前发布暂时还未清楚。</p>
 ]]></content>
       <categories>
         <category>其他</category>
       </categories>
       <tags>
-        <tag>-技术</tag>
+        <tag>-其他</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【吉他伴奏版】See You Again【Igor Presnyakov】</title>
+    <url>/post/22e374f1.html</url>
+    <content><![CDATA[<p>【吉他伴奏版】See You Again【Igor Presnyakov】</p>
+<p><a href="http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1">http://static.hdslb.com/miniloader.swf?aid=3291901&amp;page=1</a></p>
+]]></content>
+      <categories>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>-音乐</tag>
       </tags>
   </entry>
   <entry>
@@ -1302,27 +1323,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一条短信直接崩溃iPhone，几乎所有iOS设备躺枪</title>
-    <url>/post/3420606c.html</url>
-    <content><![CDATA[<p>iPhone 又出 Bug 了！国外有网友发现，只要给用 iPhone 的好友发送一段含有特殊字符的短信或者是 iMessage 消息，就会让对方的 iPhone 崩溃重启，这条信息最先出现在 Reddit 网站。这段字符信息包含了英文、阿拉伯文、中文和特殊符号：</p>
-<p><img src="/" alt="messagescrashingbug.jpg"></p>
-<blockquote>
-<p>Power<br>لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ<br>冗</p>
-</blockquote>
-<p>如果用户接收到这条短信，就会导致短信程序崩溃，手机重启。如果以短信应用的消息列表打开收到的短信，则会发生再次崩溃，如果进入了这条包含特殊字符的消息列表，这个对话窗口并不会崩溃，但如果再跳转到其他对话，消息应用又会崩溃，进入一个死循环。</p>
-<p>这个 BUG 目前影响苹果运行 iOS 8.3 的设备，包括 iPhone 和 iPad，也包括其他版本的 iOS 系统。如果 iPhone 处于安全模式下，则攻击不会生效，如果 iPhone 已经越狱，则越狱的 iPhone 会转入到安全模式。</p>
-<p>这可能是 iOS 通知中心预览功能处理 Unicode 字符时存在的一个 BUG，通知中心会在推送时会直接打开预览功能，所以会导致整个系统崩溃。</p>
-<p>如果收到这种短信，解决的办法有以下几种，例如能够在短信应用打开这条短信，可以回复对方一条短信来解决崩溃（例如再发送一条同样的短信进行报复 XD），如果是在消息列表中收到这种短信，可以尝试使用其他方法例如语音控制或者是社交软件分享一条消息给自己来解决崩溃。</p>
-<p>目前苹果已经知道了这个问题，正在进行修复，会不会提前发布小更新或者让 iOS 8.4 提前发布暂时还未清楚。</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>-其他</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>不拆机仅用SD卡为Thinkpad E450 E460作磁盘永久缓存加速</title>
     <url>/post/c234aa14.html</url>
     <content><![CDATA[<p>**Thinkpad E450 E460 的特点：<br>**一般标配机械硬盘，没有多余的光驱和内置硬盘接口。<br>ngff M.2接口被阉割，截至目前，有人尝试自行焊接M.2插槽，失败。可能是BIOS里面的问题，而不是仅仅焊接一个插槽这么简单。个人猜测，未经验证。</p>
@@ -1419,19 +1419,6 @@
       </tags>
   </entry>
   <entry>
-    <title>交叉熵</title>
-    <url>/post/ea101373.html</url>
-    <content><![CDATA[<p>我们简单介绍了相对熵的概念，知道了相对熵可以用来表达真实事件和理论拟合出来的事件之间的差异。</p>
-<p>相对熵的公式如下：<br>$$<br>D _ { K L } ( p | q ) = \sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log p \left( x _ { i } \right)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>可以看到前面一项是真实事件的信息熵取反，我们可以直接写成<br>$$<br>D _ { K L } ( p | q ) = -H(p)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>在神经网络训练中，我们要训练的是<br>$$<br>q ( x _ { i })<br>$$<br>使得其与真实事件的分布越接近越好，也就是说在神经网络的训练中，相对熵会变的部分只有后面的部分，我们希望它越小越好，而前面的那部分是不变的。因此我们可以把后面的部分单独取出来，那部分就是交叉熵，写作：<br>$$<br>H(p，q) = -\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>这就是我们经常在神经网络训练中看到的交叉熵损失函数。如果要了解它的内涵，要回头去看相对熵。</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>人工智能神经网络四种算法</title>
     <url>/post/cbd530a7.html</url>
     <content><![CDATA[<p>人工神经网络的许多算法已在智能信息处理系统中获得广泛采用，尤为突出是是以下4种算法：ART网络、LVQ网络、Kohonen网络Hopfield网络，下面就具体介绍一下这这四种算法：</p>
@@ -1476,6 +1463,19 @@
       </categories>
       <tags>
         <tag>-人工智能 -神经网络 -算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>交叉熵</title>
+    <url>/post/ea101373.html</url>
+    <content><![CDATA[<p>我们简单介绍了相对熵的概念，知道了相对熵可以用来表达真实事件和理论拟合出来的事件之间的差异。</p>
+<p>相对熵的公式如下：<br>$$<br>D _ { K L } ( p | q ) = \sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log p \left( x _ { i } \right)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>可以看到前面一项是真实事件的信息熵取反，我们可以直接写成<br>$$<br>D _ { K L } ( p | q ) = -H(p)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>在神经网络训练中，我们要训练的是<br>$$<br>q ( x _ { i })<br>$$<br>使得其与真实事件的分布越接近越好，也就是说在神经网络的训练中，相对熵会变的部分只有后面的部分，我们希望它越小越好，而前面的那部分是不变的。因此我们可以把后面的部分单独取出来，那部分就是交叉熵，写作：<br>$$<br>H(p，q) = -\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)<br>$$<br>这就是我们经常在神经网络训练中看到的交叉熵损失函数。如果要了解它的内涵，要回头去看相对熵。</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -2005,46 +2005,6 @@
       </tags>
   </entry>
   <entry>
-    <title>教你如何修改win7旗舰版系统远程桌面端口</title>
-    <url>/post/6e092dae.html</url>
-    <content><![CDATA[<p>**<a href="http://www.windows7en.com/">win7旗舰版</a>**系统中的远程终端服务是一项功能非常强大的服务，同时也成了入侵者长驻主机的通道，入侵者可以利用一些手段得到管理员账号和密码并入侵主机。下面，墨染暖心教你如何通过修改win7旗舰版远程桌面默认端口，防范黑客入侵。</p>
-<p>　　远程终端服务基于端口3389。入侵者一般先扫描主机开放端口，一旦发现其开放了3389端口，就会进行下一步的入侵，所以我们只需要修改该务默认端口就可以避开大多数入侵者的耳目。</p>
-<p>　　<strong>具体操作步骤：</strong></p>
-<p>　　1、打开“开始“→”运行”，输入“regedit”，按下回车键，打开注册表，依次点开：[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp]，可以看到PortNumber的默认值是3389，修改成所希望的端口即可，例如此处墨染暖心用的是8080，同时，要注意点选“十进制”。见下图：</p>
-<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-140923161S0V8.jpg" alt="修改成所希望的端口"></p>
-<p>　　2、打开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]，将PortNumber的值(默认是3389)修改成端口8080，注意使用十进制。</p>
-<p>　　PS：网上很多教程到此就结束了。的确，如果是XP或2003系统，这样客户端就可以通过8080端口进行远程桌面连接。但是，在win7旗舰版系统下，光修改以上两处的端口为8080，客户端是无法进行远程桌面连接的。究其原因，原来<a href="http://www.windows7en.com/">win7旗舰版</a> 加强了自带防火墙的功能。下面是一张已经将远程桌面的本地端口修改为8080后的截图，原本默认本地端口为3389：</p>
-<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-14092316194EV.jpg" alt="远程桌面的本地端口修改为8080后"></p>
-<p>　　再PS：从入站规则里的防火墙策略里，如果不手动修改防火墙策略的端口为8080，是不能发现有任何一条防火墙策略的本地端口为8080的。也就是说，在入站规则里，如果不开启对8080端口的放行，防火墙会默认拒绝外界访问8080端口，这也是客户端不能成功进行远程桌面连接的原因。</p>
-<p>　　3、只有通过修改注册表的方式来修改防火墙策略。在注册表中依次打开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SharedAccess\Defaults\FirewallPolicy\FirewallRules]，将RemoteDesktop-In-TCP的值中包含3389的数据改成8080，并保存。</p>
-<p>　　4、接着依次点开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]，将RemoteDesktop-In-TCP的值中包含3389的数据改成8080，并保存。</p>
-<p>　　5、修改完毕，重新启动电脑，那么以后远程登录的时候使用端口8080就可以了。</p>
-<p>　　具体的访问的方法是IP:端口号，如192.168.100.100：8080，如下图：</p>
-<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-140923162049633.jpg" alt="端口号，如192.168.100.100：8080"></p>
-]]></content>
-      <categories>
-        <category>win7</category>
-      </categories>
-      <tags>
-        <tag>-win7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>整套1208-20160109_免费高速下载百度云 斐讯PSG1208刷机大合集</title>
-    <url>/post/fb16d405.html</url>
-    <content><![CDATA[<p>整套1208-20160109_免费高速下载|百度云 网盘-分享无限制</p>
-<p><a href="http://pan.baidu.com/s/1ges68Jx#path=%2F%E6%95%B4%E5%A5%971208-20160109">http://pan.baidu.com/s/1ges68Jx#path=%252F%25E6%2595%25B4%25E5%25A5%25971208-20160109</a></p>
-<p>斐讯PSG1208刷机教程<br><a href="http://pan.baidu.com/s/1bpXKlS%E9%87%8C%E9%9D%A2%E6%9C%89%E8%A7%86%E9%A2%91%E9%87%8C%E7%9A%84%E5%85%A8%E9%83%A8%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7%E5%92%8Cbreed%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%8E%E7%A1%95%E8%80%81%E6%AF%9B%E5%AD%90%E5%9B%BA%E4%BB%B6">http://pan.baidu.com/s/1bpXKlS里面有视频里的全部所需要的工具和breed还有一个华硕老毛子固件</a><br>原帖  <a href="http://forum.anywlan.com/forum.php?mod=viewthread&tid=384522&extra=page=1&filter=author&orderby=dateline">http://forum.anywlan.com/forum.p … 6orderby%3Ddateline</a><br>刷完潘多拉后</p>
-<p>在浏览器中输入192.168.1.1 密码admin 点击登入 OK 进入到路由页面<br>1 进入路由管理界面后点击左侧的“接口”，选择“WAN”。<br>2 点击“协议”选项栏里的“DHCP客户端”改为“PPPoE”,点击“切换协议”。<br>3 在“PAP/CHAP用户名”输入你宽带的用户名，“PAP/CHAP密码”输入你宽带的密码。<br>4 在当前页面点击“高级设置”,“使用网关跃点”输入“40”，点击右下角的“保存并应用”。<br>上面的是潘多拉固件普通拨号方法，接下来才是怎么多播。如果不需要多播，到此步即可结束操作。<br>5 点击左侧的”虚拟WAN接口“，“启用”前面打对钩，“虚拟接口”数量建议输入“10”，“断线自动重连”打对钩，最低在线数输入“1”，“保存并应用”。<br>6 等待15S后，点击“重新并发拨号”。<br>7 检查多拨状态，点左侧“负载均衡”，等1分钟，看看你下图的接口绿了几个就是成功多拨了几个。<br>原帖  <a href="http://www.52pojie.cn/thread-409698-1-1.html">http://www.52pojie.cn/thread-409698-1-1.html</a><br>不需要多拨的，可以刷华硕的，感觉比原厂固件好<br>地址 <a href="http://www.right.com.cn/forum/thread-161324-1-1.html">http://www.right.com.cn/forum/thread-161324-1-1.html</a><br>更新更多斐讯k1 斐讯1208固件  <a href="http://www.right.com.cn/forum/forum.php?mod=viewthread&tid=181006&highlight=1208">http://www.right.com.cn/forum/fo … &amp;highlight=1208</a><br> 下载地址 <a href="http://pan.baidu.com/s/1skl0VIP">http://pan.baidu.com/s/1skl0VIP</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>-技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>斐讯PSG1208 K1 免拆机刷breed恢复控制台</title>
     <url>/post/cf81e54b.html</url>
     <content><![CDATA[<p>Breed，不是 U-Boot，也不是 U-Boot 的改进版，是全新、独立的、跟 U-Boot 平级的 Bootloader。</p>
@@ -2085,6 +2045,46 @@
       </categories>
       <tags>
         <tag>-斐讯 -技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>整套1208-20160109_免费高速下载百度云 斐讯PSG1208刷机大合集</title>
+    <url>/post/fb16d405.html</url>
+    <content><![CDATA[<p>整套1208-20160109_免费高速下载|百度云 网盘-分享无限制</p>
+<p><a href="http://pan.baidu.com/s/1ges68Jx#path=%2F%E6%95%B4%E5%A5%971208-20160109">http://pan.baidu.com/s/1ges68Jx#path=%252F%25E6%2595%25B4%25E5%25A5%25971208-20160109</a></p>
+<p>斐讯PSG1208刷机教程<br><a href="http://pan.baidu.com/s/1bpXKlS%E9%87%8C%E9%9D%A2%E6%9C%89%E8%A7%86%E9%A2%91%E9%87%8C%E7%9A%84%E5%85%A8%E9%83%A8%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7%E5%92%8Cbreed%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E5%8D%8E%E7%A1%95%E8%80%81%E6%AF%9B%E5%AD%90%E5%9B%BA%E4%BB%B6">http://pan.baidu.com/s/1bpXKlS里面有视频里的全部所需要的工具和breed还有一个华硕老毛子固件</a><br>原帖  <a href="http://forum.anywlan.com/forum.php?mod=viewthread&tid=384522&extra=page=1&filter=author&orderby=dateline">http://forum.anywlan.com/forum.p … 6orderby%3Ddateline</a><br>刷完潘多拉后</p>
+<p>在浏览器中输入192.168.1.1 密码admin 点击登入 OK 进入到路由页面<br>1 进入路由管理界面后点击左侧的“接口”，选择“WAN”。<br>2 点击“协议”选项栏里的“DHCP客户端”改为“PPPoE”,点击“切换协议”。<br>3 在“PAP/CHAP用户名”输入你宽带的用户名，“PAP/CHAP密码”输入你宽带的密码。<br>4 在当前页面点击“高级设置”,“使用网关跃点”输入“40”，点击右下角的“保存并应用”。<br>上面的是潘多拉固件普通拨号方法，接下来才是怎么多播。如果不需要多播，到此步即可结束操作。<br>5 点击左侧的”虚拟WAN接口“，“启用”前面打对钩，“虚拟接口”数量建议输入“10”，“断线自动重连”打对钩，最低在线数输入“1”，“保存并应用”。<br>6 等待15S后，点击“重新并发拨号”。<br>7 检查多拨状态，点左侧“负载均衡”，等1分钟，看看你下图的接口绿了几个就是成功多拨了几个。<br>原帖  <a href="http://www.52pojie.cn/thread-409698-1-1.html">http://www.52pojie.cn/thread-409698-1-1.html</a><br>不需要多拨的，可以刷华硕的，感觉比原厂固件好<br>地址 <a href="http://www.right.com.cn/forum/thread-161324-1-1.html">http://www.right.com.cn/forum/thread-161324-1-1.html</a><br>更新更多斐讯k1 斐讯1208固件  <a href="http://www.right.com.cn/forum/forum.php?mod=viewthread&tid=181006&highlight=1208">http://www.right.com.cn/forum/fo … &amp;highlight=1208</a><br> 下载地址 <a href="http://pan.baidu.com/s/1skl0VIP">http://pan.baidu.com/s/1skl0VIP</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>-技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>教你如何修改win7旗舰版系统远程桌面端口</title>
+    <url>/post/6e092dae.html</url>
+    <content><![CDATA[<p>**<a href="http://www.windows7en.com/">win7旗舰版</a>**系统中的远程终端服务是一项功能非常强大的服务，同时也成了入侵者长驻主机的通道，入侵者可以利用一些手段得到管理员账号和密码并入侵主机。下面，墨染暖心教你如何通过修改win7旗舰版远程桌面默认端口，防范黑客入侵。</p>
+<p>　　远程终端服务基于端口3389。入侵者一般先扫描主机开放端口，一旦发现其开放了3389端口，就会进行下一步的入侵，所以我们只需要修改该务默认端口就可以避开大多数入侵者的耳目。</p>
+<p>　　<strong>具体操作步骤：</strong></p>
+<p>　　1、打开“开始“→”运行”，输入“regedit”，按下回车键，打开注册表，依次点开：[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp]，可以看到PortNumber的默认值是3389，修改成所希望的端口即可，例如此处墨染暖心用的是8080，同时，要注意点选“十进制”。见下图：</p>
+<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-140923161S0V8.jpg" alt="修改成所希望的端口"></p>
+<p>　　2、打开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]，将PortNumber的值(默认是3389)修改成端口8080，注意使用十进制。</p>
+<p>　　PS：网上很多教程到此就结束了。的确，如果是XP或2003系统，这样客户端就可以通过8080端口进行远程桌面连接。但是，在win7旗舰版系统下，光修改以上两处的端口为8080，客户端是无法进行远程桌面连接的。究其原因，原来<a href="http://www.windows7en.com/">win7旗舰版</a> 加强了自带防火墙的功能。下面是一张已经将远程桌面的本地端口修改为8080后的截图，原本默认本地端口为3389：</p>
+<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-14092316194EV.jpg" alt="远程桌面的本地端口修改为8080后"></p>
+<p>　　再PS：从入站规则里的防火墙策略里，如果不手动修改防火墙策略的端口为8080，是不能发现有任何一条防火墙策略的本地端口为8080的。也就是说，在入站规则里，如果不开启对8080端口的放行，防火墙会默认拒绝外界访问8080端口，这也是客户端不能成功进行远程桌面连接的原因。</p>
+<p>　　3、只有通过修改注册表的方式来修改防火墙策略。在注册表中依次打开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SharedAccess\Defaults\FirewallPolicy\FirewallRules]，将RemoteDesktop-In-TCP的值中包含3389的数据改成8080，并保存。</p>
+<p>　　4、接着依次点开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]，将RemoteDesktop-In-TCP的值中包含3389的数据改成8080，并保存。</p>
+<p>　　5、修改完毕，重新启动电脑，那么以后远程登录的时候使用端口8080就可以了。</p>
+<p>　　具体的访问的方法是IP:端口号，如192.168.100.100：8080，如下图：</p>
+<p><img src="/../images/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9win7%E6%97%97%E8%88%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%8F%A3/4-140923162049633.jpg" alt="端口号，如192.168.100.100：8080"></p>
+]]></content>
+      <categories>
+        <category>win7</category>
+      </categories>
+      <tags>
+        <tag>-win7</tag>
       </tags>
   </entry>
   <entry>
@@ -2281,6 +2281,31 @@
       </tags>
   </entry>
   <entry>
+    <title>极大似然估计（MLE）</title>
+    <url>/post/107224d5.html</url>
+    <content><![CDATA[<p>我们已经了解了似然函数是什么，但怎么去把里面的θ给求出来是个更加关键的问题。这篇我们将来探讨下这个问题。</p>
+<p>还是先举一个例子，假设有一个造币厂生产某种硬币，现在我们拿到了一枚这种硬币，想试试这硬币是不是均匀的。即想知道抛这枚硬币，正反面出现的概率（记为θ）各是多少？</p>
+<p>这是一个统计问题，回想一下，解决统计问题需要什么？ 数据！</p>
+<p>于是我们拿这枚硬币抛了10次，得到的数据x_0x0是：反正正正正反正正正反。我们想求的正面概率θ是模型参数，而抛硬币模型是二项分布(除非硬币立起来，那么这个时候要马上去买彩票，还搞什么算法)。</p>
+<p>那么，出现实验结果x0（即反正正正正反正正正反）的似然函数是多少呢？我们是这样列式的：<br>$$<br>f \left( x _ { 0 } , \theta \right) = ( 1 - \theta ) \times \theta \times \theta \times \theta \times \theta \times ( 1 - \theta ) \times \theta \times \theta \times \theta \times ( 1 - \theta ) = \theta ^ { 7 } ( 1 - \theta ) ^ { 3 } = f ( \theta )<br>$$<br>求出来函数的最大值是θ=0.7时取得的。这样，我们已经完成了对θ的极大似然估计。即抛10次硬币，发现7次硬币正面向上，最大似然估计认为正面向上的概率是0.7。</p>
+<p>看完上面的公式相信很多人跟我一样是一脸懵逼的。懵逼的点就在于这他妈公式是哪里来的？为什么这样列式然后求其最大值时θ的取值就是极大似然估计的值，也就是根据给出样本的情况模型参数最有可能的取值？Why?</p>
+<p>这里需要另外一个例子来告诉我们：</p>
+<p>假设有一批产品，根据以往的经验知道它的次品率可能是0.1或0.3。生产这批产品的厂家认为该批产品很好，次品率大约为0.1，而收购产品的商业部门表示产品质量有问题，次品率可能为0.3。现在从这批产品中随机抽取15件，发现其中有5件是次品。问：生产厂家与收购部分谁的估计更加可靠？</p>
+<p>解：记次品数为X，则<br>$$<br>X \sim B ( n , p )<br>$$<br>(这式子的意思是X服从二项分布)</p>
+<p>若次品率<br>$$<br>p _ { 1 } = 0.1，<br>$$<br>则15件产品中有5件是次品的概率为：<br>$$<br>P ( X = 5 ) = C _ { 15 } ^ { 5 } 0.1 ^ { 5 } 0.9 ^ { 10 } = 0.0105<br>$$<br>若次品率<br>$$<br>p _ { 2 } = 0.3，<br>$$<br>则15件产品中有5件是次品的概率为：<br>$$<br>P ( X = 5 ) = C _ { 15 } ^ { 5 } 0.3 ^ { 5 } 0.7 ^ { 10 } = 0.2061<br>$$<br>后面的概率显然高于前面的，因此用0.3作为次品率的估计值更为可靠一些。</p>
+<p>OK，解题结束，到这里相信你已经恍然大悟了。为什么极大似然估计公式是连乘。那不就是上面两道公式<br>$$<br>C _ { 15 } ^ { 5 }的右边部分吗？仔细看来，对比上下两道公式，可以发现C _ { 15 } ^ { 5 }这个部分是一样的，不同的就是C _ { 15 } ^ { 5 }的右边部分。<br>$$<br>而我们要让评估更正确，其实是要求让<br>$$<br>P ( X = 5 )这道公式取最大值的pp的值。又因为C _ { 15 } ^ { 5 }<br>$$<br>这部分写不写都不影响求解结果，它相当于一个常数，因此忽略掉那部分后，就得到了极大似然估计公式。</p>
+<p>我们用更加严谨的公式把似然函数和极大似然估计都用数学表达出来如下（其中argmaxθ表示当右边函数取得最大值时θ的取值）：<br>似然函数：<br>$$<br>l ( \theta ) = P ( x | \theta ) = p \left( x _ { 1 } , x _ { 2 } , \cdots , x _ { N } | \theta \right) = \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)<br>$$</p>
+<p>极大似然估计：<br>$$<br>\hat { \theta } = \arg \max _ { \theta } l ( \theta ) = \arg \max _ { \theta } \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)<br>$$</p>
+<p>当然这个公式看起来虽好，但有个问题，算起来比较要命，因为是连乘啊！这求个导能把人求哭。怎么办？两边取对数（因为lnx是随着x增大而单调增大的，也就是说当lnx取得最大值的时候x也取得最大值），这个时候极大似然估计变成这样：<br>$$<br>\hat { \theta } = \arg \max _ { \theta } H ( \theta ) = \arg \max _ { \theta } \ln l ( \theta ) = \arg \max _ { \theta } \sum _ { i = 1 } ^ { N } \ln p \left( x _ { i } | \theta \right)<br>$$<br>连乘变成累加，世界瞬间清净了！</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习经典算法之-----最小二乘法</title>
     <url>/post/46e20187.html</url>
     <content><![CDATA[<p>最小二乘法</p>
@@ -2307,31 +2332,6 @@
       </categories>
       <tags>
         <tag>-大数据 -机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>极大似然估计（MLE）</title>
-    <url>/post/107224d5.html</url>
-    <content><![CDATA[<p>我们已经了解了似然函数是什么，但怎么去把里面的θ给求出来是个更加关键的问题。这篇我们将来探讨下这个问题。</p>
-<p>还是先举一个例子，假设有一个造币厂生产某种硬币，现在我们拿到了一枚这种硬币，想试试这硬币是不是均匀的。即想知道抛这枚硬币，正反面出现的概率（记为θ）各是多少？</p>
-<p>这是一个统计问题，回想一下，解决统计问题需要什么？ 数据！</p>
-<p>于是我们拿这枚硬币抛了10次，得到的数据x_0x0是：反正正正正反正正正反。我们想求的正面概率θ是模型参数，而抛硬币模型是二项分布(除非硬币立起来，那么这个时候要马上去买彩票，还搞什么算法)。</p>
-<p>那么，出现实验结果x0（即反正正正正反正正正反）的似然函数是多少呢？我们是这样列式的：<br>$$<br>f \left( x _ { 0 } , \theta \right) = ( 1 - \theta ) \times \theta \times \theta \times \theta \times \theta \times ( 1 - \theta ) \times \theta \times \theta \times \theta \times ( 1 - \theta ) = \theta ^ { 7 } ( 1 - \theta ) ^ { 3 } = f ( \theta )<br>$$<br>求出来函数的最大值是θ=0.7时取得的。这样，我们已经完成了对θ的极大似然估计。即抛10次硬币，发现7次硬币正面向上，最大似然估计认为正面向上的概率是0.7。</p>
-<p>看完上面的公式相信很多人跟我一样是一脸懵逼的。懵逼的点就在于这他妈公式是哪里来的？为什么这样列式然后求其最大值时θ的取值就是极大似然估计的值，也就是根据给出样本的情况模型参数最有可能的取值？Why?</p>
-<p>这里需要另外一个例子来告诉我们：</p>
-<p>假设有一批产品，根据以往的经验知道它的次品率可能是0.1或0.3。生产这批产品的厂家认为该批产品很好，次品率大约为0.1，而收购产品的商业部门表示产品质量有问题，次品率可能为0.3。现在从这批产品中随机抽取15件，发现其中有5件是次品。问：生产厂家与收购部分谁的估计更加可靠？</p>
-<p>解：记次品数为X，则<br>$$<br>X \sim B ( n , p )<br>$$<br>(这式子的意思是X服从二项分布)</p>
-<p>若次品率<br>$$<br>p _ { 1 } = 0.1，<br>$$<br>则15件产品中有5件是次品的概率为：<br>$$<br>P ( X = 5 ) = C _ { 15 } ^ { 5 } 0.1 ^ { 5 } 0.9 ^ { 10 } = 0.0105<br>$$<br>若次品率<br>$$<br>p _ { 2 } = 0.3，<br>$$<br>则15件产品中有5件是次品的概率为：<br>$$<br>P ( X = 5 ) = C _ { 15 } ^ { 5 } 0.3 ^ { 5 } 0.7 ^ { 10 } = 0.2061<br>$$<br>后面的概率显然高于前面的，因此用0.3作为次品率的估计值更为可靠一些。</p>
-<p>OK，解题结束，到这里相信你已经恍然大悟了。为什么极大似然估计公式是连乘。那不就是上面两道公式<br>$$<br>C _ { 15 } ^ { 5 }的右边部分吗？仔细看来，对比上下两道公式，可以发现C _ { 15 } ^ { 5 }这个部分是一样的，不同的就是C _ { 15 } ^ { 5 }的右边部分。<br>$$<br>而我们要让评估更正确，其实是要求让<br>$$<br>P ( X = 5 )这道公式取最大值的pp的值。又因为C _ { 15 } ^ { 5 }<br>$$<br>这部分写不写都不影响求解结果，它相当于一个常数，因此忽略掉那部分后，就得到了极大似然估计公式。</p>
-<p>我们用更加严谨的公式把似然函数和极大似然估计都用数学表达出来如下（其中argmaxθ表示当右边函数取得最大值时θ的取值）：<br>似然函数：<br>$$<br>l ( \theta ) = P ( x | \theta ) = p \left( x _ { 1 } , x _ { 2 } , \cdots , x _ { N } | \theta \right) = \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)<br>$$</p>
-<p>极大似然估计：<br>$$<br>\hat { \theta } = \arg \max _ { \theta } l ( \theta ) = \arg \max _ { \theta } \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)<br>$$</p>
-<p>当然这个公式看起来虽好，但有个问题，算起来比较要命，因为是连乘啊！这求个导能把人求哭。怎么办？两边取对数（因为lnx是随着x增大而单调增大的，也就是说当lnx取得最大值的时候x也取得最大值），这个时候极大似然估计变成这样：<br>$$<br>\hat { \theta } = \arg \max _ { \theta } H ( \theta ) = \arg \max _ { \theta } \ln l ( \theta ) = \arg \max _ { \theta } \sum _ { i = 1 } ^ { N } \ln p \left( x _ { i } | \theta \right)<br>$$<br>连乘变成累加，世界瞬间清净了！</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -4518,31 +4518,6 @@
       </tags>
   </entry>
   <entry>
-    <title>深度学习2---任意结点数的三层全连接神经网络</title>
-    <url>/post/ee239b41.html</url>
-    <content><![CDATA[<p>上一篇文章：<a href="https://aichn.cn/post/74e51a6a.html">深度学习1—最简单的全连接神经网络</a>　<br>　　我们完成了一个三层（输入+隐含+输出）且每层都具有两个节点的全连接神经网络的原理分析和代码编写。本篇文章将进一步探讨如何把每层固定的两个节点变成任意个节点，以方便我们下一篇文章用本篇文章完成的网络来训练手写字符集“mnist”。<br>　　对于前向传播，基本上没有什么变化，就不用说了。主要看看后向传播的梯度下降公式。先放上上篇文章的网络图。<br><img src="/../images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02---%E4%BB%BB%E6%84%8F%E7%BB%93%E7%82%B9%E6%95%B0%E7%9A%84%E4%B8%89%E5%B1%82%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/20180928134419558" alt="在这里插入图片描述"><br>　　上篇文章我们推知，含有两个节点的隐含层到输出层的权值对误差的偏导数，公式如下：<br>　<br>$$<br>　\frac{\partial E_{总}}{\partial W_{11}^{(２)}}=(O_{1}-T_{1})*O_{1}(1-O_{1})*Y_{1}<br>$$<br>　　而含有两个节点的输入层到隐含层的权值对于误差梯度的偏导数公式如下：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{11}^{(1)}}=((O_{1}-T_{1})*O_{1}(1-O_{1})*W_{11}^{(2)}+(O_{2}-T_{2})*O_{2}(1-O_{2})*W_{21}^{(2)})*Y_{1}(1-Y_{1})*X_{1}<br>$$<br>　　现在我们来总结规律，先看第一道公式：<br>　　<br>$$<br>W_{11}^{(2)}<br>$$<br>位于输出层第一个结点的后方，与隐含层第一个结点相连接，其对总误差求偏导的式子结果也只与这两个节点的相关参数有关，与输入层、隐含层的第二个节点、输出层的第二个节点均无关。因此，也可以说，无论各层的节点数怎么样变化，隐含层到输出层的权值只与它连接的两个节点的参数相关。上式可以写成：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{xy}^{(2)}}=(O_{x}-T_{x})*O_{x}(1-O_{x})*Y_{y}<br>$$<br>　　再看第二道公式：<br>　　<br>$$<br>W_{11}^{(1)}<br>$$<br>位于隐含层第一个节点的后方，与输入层第一个节点相连接，第一个隐含层节点又与输出层所有节点相连接。公式中出现的项与上面描述到的节点相关，因此如果输出层节点增加，则表达式需要增加对增加节点的计算。而隐含层和输入层增加则无所谓。因此表达式可以写成：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{xy}^{(1)}}=[\sum_{k=1}^{n}(O_{k}-T_{k})*O_{k}(1-O_{k})*W_{kx}^{(2)}]*Y_{x}(1-Y_{x})*X_{y}<br>$$<br>　　大功告成！规律总结完了，下面就只剩下写代码了。不得不承认，这一篇原理部分蛮少的，应该只能算是上一篇文章的补充。但从固定到任意还是挺重要的，因此独立出来写。<br>　　下面我们用代码来实现一个任意节点数（代码中取的输入层、隐含层、输出层分别为5、10、5个节点，当然你高兴的话可以随意改动）的三层全连接神经网络。</p>
-<h2 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a><strong>C++实现</strong></h2><hr>
-<p>直接上代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include&lt;ctime&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define IPNNUM 5     &#x2F;&#x2F;输入层节点数</span><br><span class="line">#define HDNNUM 10    &#x2F;&#x2F;隐含层节点数</span><br><span class="line">#define OPNNUM 5     &#x2F;&#x2F;输出层节点数</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;结点类，用以构成网络</span><br><span class="line">class node </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	double value; &#x2F;&#x2F;数值，存储结点最后的状态</span><br><span class="line">	double *W&#x3D;NULL;    &#x2F;&#x2F;结点到下一层的权值</span><br><span class="line"></span><br><span class="line">	void initNode(int num);&#x2F;&#x2F;初始化函数，必须调用以初始化权值个数</span><br><span class="line">	~node();	  &#x2F;&#x2F;析构函数，释放掉权值占用内存</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void node::initNode(int num)</span><br><span class="line">&#123;</span><br><span class="line">	W &#x3D; new double[num];</span><br><span class="line">	srand((unsigned)time(NULL));</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; num; i++)&#x2F;&#x2F;给权值赋一个随机值</span><br><span class="line">	&#123;</span><br><span class="line">		W[i]&#x3D; (rand() % 100)&#x2F;(double)100;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node::~node()</span><br><span class="line">&#123;</span><br><span class="line">	if (W!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		delete[]W;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;网络类，描述神经网络的结构并实现前向传播以及后向传播</span><br><span class="line">class net </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	node inlayer[IPNNUM]; &#x2F;&#x2F;输入层</span><br><span class="line">	node hidlayer[HDNNUM];&#x2F;&#x2F;隐含层</span><br><span class="line">	node outlayer[OPNNUM];&#x2F;&#x2F;输出层</span><br><span class="line"></span><br><span class="line">	double yita &#x3D; 0.1;&#x2F;&#x2F;学习率η</span><br><span class="line">	double k1;&#x2F;&#x2F;输入层偏置项权重</span><br><span class="line">	double k2;&#x2F;&#x2F;隐含层偏置项权重</span><br><span class="line">	double Tg[OPNNUM];&#x2F;&#x2F;训练目标</span><br><span class="line">	double O[OPNNUM];&#x2F;&#x2F;网络实际输出</span><br><span class="line"></span><br><span class="line">	net();&#x2F;&#x2F;构造函数，用于初始化各层和偏置项权重</span><br><span class="line">	double sigmoid(double z);&#x2F;&#x2F;激活函数</span><br><span class="line">	double getLoss();&#x2F;&#x2F;损失函数，输入为目标值</span><br><span class="line">	void forwardPropagation(double *input);&#x2F;&#x2F;前向传播,输入为输入层节点的值</span><br><span class="line">	void backPropagation(double *T);&#x2F;&#x2F;反向传播，输入为目标输出值</span><br><span class="line">	void printresual(int trainingTimes);&#x2F;&#x2F;打印信息</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">net::net()</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F;初始化输入层和隐含层偏置项权值，给一个随机值</span><br><span class="line">	srand((unsigned)time(NULL));</span><br><span class="line">	k1&#x3D; (rand() % 100) &#x2F; (double)100;</span><br><span class="line">	k2 &#x3D; (rand() % 100) &#x2F; (double)100;</span><br><span class="line">	&#x2F;&#x2F;初始化输入层到隐含层节点个数</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; IPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		inlayer[i].initNode(HDNNUM);</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;初始化隐含层到输出层节点个数</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; HDNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		hidlayer[i].initNode(OPNNUM);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;激活函数</span><br><span class="line">double net::sigmoid(double z)</span><br><span class="line">&#123;</span><br><span class="line">	return 1&#x2F;(1+ exp(-z));</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;损失函数</span><br><span class="line">double net::getLoss()</span><br><span class="line">&#123;</span><br><span class="line">	double mloss &#x3D; 0;</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; OPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mloss +&#x3D; pow(O[i] - Tg[i], 2);</span><br><span class="line">	&#125;</span><br><span class="line">	return mloss &#x2F; OPNNUM;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;前向传播</span><br><span class="line">void net::forwardPropagation(double *input)</span><br><span class="line">&#123;</span><br><span class="line">	for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)&#x2F;&#x2F;输入层节点赋值</span><br><span class="line">	&#123;</span><br><span class="line">		inlayer[iNNum].value &#x3D; input[iNNum];</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)&#x2F;&#x2F;算出隐含层结点的值</span><br><span class="line">	&#123;</span><br><span class="line">		double z &#x3D; 0;</span><br><span class="line">		for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			z+&#x3D; inlayer[iNNum].value*inlayer[iNNum].W[hNNum];</span><br><span class="line">		&#125;</span><br><span class="line">		z+&#x3D; k1;&#x2F;&#x2F;加上偏置项</span><br><span class="line">		hidlayer[hNNum].value &#x3D; sigmoid(z);</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)&#x2F;&#x2F;算出输出层结点的值</span><br><span class="line">	&#123;</span><br><span class="line">		double z &#x3D; 0;</span><br><span class="line">		for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			z +&#x3D; hidlayer[hNNum].value*hidlayer[hNNum].W[oNNum];</span><br><span class="line">		&#125;</span><br><span class="line">		z +&#x3D; k2;&#x2F;&#x2F;加上偏置项</span><br><span class="line">		O[oNNum] &#x3D; outlayer[oNNum].value &#x3D; sigmoid(z);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;反向传播，这里为了公式好看一点多写了一些变量作为中间值</span><br><span class="line">&#x2F;&#x2F;计算过程用到的公式在博文中已经推导过了，如果代码没看明白请看看博文</span><br><span class="line">void net::backPropagation(double *T)</span><br><span class="line">&#123;	</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; OPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		Tg[i] &#x3D; T[i];</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)&#x2F;&#x2F;更新输入层权重</span><br><span class="line">	&#123;</span><br><span class="line">		for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			double y &#x3D; hidlayer[hNNum].value;</span><br><span class="line">			double loss &#x3D; 0;</span><br><span class="line">			for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">			&#123;</span><br><span class="line">				loss +&#x3D; (O[oNNum] - Tg[oNNum])*O[oNNum] * (1 - O[oNNum])*hidlayer[hNNum].W[oNNum];</span><br><span class="line">			&#125;</span><br><span class="line">			inlayer[iNNum].W[hNNum] -&#x3D; yita*loss*y*(1 - y)*inlayer[iNNum].value;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)&#x2F;&#x2F;更新隐含层权重</span><br><span class="line">	&#123;</span><br><span class="line">		for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			hidlayer[hNNum].W[oNNum]-&#x3D; yita*(O[oNNum] - Tg[oNNum])*</span><br><span class="line">				O[oNNum] *(1- O[oNNum])*hidlayer[hNNum].value;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void net::printresual(int trainingTimes)</span><br><span class="line">&#123;</span><br><span class="line">	double loss &#x3D; getLoss();</span><br><span class="line">	cout &lt;&lt; &quot;训练次数：&quot; &lt;&lt; trainingTimes &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;loss：&quot; &lt;&lt; loss &lt;&lt; endl;</span><br><span class="line">	for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;输出&quot; &lt;&lt; oNNum+1&lt;&lt; &quot;：&quot; &lt;&lt; O[oNNum] &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	net mnet;</span><br><span class="line">	double minput[IPNNUM] &#x3D; &#123; 0.1, 0.2, 0.3, 0.4, 0.5 &#125;;</span><br><span class="line">	double mtarget[IPNNUM] &#x3D; &#123; 0.2, 0.4, 0.6, 0.8, 1 &#125;;</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; 10000; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mnet.forwardPropagation(minput);&#x2F;&#x2F;前向传播</span><br><span class="line">		mnet.backPropagation(mtarget);&#x2F;&#x2F;反向传播</span><br><span class="line">		if (i%1000&#x3D;&#x3D;0)</span><br><span class="line">		&#123;</span><br><span class="line">			mnet.printresual(i);&#x2F;&#x2F;信息打印</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="python实现"><a href="#python实现" class="headerlink" title="python实现"></a><strong>python实现</strong></h2><hr>
-<p>直接上代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">IPNNUM&#x3D;5     #输入层节点数</span><br><span class="line">HDNNUM&#x3D;10    #隐含层节点数</span><br><span class="line">OPNNUM&#x3D;3     #输出层节点数</span><br><span class="line"></span><br><span class="line">class node:</span><br><span class="line">    #结点类，用以构成网络</span><br><span class="line">    def __init__(self,connectNum&#x3D;0):</span><br><span class="line">        self.value&#x3D;0 #数值，存储结点最后的状态，对应到文章示例为X1，Y1等值</span><br><span class="line">        self.W &#x3D; (2*np.random.random_sample(connectNum)-1)*0.01</span><br><span class="line"></span><br><span class="line">class net:</span><br><span class="line">    #网络类，描述神经网络的结构并实现前向传播以及后向传播</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #初始化函数，用于初始化各层间节点和偏置项权重</span><br><span class="line">        #输入层结点</span><br><span class="line">        self.inlayer&#x3D;[node(HDNNUM)];</span><br><span class="line">        for obj in range(1, IPNNUM):</span><br><span class="line">            self.inlayer.append(node(HDNNUM)) </span><br><span class="line">        #隐含层结点</span><br><span class="line">        self.hidlayer&#x3D;[node(OPNNUM)];</span><br><span class="line">        for obj in range(1, HDNNUM):</span><br><span class="line">            self.hidlayer.append(node(OPNNUM))             </span><br><span class="line">        #输出层结点</span><br><span class="line">        self.outlayer&#x3D;[node(0)];</span><br><span class="line">        for obj in range(1, OPNNUM):</span><br><span class="line">            self.outlayer&#x3D;[node(0)]                 </span><br><span class="line"></span><br><span class="line">        self.yita &#x3D; 0.1                                           #学习率η</span><br><span class="line">        self.k1&#x3D;random.random()                       #输入层偏置项权重</span><br><span class="line">        self.k2&#x3D;random.random()                       #隐含层偏置项权重</span><br><span class="line">        self.Tg&#x3D;np.zeros(OPNNUM)                   #训练目标</span><br><span class="line">        self.O&#x3D;np.zeros(OPNNUM)                     #网络实际输出</span><br><span class="line"></span><br><span class="line">    def sigmoid(self,z):</span><br><span class="line">        #激活函数</span><br><span class="line">        return 1 &#x2F; (1 + math.exp(-z))</span><br><span class="line"></span><br><span class="line">    def getLoss(self):</span><br><span class="line">        #损失函数</span><br><span class="line">        loss&#x3D;0</span><br><span class="line">        for num in range(0, OPNNUM):</span><br><span class="line">            loss+&#x3D;pow(self.O[num] -self.Tg[num],2)</span><br><span class="line">        return loss&#x2F;OPNNUM</span><br><span class="line"></span><br><span class="line">    def forwardPropagation(self,input):</span><br><span class="line">        #前向传播</span><br><span class="line">        for i in range(0, IPNNUM):</span><br><span class="line">            #输入层节点赋值</span><br><span class="line">            self.inlayer[i].value &#x3D; input[i]</span><br><span class="line">        for hNNum in range(0,HDNNUM):</span><br><span class="line">             #算出隐含层结点的值</span><br><span class="line">            z &#x3D; 0</span><br><span class="line">            for iNNum in range(0,IPNNUM):</span><br><span class="line">                z+&#x3D;self.inlayer[iNNum].value*self.inlayer[iNNum].W[hNNum]</span><br><span class="line">            #加上偏置项</span><br><span class="line">            z+&#x3D; self.k1</span><br><span class="line">            self.hidlayer[hNNum].value &#x3D; self.sigmoid(z)</span><br><span class="line">        for oNNum in range(0,OPNNUM):</span><br><span class="line">            #算出输出层结点的值</span><br><span class="line">            z &#x3D; 0</span><br><span class="line">            for hNNum in range(0,HDNNUM):</span><br><span class="line">                z +&#x3D; self.hidlayer[hNNum].value* self.hidlayer[hNNum].W[oNNum]</span><br><span class="line">            z +&#x3D; self.k2</span><br><span class="line">            self.O[oNNum] &#x3D; self.sigmoid(z)</span><br><span class="line"></span><br><span class="line">    def backPropagation(self,T):</span><br><span class="line">        #反向传播，这里为了公式好看一点多写了一些变量作为中间值</span><br><span class="line">        for num in range(0, OPNNUM):</span><br><span class="line">            self.Tg[num] &#x3D; T[num]</span><br><span class="line">        for iNNum in range(0,IPNNUM):</span><br><span class="line">            #更新输入层权重</span><br><span class="line">            for hNNum in range(0,HDNNUM):</span><br><span class="line">                y &#x3D; self.hidlayer[hNNum].value</span><br><span class="line">                loss &#x3D; 0</span><br><span class="line">                for oNNum in range(0, OPNNUM):</span><br><span class="line">                    loss+&#x3D;(self.O[oNNum] - self.Tg[oNNum])*self.O[oNNum] * (1 - self.O[oNNum])*self.hidlayer[hNNum].W[oNNum]</span><br><span class="line">                self.inlayer[iNNum].W[hNNum] -&#x3D; self.yita*loss*y*(1- y)*self.inlayer[iNNum].value</span><br><span class="line">        for hNNum in range(0,HDNNUM):</span><br><span class="line">            #更新隐含层权重</span><br><span class="line">            for oNNum in range(0,OPNNUM):</span><br><span class="line">                self.hidlayer[hNNum].W[oNNum]-&#x3D; self.yita*(self.O[oNNum] - self.Tg[oNNum])*self.O[oNNum]*\</span><br><span class="line">                    (1- self.O[oNNum])*self.hidlayer[hNNum].value</span><br><span class="line"></span><br><span class="line">    def printresual(self,trainingTimes):</span><br><span class="line">        #信息打印</span><br><span class="line">        loss &#x3D; self.getLoss()</span><br><span class="line">        print(&quot;训练次数：&quot;, trainingTimes)</span><br><span class="line">        print(&quot;loss&quot;,loss)</span><br><span class="line">        for oNNum in range(0,OPNNUM):</span><br><span class="line">            print(&quot;输出&quot;,oNNum,&quot;:&quot;,self.O[oNNum])</span><br><span class="line"></span><br><span class="line">#主程序</span><br><span class="line">mnet&#x3D;net()</span><br><span class="line">input&#x3D;np.array([0.1,0.2,0.3,0.4,0.5])</span><br><span class="line">target&#x3D;np.array([0.1,0.4,0.5])</span><br><span class="line"></span><br><span class="line">for n in range(0,1000):   </span><br><span class="line">    mnet.forwardPropagation(input)</span><br><span class="line">    mnet.backPropagation(target)</span><br><span class="line">    if (n%200&#x3D;&#x3D;0):</span><br><span class="line">        mnet.printresual(n)</span><br></pre></td></tr></table></figure>
-<h2 id="pytorch的CPU实现"><a href="#pytorch的CPU实现" class="headerlink" title="pytorch的CPU实现"></a><strong>pytorch的CPU实现</strong></h2><hr>
-<p>其实pytorch本身就已经支持任意节点数，所以这里只是随意的改了下上一篇文章中代码的参数部分。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;UTF-8</span><br><span class="line">import time</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">from torch.autograd import Variable</span><br><span class="line"></span><br><span class="line">class Net(nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #定义Net的初始化函数，这个函数定义了该神经网络的基本结构</span><br><span class="line">        super(Net, self).__init__() #复制并使用Net的父类的初始化方法，即先运行nn.Module的初始化函数</span><br><span class="line">        self.intohid_layer &#x3D; nn.Linear(5, 10) #定义输入层到隐含层的连结关系函数</span><br><span class="line">        self.hidtoout_layer &#x3D; nn.Linear(10, 5)#定义隐含层到输出层的连结关系函数</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        #定义该神经网络的向前传播函数，该函数必须定义，一旦定义成功，向后传播函数也会自动生成</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.intohid_layer(input))    #输入input在输入层经过经过加权和与激活函数后到达隐含层</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.hidtoout_layer(x))       #类似上面</span><br><span class="line">        return x</span><br><span class="line"></span><br><span class="line">mnet &#x3D; Net()</span><br><span class="line">target&#x3D;Variable(torch.FloatTensor([0.2, 0.4, 0.6, 0.8, 1]))   #目标输出</span><br><span class="line">input&#x3D;Variable(torch.FloatTensor([0.1, 0.2, 0.3, 0.4, 0.5]))    #输入</span><br><span class="line"></span><br><span class="line">loss_fn &#x3D; torch.nn.MSELoss()                       #损失函数定义，可修改</span><br><span class="line">optimizer &#x3D; torch.optim.SGD(mnet.parameters(), lr&#x3D;0.5, momentum&#x3D;0.9);</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line"></span><br><span class="line">for t in range(0,5000):</span><br><span class="line">    optimizer.zero_grad()      #清空节点值</span><br><span class="line">    out&#x3D;mnet(input)            #前向传播</span><br><span class="line">    loss &#x3D; loss_fn(out,target) #损失计算</span><br><span class="line">    loss.backward()            #后向传播</span><br><span class="line">    optimizer.step()           #更新权值</span><br><span class="line">    if (t%1000&#x3D;&#x3D;0):</span><br><span class="line">        print(out)</span><br><span class="line"></span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(end - start)</span><br></pre></td></tr></table></figure>
-<h2 id="pytorch的GPU实现"><a href="#pytorch的GPU实现" class="headerlink" title="pytorch的GPU实现"></a><strong>pytorch的GPU实现</strong></h2><hr>
-<p>直接上代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;UTF-8</span><br><span class="line">import time</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">from torch.autograd import Variable</span><br><span class="line"></span><br><span class="line">class Net(nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #定义Net的初始化函数，这个函数定义了该神经网络的基本结构</span><br><span class="line">        super(Net, self).__init__() #复制并使用Net的父类的初始化方法，即先运行nn.Module的初始化函数</span><br><span class="line">        self.intohid_layer &#x3D; nn.Linear(5, 10) #定义输入层到隐含层的连结关系函数</span><br><span class="line">        self.hidtoout_layer &#x3D; nn.Linear(10, 5)#定义隐含层到输出层的连结关系函数</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        #定义该神经网络的向前传播函数，该函数必须定义，一旦定义成功，向后传播函数也会自动生成</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.intohid_layer(input))    #输入input在输入层经过经过加权和与激活函数后到达隐含层</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.hidtoout_layer(x))       #类似上面</span><br><span class="line">        return x</span><br><span class="line"></span><br><span class="line">mnet &#x3D; Net().cuda()</span><br><span class="line">target&#x3D;Variable(torch.cuda.FloatTensor([0.2, 0.4, 0.6, 0.8, 1]))   #目标输出</span><br><span class="line">input&#x3D;Variable(torch.cuda.FloatTensor([0.1, 0.2, 0.3, 0.4, 0.5]))    #输入</span><br><span class="line"></span><br><span class="line">loss_fn &#x3D; torch.nn.MSELoss()                       #损失函数定义，可修改</span><br><span class="line">optimizer &#x3D; torch.optim.SGD(mnet.parameters(), lr&#x3D;0.5, momentum&#x3D;0.9);</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line"></span><br><span class="line">for t in range(0,5000):</span><br><span class="line">    optimizer.zero_grad()      #清空节点值</span><br><span class="line">    out&#x3D;mnet(input)            #前向传播</span><br><span class="line">    loss &#x3D; loss_fn(out,target) #损失计算</span><br><span class="line">    loss.backward()            #后向传播</span><br><span class="line">    optimizer.step()           #更新权值</span><br><span class="line">    if (t%1000&#x3D;&#x3D;0):</span><br><span class="line">        print(out)</span><br><span class="line"></span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(end - start)</span><br></pre></td></tr></table></figure>
-<p>到此就用代码实现了任意结点数的三层全连接神经网络，代码运行的结果都是对的，但相对来说pytorch收敛的快一些，可能跟其默认初始化的参数有关(自己写的代码都是用随机数初始化的)。<br>　　下一篇文章我们将用一个输入层、隐含层、输出层分别为784、100、10的三层全连接神经网络来训练闻名已久的MNIST手写数字字符集，然后自己手写一个数字来看看网络是否能比较给力的工作。<br>　　最后再预告下篇文章，<a href="https://aichn.cn/post/abc0fd31.html">深度学习3—用三层全连接神经网络训练MNIST手写数字字符集</a><br>　　另外写文章累人，写代码掉头发，如果觉得文章有帮助，哈哈哈</p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>-神经网络 -人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习3—用三层全连接神经网络训练MNIST手写数字字符集</title>
     <url>/post/abc0fd31.html</url>
     <content><![CDATA[<p>上一篇文章：<a href="https://aichn.cn/post/ee239b41.html">深度学习2—任意结点数的三层全连接神经网络</a><br>　　距离上篇文章过去了快四个月了，真是时光飞逝，之前因为要考博所以耽误了更新，谁知道考完博后之前落下的接近半个学期的工作是如此之多，以至于弄到现在才算基本填完坑，实在是疲惫至极。<br>　　另外在这段期间，发现了一本非常好的神经网络入门书籍，本篇的很多细节问题本人就是在这本书上找到的答案，强烈推荐一下：
@@ -4575,6 +4550,31 @@
 <p>上面的代码在频率为3.40GHz的电脑上，训练10遍，每次都遍历一整个训练集要花费1000s左右，也就是16.7分钟左右，因全连接神经网络的过拟合问题，正确率基本到了97.5%之后就再也升不上去了。</p>
 <h2 id="pytorch的GPU实现"><a href="#pytorch的GPU实现" class="headerlink" title="pytorch的GPU实现"></a><strong>pytorch的GPU实现</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">from torch.autograd import Variable</span><br><span class="line">import torchvision.datasets as dsets</span><br><span class="line">import torchvision.transforms as transforms</span><br><span class="line"></span><br><span class="line">#网络模型</span><br><span class="line">class Net(nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #定义Net的初始化函数，这个函数定义了该神经网络的基本结构</span><br><span class="line">        super(Net, self).__init__() #复制并使用Net的父类的初始化方法，即先运行nn.Module的初始化函数</span><br><span class="line">        self.intohid_layer &#x3D; nn.Linear(784, 100) #定义输入层到隐含层的连结关系函数</span><br><span class="line">        self.hidtoout_layer &#x3D; nn.Linear(100, 10)#定义隐含层到输出层的连结关系函数</span><br><span class="line">    def forward(self, input):</span><br><span class="line">        #定义该神经网络的向前传播函数，该函数必须定义，一旦定义成功，向后传播函数也会自动生成</span><br><span class="line">        x &#x3D; torch.sigmoid(self.intohid_layer(input))   #输入input在输入层经过经过加权和与激活函数后到达隐含层</span><br><span class="line">        x &#x3D; torch.sigmoid(self.hidtoout_layer(x))       #类似上面</span><br><span class="line">        return x</span><br><span class="line"></span><br><span class="line">mnet &#x3D; Net().cuda()</span><br><span class="line">#数据集</span><br><span class="line">train_dataset &#x3D; dsets.MNIST(root &#x3D; &#39;..&#x2F;mnist&#x2F;&#39;, #选择数据的根目录</span><br><span class="line">                           train &#x3D; True, # 选择训练集</span><br><span class="line">                           transform &#x3D; transforms.ToTensor(), # 转换成tensor变量</span><br><span class="line">                           download &#x3D; False) # 不从网络上download图片</span><br><span class="line">test_dataset &#x3D; dsets.MNIST(root &#x3D; &#39;..&#x2F;mnist&#x2F;&#39;, # 选择数据的根目录</span><br><span class="line">                           train &#x3D; False, # 选择训练集</span><br><span class="line">                           transform &#x3D; transforms.ToTensor(),# 转换成tensor变量</span><br><span class="line">                           download &#x3D; False) # 不从网络上download图片</span><br><span class="line"># 加载数据</span><br><span class="line">train_loader &#x3D; torch.utils.data.DataLoader(dataset &#x3D; train_dataset, </span><br><span class="line">                                           batch_size &#x3D; 1,#每一次训练选用的数据个数</span><br><span class="line">                                           shuffle &#x3D; False)#将数据打乱</span><br><span class="line">test_loader &#x3D; torch.utils.data.DataLoader(dataset &#x3D; test_dataset,</span><br><span class="line">                                          batch_size &#x3D; 1000,#每一次训练选用的数据个数</span><br><span class="line">                                          shuffle &#x3D; False)</span><br><span class="line"></span><br><span class="line">loss_fn &#x3D; torch.nn.MSELoss()#损失函数定义，可修改</span><br><span class="line">optimizer &#x3D; torch.optim.SGD(mnet.parameters(), lr &#x3D; 0.1, momentum&#x3D;0.9)</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line"></span><br><span class="line">for epoch in range(1):#训练次数</span><br><span class="line">    print(&#39;current epoch &#x3D; %d&#39; % epoch)</span><br><span class="line">    for i, (images, labels) in enumerate(train_loader): #利用enumerate取出一个可迭代对象的内容</span><br><span class="line">        images &#x3D; Variable(images.view(-1, 28 * 28).cuda())</span><br><span class="line">        labels &#x3D; Variable(labels.cuda())</span><br><span class="line">        labels &#x3D; torch.cuda.LongTensor(labels).view(-1,1)#将标签转为单列矩阵</span><br><span class="line">        target&#x3D; torch.zeros(1, 10).cuda().scatter_(dim &#x3D; 1, index &#x3D; labels, value &#x3D; 0.98)#将标签转为onehot形式</span><br><span class="line">        target+&#x3D;0.01</span><br><span class="line">        optimizer.zero_grad()               #清空节点值</span><br><span class="line">        outputs &#x3D; mnet(images)           #前向传播</span><br><span class="line">        loss &#x3D; loss_fn(outputs, target)  #损失计算</span><br><span class="line">        loss.backward()                          #后向传播</span><br><span class="line">        optimizer.step()                         #更新权值</span><br><span class="line">        if i % 10000 &#x3D;&#x3D; 0:</span><br><span class="line">            print(i)</span><br><span class="line">            total &#x3D; 0</span><br><span class="line">            correct &#x3D; 0.0</span><br><span class="line">            for images, labels in test_loader:</span><br><span class="line">                images &#x3D; Variable(images.view(-1, 28 * 28).cuda())</span><br><span class="line">                outputs &#x3D; mnet(images)                                        #前向传播</span><br><span class="line">                _, predicts &#x3D; torch.max(outputs.data, 1)                #返回预测结果</span><br><span class="line">                total +&#x3D; labels.size(0)</span><br><span class="line">                correct +&#x3D; (predicts &#x3D;&#x3D; labels.cuda()).sum()</span><br><span class="line">            print(&#39;Accuracy &#x3D; %.2f&#39; % (100 * float(correct) &#x2F; total))</span><br><span class="line"></span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(&#39;花费时间%.2f&#39; % (end - start))</span><br></pre></td></tr></table></figure>
 <p>另外写文章累人，写代码掉头发，如果觉得文章有帮助，哈哈哈</p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>-神经网络 -人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习2---任意结点数的三层全连接神经网络</title>
+    <url>/post/ee239b41.html</url>
+    <content><![CDATA[<p>上一篇文章：<a href="https://aichn.cn/post/74e51a6a.html">深度学习1—最简单的全连接神经网络</a>　<br>　　我们完成了一个三层（输入+隐含+输出）且每层都具有两个节点的全连接神经网络的原理分析和代码编写。本篇文章将进一步探讨如何把每层固定的两个节点变成任意个节点，以方便我们下一篇文章用本篇文章完成的网络来训练手写字符集“mnist”。<br>　　对于前向传播，基本上没有什么变化，就不用说了。主要看看后向传播的梯度下降公式。先放上上篇文章的网络图。<br><img src="/../images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02---%E4%BB%BB%E6%84%8F%E7%BB%93%E7%82%B9%E6%95%B0%E7%9A%84%E4%B8%89%E5%B1%82%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/20180928134419558" alt="在这里插入图片描述"><br>　　上篇文章我们推知，含有两个节点的隐含层到输出层的权值对误差的偏导数，公式如下：<br>　<br>$$<br>　\frac{\partial E_{总}}{\partial W_{11}^{(２)}}=(O_{1}-T_{1})*O_{1}(1-O_{1})*Y_{1}<br>$$<br>　　而含有两个节点的输入层到隐含层的权值对于误差梯度的偏导数公式如下：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{11}^{(1)}}=((O_{1}-T_{1})*O_{1}(1-O_{1})*W_{11}^{(2)}+(O_{2}-T_{2})*O_{2}(1-O_{2})*W_{21}^{(2)})*Y_{1}(1-Y_{1})*X_{1}<br>$$<br>　　现在我们来总结规律，先看第一道公式：<br>　　<br>$$<br>W_{11}^{(2)}<br>$$<br>位于输出层第一个结点的后方，与隐含层第一个结点相连接，其对总误差求偏导的式子结果也只与这两个节点的相关参数有关，与输入层、隐含层的第二个节点、输出层的第二个节点均无关。因此，也可以说，无论各层的节点数怎么样变化，隐含层到输出层的权值只与它连接的两个节点的参数相关。上式可以写成：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{xy}^{(2)}}=(O_{x}-T_{x})*O_{x}(1-O_{x})*Y_{y}<br>$$<br>　　再看第二道公式：<br>　　<br>$$<br>W_{11}^{(1)}<br>$$<br>位于隐含层第一个节点的后方，与输入层第一个节点相连接，第一个隐含层节点又与输出层所有节点相连接。公式中出现的项与上面描述到的节点相关，因此如果输出层节点增加，则表达式需要增加对增加节点的计算。而隐含层和输入层增加则无所谓。因此表达式可以写成：<br>　　<br>$$<br>\frac{\partial E_{总}}{\partial W_{xy}^{(1)}}=[\sum_{k=1}^{n}(O_{k}-T_{k})*O_{k}(1-O_{k})*W_{kx}^{(2)}]*Y_{x}(1-Y_{x})*X_{y}<br>$$<br>　　大功告成！规律总结完了，下面就只剩下写代码了。不得不承认，这一篇原理部分蛮少的，应该只能算是上一篇文章的补充。但从固定到任意还是挺重要的，因此独立出来写。<br>　　下面我们用代码来实现一个任意节点数（代码中取的输入层、隐含层、输出层分别为5、10、5个节点，当然你高兴的话可以随意改动）的三层全连接神经网络。</p>
+<h2 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a><strong>C++实现</strong></h2><hr>
+<p>直接上代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include&lt;ctime&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define IPNNUM 5     &#x2F;&#x2F;输入层节点数</span><br><span class="line">#define HDNNUM 10    &#x2F;&#x2F;隐含层节点数</span><br><span class="line">#define OPNNUM 5     &#x2F;&#x2F;输出层节点数</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;结点类，用以构成网络</span><br><span class="line">class node </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	double value; &#x2F;&#x2F;数值，存储结点最后的状态</span><br><span class="line">	double *W&#x3D;NULL;    &#x2F;&#x2F;结点到下一层的权值</span><br><span class="line"></span><br><span class="line">	void initNode(int num);&#x2F;&#x2F;初始化函数，必须调用以初始化权值个数</span><br><span class="line">	~node();	  &#x2F;&#x2F;析构函数，释放掉权值占用内存</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void node::initNode(int num)</span><br><span class="line">&#123;</span><br><span class="line">	W &#x3D; new double[num];</span><br><span class="line">	srand((unsigned)time(NULL));</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; num; i++)&#x2F;&#x2F;给权值赋一个随机值</span><br><span class="line">	&#123;</span><br><span class="line">		W[i]&#x3D; (rand() % 100)&#x2F;(double)100;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node::~node()</span><br><span class="line">&#123;</span><br><span class="line">	if (W!&#x3D;NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		delete[]W;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;网络类，描述神经网络的结构并实现前向传播以及后向传播</span><br><span class="line">class net </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	node inlayer[IPNNUM]; &#x2F;&#x2F;输入层</span><br><span class="line">	node hidlayer[HDNNUM];&#x2F;&#x2F;隐含层</span><br><span class="line">	node outlayer[OPNNUM];&#x2F;&#x2F;输出层</span><br><span class="line"></span><br><span class="line">	double yita &#x3D; 0.1;&#x2F;&#x2F;学习率η</span><br><span class="line">	double k1;&#x2F;&#x2F;输入层偏置项权重</span><br><span class="line">	double k2;&#x2F;&#x2F;隐含层偏置项权重</span><br><span class="line">	double Tg[OPNNUM];&#x2F;&#x2F;训练目标</span><br><span class="line">	double O[OPNNUM];&#x2F;&#x2F;网络实际输出</span><br><span class="line"></span><br><span class="line">	net();&#x2F;&#x2F;构造函数，用于初始化各层和偏置项权重</span><br><span class="line">	double sigmoid(double z);&#x2F;&#x2F;激活函数</span><br><span class="line">	double getLoss();&#x2F;&#x2F;损失函数，输入为目标值</span><br><span class="line">	void forwardPropagation(double *input);&#x2F;&#x2F;前向传播,输入为输入层节点的值</span><br><span class="line">	void backPropagation(double *T);&#x2F;&#x2F;反向传播，输入为目标输出值</span><br><span class="line">	void printresual(int trainingTimes);&#x2F;&#x2F;打印信息</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">net::net()</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F;初始化输入层和隐含层偏置项权值，给一个随机值</span><br><span class="line">	srand((unsigned)time(NULL));</span><br><span class="line">	k1&#x3D; (rand() % 100) &#x2F; (double)100;</span><br><span class="line">	k2 &#x3D; (rand() % 100) &#x2F; (double)100;</span><br><span class="line">	&#x2F;&#x2F;初始化输入层到隐含层节点个数</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; IPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		inlayer[i].initNode(HDNNUM);</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F;初始化隐含层到输出层节点个数</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; HDNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		hidlayer[i].initNode(OPNNUM);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;激活函数</span><br><span class="line">double net::sigmoid(double z)</span><br><span class="line">&#123;</span><br><span class="line">	return 1&#x2F;(1+ exp(-z));</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;损失函数</span><br><span class="line">double net::getLoss()</span><br><span class="line">&#123;</span><br><span class="line">	double mloss &#x3D; 0;</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; OPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mloss +&#x3D; pow(O[i] - Tg[i], 2);</span><br><span class="line">	&#125;</span><br><span class="line">	return mloss &#x2F; OPNNUM;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;前向传播</span><br><span class="line">void net::forwardPropagation(double *input)</span><br><span class="line">&#123;</span><br><span class="line">	for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)&#x2F;&#x2F;输入层节点赋值</span><br><span class="line">	&#123;</span><br><span class="line">		inlayer[iNNum].value &#x3D; input[iNNum];</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)&#x2F;&#x2F;算出隐含层结点的值</span><br><span class="line">	&#123;</span><br><span class="line">		double z &#x3D; 0;</span><br><span class="line">		for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			z+&#x3D; inlayer[iNNum].value*inlayer[iNNum].W[hNNum];</span><br><span class="line">		&#125;</span><br><span class="line">		z+&#x3D; k1;&#x2F;&#x2F;加上偏置项</span><br><span class="line">		hidlayer[hNNum].value &#x3D; sigmoid(z);</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)&#x2F;&#x2F;算出输出层结点的值</span><br><span class="line">	&#123;</span><br><span class="line">		double z &#x3D; 0;</span><br><span class="line">		for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			z +&#x3D; hidlayer[hNNum].value*hidlayer[hNNum].W[oNNum];</span><br><span class="line">		&#125;</span><br><span class="line">		z +&#x3D; k2;&#x2F;&#x2F;加上偏置项</span><br><span class="line">		O[oNNum] &#x3D; outlayer[oNNum].value &#x3D; sigmoid(z);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;反向传播，这里为了公式好看一点多写了一些变量作为中间值</span><br><span class="line">&#x2F;&#x2F;计算过程用到的公式在博文中已经推导过了，如果代码没看明白请看看博文</span><br><span class="line">void net::backPropagation(double *T)</span><br><span class="line">&#123;	</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; OPNNUM; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		Tg[i] &#x3D; T[i];</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t iNNum &#x3D; 0; iNNum &lt; IPNNUM; iNNum++)&#x2F;&#x2F;更新输入层权重</span><br><span class="line">	&#123;</span><br><span class="line">		for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			double y &#x3D; hidlayer[hNNum].value;</span><br><span class="line">			double loss &#x3D; 0;</span><br><span class="line">			for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">			&#123;</span><br><span class="line">				loss +&#x3D; (O[oNNum] - Tg[oNNum])*O[oNNum] * (1 - O[oNNum])*hidlayer[hNNum].W[oNNum];</span><br><span class="line">			&#125;</span><br><span class="line">			inlayer[iNNum].W[hNNum] -&#x3D; yita*loss*y*(1 - y)*inlayer[iNNum].value;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for (size_t hNNum &#x3D; 0; hNNum &lt; HDNNUM; hNNum++)&#x2F;&#x2F;更新隐含层权重</span><br><span class="line">	&#123;</span><br><span class="line">		for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">		&#123;</span><br><span class="line">			hidlayer[hNNum].W[oNNum]-&#x3D; yita*(O[oNNum] - Tg[oNNum])*</span><br><span class="line">				O[oNNum] *(1- O[oNNum])*hidlayer[hNNum].value;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void net::printresual(int trainingTimes)</span><br><span class="line">&#123;</span><br><span class="line">	double loss &#x3D; getLoss();</span><br><span class="line">	cout &lt;&lt; &quot;训练次数：&quot; &lt;&lt; trainingTimes &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; &quot;loss：&quot; &lt;&lt; loss &lt;&lt; endl;</span><br><span class="line">	for (size_t oNNum &#x3D; 0; oNNum &lt; OPNNUM; oNNum++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; &quot;输出&quot; &lt;&lt; oNNum+1&lt;&lt; &quot;：&quot; &lt;&lt; O[oNNum] &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	net mnet;</span><br><span class="line">	double minput[IPNNUM] &#x3D; &#123; 0.1, 0.2, 0.3, 0.4, 0.5 &#125;;</span><br><span class="line">	double mtarget[IPNNUM] &#x3D; &#123; 0.2, 0.4, 0.6, 0.8, 1 &#125;;</span><br><span class="line">	for (size_t i &#x3D; 0; i &lt; 10000; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mnet.forwardPropagation(minput);&#x2F;&#x2F;前向传播</span><br><span class="line">		mnet.backPropagation(mtarget);&#x2F;&#x2F;反向传播</span><br><span class="line">		if (i%1000&#x3D;&#x3D;0)</span><br><span class="line">		&#123;</span><br><span class="line">			mnet.printresual(i);&#x2F;&#x2F;信息打印</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="python实现"><a href="#python实现" class="headerlink" title="python实现"></a><strong>python实现</strong></h2><hr>
+<p>直接上代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">IPNNUM&#x3D;5     #输入层节点数</span><br><span class="line">HDNNUM&#x3D;10    #隐含层节点数</span><br><span class="line">OPNNUM&#x3D;3     #输出层节点数</span><br><span class="line"></span><br><span class="line">class node:</span><br><span class="line">    #结点类，用以构成网络</span><br><span class="line">    def __init__(self,connectNum&#x3D;0):</span><br><span class="line">        self.value&#x3D;0 #数值，存储结点最后的状态，对应到文章示例为X1，Y1等值</span><br><span class="line">        self.W &#x3D; (2*np.random.random_sample(connectNum)-1)*0.01</span><br><span class="line"></span><br><span class="line">class net:</span><br><span class="line">    #网络类，描述神经网络的结构并实现前向传播以及后向传播</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #初始化函数，用于初始化各层间节点和偏置项权重</span><br><span class="line">        #输入层结点</span><br><span class="line">        self.inlayer&#x3D;[node(HDNNUM)];</span><br><span class="line">        for obj in range(1, IPNNUM):</span><br><span class="line">            self.inlayer.append(node(HDNNUM)) </span><br><span class="line">        #隐含层结点</span><br><span class="line">        self.hidlayer&#x3D;[node(OPNNUM)];</span><br><span class="line">        for obj in range(1, HDNNUM):</span><br><span class="line">            self.hidlayer.append(node(OPNNUM))             </span><br><span class="line">        #输出层结点</span><br><span class="line">        self.outlayer&#x3D;[node(0)];</span><br><span class="line">        for obj in range(1, OPNNUM):</span><br><span class="line">            self.outlayer&#x3D;[node(0)]                 </span><br><span class="line"></span><br><span class="line">        self.yita &#x3D; 0.1                                           #学习率η</span><br><span class="line">        self.k1&#x3D;random.random()                       #输入层偏置项权重</span><br><span class="line">        self.k2&#x3D;random.random()                       #隐含层偏置项权重</span><br><span class="line">        self.Tg&#x3D;np.zeros(OPNNUM)                   #训练目标</span><br><span class="line">        self.O&#x3D;np.zeros(OPNNUM)                     #网络实际输出</span><br><span class="line"></span><br><span class="line">    def sigmoid(self,z):</span><br><span class="line">        #激活函数</span><br><span class="line">        return 1 &#x2F; (1 + math.exp(-z))</span><br><span class="line"></span><br><span class="line">    def getLoss(self):</span><br><span class="line">        #损失函数</span><br><span class="line">        loss&#x3D;0</span><br><span class="line">        for num in range(0, OPNNUM):</span><br><span class="line">            loss+&#x3D;pow(self.O[num] -self.Tg[num],2)</span><br><span class="line">        return loss&#x2F;OPNNUM</span><br><span class="line"></span><br><span class="line">    def forwardPropagation(self,input):</span><br><span class="line">        #前向传播</span><br><span class="line">        for i in range(0, IPNNUM):</span><br><span class="line">            #输入层节点赋值</span><br><span class="line">            self.inlayer[i].value &#x3D; input[i]</span><br><span class="line">        for hNNum in range(0,HDNNUM):</span><br><span class="line">             #算出隐含层结点的值</span><br><span class="line">            z &#x3D; 0</span><br><span class="line">            for iNNum in range(0,IPNNUM):</span><br><span class="line">                z+&#x3D;self.inlayer[iNNum].value*self.inlayer[iNNum].W[hNNum]</span><br><span class="line">            #加上偏置项</span><br><span class="line">            z+&#x3D; self.k1</span><br><span class="line">            self.hidlayer[hNNum].value &#x3D; self.sigmoid(z)</span><br><span class="line">        for oNNum in range(0,OPNNUM):</span><br><span class="line">            #算出输出层结点的值</span><br><span class="line">            z &#x3D; 0</span><br><span class="line">            for hNNum in range(0,HDNNUM):</span><br><span class="line">                z +&#x3D; self.hidlayer[hNNum].value* self.hidlayer[hNNum].W[oNNum]</span><br><span class="line">            z +&#x3D; self.k2</span><br><span class="line">            self.O[oNNum] &#x3D; self.sigmoid(z)</span><br><span class="line"></span><br><span class="line">    def backPropagation(self,T):</span><br><span class="line">        #反向传播，这里为了公式好看一点多写了一些变量作为中间值</span><br><span class="line">        for num in range(0, OPNNUM):</span><br><span class="line">            self.Tg[num] &#x3D; T[num]</span><br><span class="line">        for iNNum in range(0,IPNNUM):</span><br><span class="line">            #更新输入层权重</span><br><span class="line">            for hNNum in range(0,HDNNUM):</span><br><span class="line">                y &#x3D; self.hidlayer[hNNum].value</span><br><span class="line">                loss &#x3D; 0</span><br><span class="line">                for oNNum in range(0, OPNNUM):</span><br><span class="line">                    loss+&#x3D;(self.O[oNNum] - self.Tg[oNNum])*self.O[oNNum] * (1 - self.O[oNNum])*self.hidlayer[hNNum].W[oNNum]</span><br><span class="line">                self.inlayer[iNNum].W[hNNum] -&#x3D; self.yita*loss*y*(1- y)*self.inlayer[iNNum].value</span><br><span class="line">        for hNNum in range(0,HDNNUM):</span><br><span class="line">            #更新隐含层权重</span><br><span class="line">            for oNNum in range(0,OPNNUM):</span><br><span class="line">                self.hidlayer[hNNum].W[oNNum]-&#x3D; self.yita*(self.O[oNNum] - self.Tg[oNNum])*self.O[oNNum]*\</span><br><span class="line">                    (1- self.O[oNNum])*self.hidlayer[hNNum].value</span><br><span class="line"></span><br><span class="line">    def printresual(self,trainingTimes):</span><br><span class="line">        #信息打印</span><br><span class="line">        loss &#x3D; self.getLoss()</span><br><span class="line">        print(&quot;训练次数：&quot;, trainingTimes)</span><br><span class="line">        print(&quot;loss&quot;,loss)</span><br><span class="line">        for oNNum in range(0,OPNNUM):</span><br><span class="line">            print(&quot;输出&quot;,oNNum,&quot;:&quot;,self.O[oNNum])</span><br><span class="line"></span><br><span class="line">#主程序</span><br><span class="line">mnet&#x3D;net()</span><br><span class="line">input&#x3D;np.array([0.1,0.2,0.3,0.4,0.5])</span><br><span class="line">target&#x3D;np.array([0.1,0.4,0.5])</span><br><span class="line"></span><br><span class="line">for n in range(0,1000):   </span><br><span class="line">    mnet.forwardPropagation(input)</span><br><span class="line">    mnet.backPropagation(target)</span><br><span class="line">    if (n%200&#x3D;&#x3D;0):</span><br><span class="line">        mnet.printresual(n)</span><br></pre></td></tr></table></figure>
+<h2 id="pytorch的CPU实现"><a href="#pytorch的CPU实现" class="headerlink" title="pytorch的CPU实现"></a><strong>pytorch的CPU实现</strong></h2><hr>
+<p>其实pytorch本身就已经支持任意节点数，所以这里只是随意的改了下上一篇文章中代码的参数部分。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;UTF-8</span><br><span class="line">import time</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">from torch.autograd import Variable</span><br><span class="line"></span><br><span class="line">class Net(nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #定义Net的初始化函数，这个函数定义了该神经网络的基本结构</span><br><span class="line">        super(Net, self).__init__() #复制并使用Net的父类的初始化方法，即先运行nn.Module的初始化函数</span><br><span class="line">        self.intohid_layer &#x3D; nn.Linear(5, 10) #定义输入层到隐含层的连结关系函数</span><br><span class="line">        self.hidtoout_layer &#x3D; nn.Linear(10, 5)#定义隐含层到输出层的连结关系函数</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        #定义该神经网络的向前传播函数，该函数必须定义，一旦定义成功，向后传播函数也会自动生成</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.intohid_layer(input))    #输入input在输入层经过经过加权和与激活函数后到达隐含层</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.hidtoout_layer(x))       #类似上面</span><br><span class="line">        return x</span><br><span class="line"></span><br><span class="line">mnet &#x3D; Net()</span><br><span class="line">target&#x3D;Variable(torch.FloatTensor([0.2, 0.4, 0.6, 0.8, 1]))   #目标输出</span><br><span class="line">input&#x3D;Variable(torch.FloatTensor([0.1, 0.2, 0.3, 0.4, 0.5]))    #输入</span><br><span class="line"></span><br><span class="line">loss_fn &#x3D; torch.nn.MSELoss()                       #损失函数定义，可修改</span><br><span class="line">optimizer &#x3D; torch.optim.SGD(mnet.parameters(), lr&#x3D;0.5, momentum&#x3D;0.9);</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line"></span><br><span class="line">for t in range(0,5000):</span><br><span class="line">    optimizer.zero_grad()      #清空节点值</span><br><span class="line">    out&#x3D;mnet(input)            #前向传播</span><br><span class="line">    loss &#x3D; loss_fn(out,target) #损失计算</span><br><span class="line">    loss.backward()            #后向传播</span><br><span class="line">    optimizer.step()           #更新权值</span><br><span class="line">    if (t%1000&#x3D;&#x3D;0):</span><br><span class="line">        print(out)</span><br><span class="line"></span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(end - start)</span><br></pre></td></tr></table></figure>
+<h2 id="pytorch的GPU实现"><a href="#pytorch的GPU实现" class="headerlink" title="pytorch的GPU实现"></a><strong>pytorch的GPU实现</strong></h2><hr>
+<p>直接上代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># coding&#x3D;UTF-8</span><br><span class="line">import time</span><br><span class="line">import torch</span><br><span class="line">import torch.nn as nn</span><br><span class="line">from torch.autograd import Variable</span><br><span class="line"></span><br><span class="line">class Net(nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #定义Net的初始化函数，这个函数定义了该神经网络的基本结构</span><br><span class="line">        super(Net, self).__init__() #复制并使用Net的父类的初始化方法，即先运行nn.Module的初始化函数</span><br><span class="line">        self.intohid_layer &#x3D; nn.Linear(5, 10) #定义输入层到隐含层的连结关系函数</span><br><span class="line">        self.hidtoout_layer &#x3D; nn.Linear(10, 5)#定义隐含层到输出层的连结关系函数</span><br><span class="line"></span><br><span class="line">    def forward(self, input):</span><br><span class="line">        #定义该神经网络的向前传播函数，该函数必须定义，一旦定义成功，向后传播函数也会自动生成</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.intohid_layer(input))    #输入input在输入层经过经过加权和与激活函数后到达隐含层</span><br><span class="line">        x &#x3D; torch.nn.functional.sigmoid(self.hidtoout_layer(x))       #类似上面</span><br><span class="line">        return x</span><br><span class="line"></span><br><span class="line">mnet &#x3D; Net().cuda()</span><br><span class="line">target&#x3D;Variable(torch.cuda.FloatTensor([0.2, 0.4, 0.6, 0.8, 1]))   #目标输出</span><br><span class="line">input&#x3D;Variable(torch.cuda.FloatTensor([0.1, 0.2, 0.3, 0.4, 0.5]))    #输入</span><br><span class="line"></span><br><span class="line">loss_fn &#x3D; torch.nn.MSELoss()                       #损失函数定义，可修改</span><br><span class="line">optimizer &#x3D; torch.optim.SGD(mnet.parameters(), lr&#x3D;0.5, momentum&#x3D;0.9);</span><br><span class="line"></span><br><span class="line">start &#x3D; time.time()</span><br><span class="line"></span><br><span class="line">for t in range(0,5000):</span><br><span class="line">    optimizer.zero_grad()      #清空节点值</span><br><span class="line">    out&#x3D;mnet(input)            #前向传播</span><br><span class="line">    loss &#x3D; loss_fn(out,target) #损失计算</span><br><span class="line">    loss.backward()            #后向传播</span><br><span class="line">    optimizer.step()           #更新权值</span><br><span class="line">    if (t%1000&#x3D;&#x3D;0):</span><br><span class="line">        print(out)</span><br><span class="line"></span><br><span class="line">end &#x3D; time.time()</span><br><span class="line">print(end - start)</span><br></pre></td></tr></table></figure>
+<p>到此就用代码实现了任意结点数的三层全连接神经网络，代码运行的结果都是对的，但相对来说pytorch收敛的快一些，可能跟其默认初始化的参数有关(自己写的代码都是用随机数初始化的)。<br>　　下一篇文章我们将用一个输入层、隐含层、输出层分别为784、100、10的三层全连接神经网络来训练闻名已久的MNIST手写数字字符集，然后自己手写一个数字来看看网络是否能比较给力的工作。<br>　　最后再预告下篇文章，<a href="https://aichn.cn/post/abc0fd31.html">深度学习3—用三层全连接神经网络训练MNIST手写数字字符集</a><br>　　另外写文章累人，写代码掉头发，如果觉得文章有帮助，哈哈哈</p>
 ]]></content>
       <categories>
         <category>人工智能</category>
@@ -4783,7 +4783,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#99;&#x6f;&#110;&#101;&#x79;&#112;&#111;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#99;&#x6f;&#110;&#101;&#x79;&#112;&#111;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p># Mail:   <a href="mailto:&#x63;&#111;&#110;&#101;&#x79;&#x70;&#111;&#x40;&#102;&#111;&#x78;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x63;&#111;&#110;&#101;&#x79;&#x70;&#111;&#x40;&#102;&#111;&#x78;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p>import dlib     # 人脸处理的库 Dlib</p>
@@ -4909,7 +4909,7 @@
 <p># Author:  coneypo</p>
 <p># Blog:   <a href="http://www.cnblogs.com/AdaminXie">http://www.cnblogs.com/AdaminXie</a></p>
 <p># GitHub:  <a href="https://github.com/coneypo/Dlib_face_recognition_from_camera">https://github.com/coneypo/Dlib_face_recognition_from_camera</a></p>
-<p># Mail:   <a href="mailto:&#99;&#111;&#x6e;&#101;&#x79;&#112;&#111;&#64;&#102;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#99;&#111;&#x6e;&#101;&#x79;&#112;&#111;&#64;&#102;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
+<p># Mail:   <a href="mailto:&#99;&#111;&#x6e;&#x65;&#x79;&#x70;&#111;&#x40;&#102;&#111;&#120;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#99;&#111;&#x6e;&#x65;&#x79;&#x70;&#111;&#x40;&#102;&#111;&#120;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p># Created at 2018-05-11</p>
 <p># Updated at 2018-10-29</p>
 <p># 增加录入多张人脸到 CSV 的功能</p>
