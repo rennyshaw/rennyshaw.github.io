@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>周王羲祖的博客 - 人工智能,大数据工程师</title><meta name="keywords" content="周王羲祖,博客,人工智能,大数据,aichn,伏羲,华夏,智慧中夏"><meta name="author" content="周王羲祖"><meta name="copyright" content="周王羲祖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="学而不思则罔，思而不学则殆"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://aichn.cn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-12-16 21:27:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 文章</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">周王羲祖的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 文章</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">周王羲祖的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/post/d0f5fd4f.html" title="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）">     <img class="post_bg" src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A010%E4%B8%AA%E6%9C%80%E4%BD%B3%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E5%92%8CAI%E5%BA%93%EF%BC%88%E4%BC%98%E7%BC%BA%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%89/1528726843672650.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）"></a></div><div class="recent-post-info"><a class="article-title" href="/post/d0f5fd4f.html" title="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）">机器学习10个最佳人工智能开发框架和AI库（优缺点总结）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-12-23T13:06:36.000Z" title="发表于 2019-12-23 21:06:36">2019-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">概述通过本文我们来一起看一些用于人工智能的高质量AI库，它们的优点和缺点，以及它们的一些特点。
+人工智能（AI）已经存在很长时间了。然而，由于这一领域的巨大进步，近年来它已成为一个流行语。人工智能曾经被称为一个完整的书呆子和天才的领域，但由于各种开发库和框架的发展，它已经成为一个友好的IT领域，并有很多人正走进它。
+在这篇文章中，我们将研究用于人工智能的优质库，它们的优缺点以及它们的一些特征。让我们深入并探索这些人工智能库的世界！
+1. TensorFlow“使用数据流图表的可伸缩机器学习的计算”
+语言：C ++或Python。
+当进入AI时，你会听到的第一个框架之一就是Google的TensorFlow。
+TensorFlow是一个使用数据流图表进行数值计算的开源软件。这个框架被称为具有允许在任何CPU或GPU上进行计算的架构，无论是台式机、服务器还是移动设备。这个框架在Python编程语言中是可用的。
+TensorFlow对称为节点的数据层进行排序，并根据所获得的任何信息做出决定。
+
+优点：
+
+使用易于学习的语言（Python）。
+使用计算图表抽象。
+用于TensorBoard的可 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/post/22f26062.html" title="GAN生成对抗式神经网络实际操作">     <img class="post_bg" src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105426838.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GAN生成对抗式神经网络实际操作"></a></div><div class="recent-post-info"><a class="article-title" href="/post/22f26062.html" title="GAN生成对抗式神经网络实际操作">GAN生成对抗式神经网络实际操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-24T13:06:36.000Z" title="发表于 2018-12-24 21:06:36">2018-12-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">上一篇文章我们强力推导了GAN的数学公式，它就是：$$V = E _ { x \sim P _ { \text {data} } } [ \log D ( x ) ] + E _ { x \sim P _ { G } } [ \log ( 1 - D ( x ) ) ]$$在我们训练D网络的时候，我们要让V最大化，当我们训练G网络的时候我们要让V最小化，就是这么简单。因此哪怕数学推导那篇五六千字的博客不想看，实做也可以做。
+实做上比较大的一个问题是我们实际上不能获取到全部真实图像样本和全部拟合图像样本。因此上面这道公式在实做上是搞不成的。
+我们采取的方法是抽样。也就是从$$P _ { \text {data} }(x)$$中抽出m个样本，写作$${ x ^ { 1 } , x ^ { 2 } , \ldots , x ^ { m } }，$$再从$$P _ { \text {G} }(x)$$中抽出m个样本，写作$${ \tilde { x } ^ { 1 } , \tilde { x } ^ { 2 } , \ldots , \tilde { x } ^ { m } }，$$然后我们 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/post/5b91f628.html" title="GAN生成对抗式神经网络数学推导">     <img class="post_bg" src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC/20181224170233872.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GAN生成对抗式神经网络数学推导"></a></div><div class="recent-post-info"><a class="article-title" href="/post/5b91f628.html" title="GAN生成对抗式神经网络数学推导">GAN生成对抗式神经网络数学推导</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-24T13:06:36.000Z" title="发表于 2018-12-24 21:06:36">2018-12-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">由上面一篇文章我们已经知道了，如果我们从真实数据分布里面取n个样本，根据给定样本我们可以列出其出现概率的表达式，那么生成这N个样本数据的似然(likelihood)就是$$l ( \theta )= \prod _ { i = 1 } ^ { N } p \left( x _ { i } | \theta \right)$$我们要找到\thetaθ来最大化这个函数，便是极大似然估计，公式如下：$$\hat { \theta } = \arg \max _ { \theta } H ( \theta ) = \arg \max _ { \theta } \ln l ( \theta ) = \arg \max _ { \theta } \sum _ { i = 1 } ^ { N } \ln p \left( x _ { i } | \theta \right)$$那么下面我们来看看GAN的推导。
+在极大似然估计中，我们假定要求的事物有一个固定的模型，写作$$P_{data}(x)Pdata(x)$$，但这个模型十分复杂，我们无法完全彻底的去刻画它，只能列一个带有参数的式子，然后用模型抽 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/post/c7d146d6.html" title="JS散度">     <img class="post_bg" src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS散度"></a></div><div class="recent-post-info"><a class="article-title" href="/post/c7d146d6.html" title="JS散度">JS散度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">前面我们介绍了相对熵（KL散度）的概念，知道了它可以用来表示两个概率分布之间的差异，但有个不大好的地方是它并不是对称的，因此有时用它来训练神经网络会有顺序不同造成不一样的训练结果的情况（其实个人觉得也就是训练时间差异罢了，也没那么严重）。为了克服这个问题，有人就提出了一个新的衡量公式，叫做JS散度，式子如下：$$J S \left( P _ { 1 } | P _ { 2 } \right) = \frac { 1 } { 2 } K L \left( P _ { 1 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right) + \frac { 1 } { 2 } K L \left( P _ { 2 } | \frac { P _ { 1 } + P _ { 2 } } { 2 } \right)JS(P1∥P2)=21KL(P1∥2P1+P2)+21KL(P2∥2P1+P2)$$如果有一点数学功底的人可以轻易看出这个公式对于$$P _ { 1 }和P _ { 2 }$$是对称的，而且因为是两个KL的叠加，由相对熵的文章我们知道KL的值一定是 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/post/7c5ef9ec.html" title="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷">     <img class="post_bg" src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827112109611" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷"></a></div><div class="recent-post-info"><a class="article-title" href="/post/7c5ef9ec.html" title="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷">为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">在很多二分类问题中，特别是正负样本不均衡的分类问题中，常使用交叉熵作为loss对模型的参数求梯度进行更新，那为何交叉熵能作为损失函数呢，我也是带着这个问题去找解析的。
+以下仅为个人理解，如有不当地方，请读到的看客能指出。
+我们都知道，各种机器学习模型都是模拟输入的分布，使得模型输出的分布尽量与训练数据一致，最直观的就是MSE（均方误差，Mean squared deviation), 直接就是输出与输入的差值平方，尽量保证输入与输出相同。这种loss我们都能理解。
+以下按照（1）熵的定义（2）交叉熵的定义 (3) 交叉熵的由来 （4）交叉熵作为loss的优势 作为主线来一步步理清思路。
+（1）熵的定义 各种熵的名称均来自信息论领域，这方面的背景就不介绍了，随便就能找到很多。
+根据维基的定义，熵的定义如下：熵是接收的每条消息中包含的信息的平均量，又被称为信息熵、信源熵、平均自信息量。直白地解释就是信息中含的信息量的大小，其定义如下：
+
+其曲线如下所示：
+
+可以看出，一个事件的发生的概率离0.5越近，其熵就越大，概率为0或1就是确定性事件，不能为我们带信息量。也可以看作是一件事我们越难猜测 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/post/ea101373.html" title="交叉熵">     <img class="post_bg" src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="交叉熵"></a></div><div class="recent-post-info"><a class="article-title" href="/post/ea101373.html" title="交叉熵">交叉熵</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">我们简单介绍了相对熵的概念，知道了相对熵可以用来表达真实事件和理论拟合出来的事件之间的差异。
+相对熵的公式如下：$$D _ { K L } ( p | q ) = \sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log p \left( x _ { i } \right)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)$$可以看到前面一项是真实事件的信息熵取反，我们可以直接写成$$D _ { K L } ( p | q ) = -H(p)-\sum _ { i = 1 } ^ { N }p \left( x _ { i } \right)\log q \left( x _ { i } \right)$$在神经网络训练中，我们要训练的是$$q ( x _ { i })$$使得其与真实事件的分布越接近越好，也就是说在神经网络的训练中，相对熵会变的部分只有后面的部分，我们希望它越小越好，而前面的那部分是不变的。因此我们可以把 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/post/89c41659.html" title="【数据可视化】电视产品精准营销推荐">     <img class="post_bg" src="/../images/%E3%80%90%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E3%80%91%E7%94%B5%E8%A7%86%E4%BA%A7%E5%93%81%E7%B2%BE%E5%87%86%E8%90%A5%E9%94%80%E6%8E%A8%E8%8D%90/v2-882533662c432170019ffeeab963aee8_hd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【数据可视化】电视产品精准营销推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/post/89c41659.html" title="【数据可视化】电视产品精准营销推荐">【数据可视化】电视产品精准营销推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></span></div><div class="content">获奖经历：
+2017年4月:美国大学生数学建模竞赛二等奖
+2017年11月:数学建模竞赛国家一等奖
+2017年11月:数学竞赛国家二等奖
+2018年4月:美国大学生数学建模竞赛二等奖
+2018年5月:泰迪杯数据挖掘竞赛国家二等家
+兴趣爱好：羽毛球，读书
+个人生活照：（1-2张）
+
+一、实验目的
+1、实验背景
+本实验项目来自于第六届泰迪杯数据挖掘竞赛，共包含用户观看信息和电视产品信息两组数据，通过对数据进行处理，实现产品的精准营销推荐，并将并将结果进行可视化展示。
+2、实验目的
+基于电视产品及用户信息数据对产品进行精准营销推荐，并将结果进行可视化展示。主要实现以下两个目的：
+（1）产品的精准营销推荐
+根据用户观看记录信息数据，分析用户的收视偏好，并给出电视产品的营销推荐方案。
+（2）相似偏好用户的产品打包推荐
+为了更好地为用户服务，扩大营销范围，利用数据对相似偏好的用户进行分类（用户标签），对产品进行分类打包（产品标签），并给出营销推荐方案。
+3、实验内容与要求
+（1）对数据进行处理，并根据用户的收视信息对用户偏好进行分析，将分析结果用图像进行表示。
+（2）整理产品信息，重新对产品分类， ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/post/fbf175a6.html" title="似然函数">     <img class="post_bg" src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="似然函数"></a></div><div class="recent-post-info"><a class="article-title" href="/post/fbf175a6.html" title="似然函数">似然函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">似然（likelihood）这个词其实和概率（probability）是差不多的意思，但是在统计里面，似然函数和概率函数却是两个不同的概念。
+对于函数：P(x∣θ)，输入有两个：x表示某一个具体的数据；θ表示模型的参数。
+如果θ是确定的，x是变量，这个函数叫做概率函数(probability function)，它描述对于不同的样本点x，其出现概率是多少。
+比如我们已经知道了一个箱子里有19个黑球和一个白球，现在问你从箱子里抽出两个球，是两个黑球的概率是多少，这个时候我们的模型参数是完全知道了，就是19个黑球和一个白球，不知道的是抽出的具体的球是什么。这个时候，P(x∣θ)就是概率函数。
+如果x是已知确定的，θ是变量，这个函数叫做似然函数(likelihood function)，它描述对于不同的模型参数，出现x这个样本点的概率是多少。
+比如我们有一箱子球，已经从里面抽出了1个黑球8个白球，问你箱子里面黑球和白球的分布模型参数是什么。这个时候我们是不知道箱子里面的具体情况的，但我们知道抽出球的样本分布，那么我们要用样本的分布来评估箱子里的球的模型分布，这个时候P(x∣θ)就是似然函数。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/post/4c350e9d.html" title="信息熵">     <img class="post_bg" src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="信息熵"></a></div><div class="recent-post-info"><a class="article-title" href="/post/4c350e9d.html" title="信息熵">信息熵</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">我们简单介绍了香农信息量的概念，由香农信息量我们可以知道对于一个已知概率的事件，我们需要多少的数据量能完整地把它表达清楚，不与外界产生歧义。但对于整个系统而言，其实我们更加关心的是表达系统整体所需要的信息量。比如我们上面举例的aaBaaaVaaaaa这段字母，虽然B和V的香农信息量比较大，但他们出现的次数明显要比a少很多，因此我们需要有一个方法来评估整体系统的信息量。
+相信你可以很容易想到利用期望这个东西，因此评估的方法可以是：“事件香农信息量×事件概率”的累加。这也正是信息熵的概念。
+如aaBaaaVaaaaa这段字母，信息熵为：$$-\frac{5}{6}log_2\frac{5}{6}-2×\frac{1}{12}log_2\frac{1}{12}=0.817$$abBcdeVfhgim这段字母，信息熵为：$$-12×\frac{1}{12}log_2\frac{1}{12}=3.585$$从数值上可以很直观地看出，第二段字母信息量大，和观察相一致。
+对于连续型随机变量，信息熵公式变为积分的形式，如下：
+$$H ( p ) = H ( X ) = \mathrm { E } _  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/post/e66f8853.html" title="共轭函数">     <img class="post_bg" src="/../images/%E5%85%B1%E8%BD%AD%E5%87%BD%E6%95%B0/20190108163103218.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="共轭函数"></a></div><div class="recent-post-info"><a class="article-title" href="/post/e66f8853.html" title="共轭函数">共轭函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">共轭函数在最近火的不行的Gan生成对抗神经网络进阶版本的数学推理中有着神奇的作用，因此在这边记录下。
+共轭函数的定义为：$$f ^ { * } ( t ) = \max _ { x \in \operatorname { dom } ( f ) } { x t - f ( x ) }$$当然如果去百度它不是这么写的，但这么写和一般的写法等价。
+这个公式的$$x \in \operatorname { dom } ( f )$$表示x要在f的定义域内取值，这个蛮好理解的，不在定义域内就算不了。
+那它具体在干一件什么事情呢？
+可以看到式子的自变量是t，而当t定住后，式子希望在定义域内找到一个x使得右边大括号内的式子取得最大值。
+它的物理意义是什么呢？
+可以看到当t定住的时候，式子其实变成了y=xt−f(x)，如果高兴也可以再把左右拆开，这样就会发现左边其实是以t为斜率的一根直线，而右边则是x的函数，那么max这货就是要找到原函数f(x)和以t为斜率的直线的最大距离点对应的$$x ^ { * }。$$
+说实在的，上面的解释我一看就懂，但完全不知所谓，心中十万只草泥马。最核心的问题在于，这个物 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">周王羲祖</div><div class="author-info__description">学而不思则罔，思而不学则殆</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" href="mailto:zhouwangxizu@163.com"><i class="fab fa-github"></i><span>联系我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">联系手机：13651208086； QQ：18905180</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/d0f5fd4f.html" title="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）"><img src="/../images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A010%E4%B8%AA%E6%9C%80%E4%BD%B3%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E5%92%8CAI%E5%BA%93%EF%BC%88%E4%BC%98%E7%BC%BA%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%89/1528726843672650.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）"/></a><div class="content"><a class="title" href="/post/d0f5fd4f.html" title="机器学习10个最佳人工智能开发框架和AI库（优缺点总结）">机器学习10个最佳人工智能开发框架和AI库（优缺点总结）</a><time datetime="2019-12-23T13:06:36.000Z" title="发表于 2019-12-23 21:06:36">2019-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/22f26062.html" title="GAN生成对抗式神经网络实际操作"><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/20181228105426838.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GAN生成对抗式神经网络实际操作"/></a><div class="content"><a class="title" href="/post/22f26062.html" title="GAN生成对抗式神经网络实际操作">GAN生成对抗式神经网络实际操作</a><time datetime="2018-12-24T13:06:36.000Z" title="发表于 2018-12-24 21:06:36">2018-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/5b91f628.html" title="GAN生成对抗式神经网络数学推导"><img src="/../images/GAN%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E5%BC%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC/20181224170233872.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GAN生成对抗式神经网络数学推导"/></a><div class="content"><a class="title" href="/post/5b91f628.html" title="GAN生成对抗式神经网络数学推导">GAN生成对抗式神经网络数学推导</a><time datetime="2018-12-24T13:06:36.000Z" title="发表于 2018-12-24 21:06:36">2018-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/c7d146d6.html" title="JS散度"><img src="/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS散度"/></a><div class="content"><a class="title" href="/post/c7d146d6.html" title="JS散度">JS散度</a><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/7c5ef9ec.html" title="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷"><img src="/../images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%A4%E5%8F%89%E7%86%B5%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BC%A5%E8%A1%A5%E4%BA%86%E5%B9%B3%E6%96%B9%E5%B7%AE%E6%8D%9F%E5%A4%B1%E4%BB%80%E4%B9%88%E7%BC%BA%E9%99%B7/20170827112109611" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷"/></a><div class="content"><a class="title" href="/post/7c5ef9ec.html" title="为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷">为什么交叉熵能作为损失函数及其弥补了平方差损失什么缺陷</a><time datetime="2018-12-23T13:06:36.000Z" title="发表于 2018-12-23 21:06:36">2018-12-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/php/"><span class="card-category-list-name">php</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/win10/"><span class="card-category-list-name">win10</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/win7/"><span class="card-category-list-name">win7</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"><span class="card-category-list-name">人工智能</span><span class="card-category-list-count">21</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"><span class="card-category-list-name">大数据</span><span class="card-category-list-count">5</span></a></li>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Python/" style="font-size: 1.33em; color: #99a2af">-Python</a> <a href="/tags/WNMPA/" style="font-size: 1.1em; color: #999">-WNMPA</a> <a href="/tags/linux/" style="font-size: 1.27em; color: #99a0a9">-linux</a> <a href="/tags/php/" style="font-size: 1.16em; color: #999b9e">-php</a> <a href="/tags/python/" style="font-size: 1.16em; color: #999b9e">-python</a> <a href="/tags/win10/" style="font-size: 1.1em; color: #999">-win10</a> <a href="/tags/win7/" style="font-size: 1.21em; color: #999ea4">-win7</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.44em; color: #99a7ba">-人工智能</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 1.1em; color: #999">-人工智能 -大数据</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">-人工智能 -机器学习</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">-人工智能 -神经网络</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">-人工智能 -神经网络 -算法</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.39em; color: #99a4b4">-其他</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 1.21em; color: #999ea4">-大数据</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.1em; color: #999">-大数据 -人工智能</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">-大数据 -机器学习</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">-技术</a> <a href="/tags/%E6%96%90%E8%AE%AF-%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">-斐讯 -技术</a> <a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.16em; color: #999b9e">-杂记</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 1.16em; color: #999b9e">-游戏</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 1.16em; color: #999b9e">-电影</a> <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 1.16em; color: #999b9e">-神经网络</a> <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.21em; color: #999ea4">-神经网络 -人工智能</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.16em; color: #999b9e">-算法</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">-音乐</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/12/"><span class="card-archive-list-date">十二月 2018</span><span class="card-archive-list-count">23</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/12/"><span class="card-archive-list-date">十二月 2017</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2016/12/"><span class="card-archive-list-date">十二月 2016</span><span class="card-archive-list-count">41</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">77</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-12-16T13:27:07.994Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">Copyright &copy; 1993 - 2026 By 周王羲祖</div><div class="framework-info"><span>框架 By </span><a href="http://aichn.cn">Aichn.cn</a><span class="footer-separator">|</span><span>主题 By </span><a href="http://aichn.cn">周王羲祖的博客</a></div><div class="icp"><a href="http://beian.miit.gov.cn/" target="_blank"><img class="lozad" data-src="/img/beian.png" onerror="onerror=null;src='/img/beian.png'" style="padding:0px;vertical-align: text-bottom;"/><span>苏ICP备2023044481号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(function (result) {
+      if (true) {
+        var sub = "学而不思则罔，思而不学则殆,Learning without thinking is useless, Thinking without learning is dangerous".length == 0 ? new Array() : "学而不思则罔，思而不学则殆,Learning without thinking is useless, Thinking without learning is dangerous".split(',')
+        var content = result.data.content
+        var both = sub.unshift(content)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
